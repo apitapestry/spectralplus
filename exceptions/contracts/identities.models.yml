@@ -1,0 +1,35 @@
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: identities.models.yaml
+- ruleId: general-version-format
+  message: "info.version MUST follow vX or vX.Y formatting. ref: 1.0.0"
+  schemaPath: info.version
+  severity: ERROR
+  contract: identities.models.yaml
+- ruleId: info-description
+  message: Info "description" must be present and non-empty string.
+  schemaPath: info
+  severity: ERROR
+  contract: identities.models.yaml
+- ruleId: oas3-api-servers
+  message: OpenAPI "servers" must be present and non-empty array.
+  schemaPath: ""
+  severity: ERROR
+  contract: identities.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.SecretWordBase
+  severity: ERROR
+  contract: identities.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.SecretWordBase.properties.word.pattern
+  severity: ERROR
+  contract: identities.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.SecretWordBase.properties
+  severity: ERROR
+  contract: identities.models.yaml

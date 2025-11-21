@@ -1,0 +1,215 @@
+- ruleId: invalid-ref
+  schemaPath: paths./media-assets.get.parameters.23.$ref
+  message: "ENOENT: no such file or directory, open '../global/global.models.yaml'"
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./media-assets.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.ContributorsQueryOptional
+  severity: INFO
+  contract: media-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.GenresQueryOptional
+  severity: INFO
+  contract: media-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.LastPlayedBeforeQueryOptional
+  severity: INFO
+  contract: media-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.LastPlayedAfterQueryOptional
+  severity: INFO
+  contract: media-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.PlayCountMinQueryOptional
+  severity: INFO
+  contract: media-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.PlayCountMaxQueryOptional
+  severity: INFO
+  contract: media-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.ReleaseMinYearQueryOptional
+  severity: INFO
+  contract: media-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.ReleaseMaxYearQueryOptional
+  severity: INFO
+  contract: media-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.ReleaseDateQueryOptional
+  severity: INFO
+  contract: media-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.UserRatingMinQueryOptional
+  severity: INFO
+  contract: media-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.UserRatingMaxQueryOptional
+  severity: INFO
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.1
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.2
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.3
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.4
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.5
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.6
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.7
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.8
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.9
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.10
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.11
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.12
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.13
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.14
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.15
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.16
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.17
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.18
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.19
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.20
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.21
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.22
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.23
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./media-assets.get.parameters.24
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /media-assets"
+  schemaPath: paths./media-assets
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./media-assets.get
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: poly-base-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: MediaAsset"
+  schemaPath: components.schemas.MediaAsset.oneOf
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: poly-discriminator-enum
+  message: discriminator property definition MUST be of type enum
+  schemaPath: components.schemas.MediaAssetBase
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: poly-explicit-discriminator
+  message: "Each polymorphic child MUST have a unique list of required properties. ref: components.schemas.MediaAsset.oneOf"
+  schemaPath: components.schemas.MediaAsset.oneOf
+  severity: ERROR
+  contract: media-assets.v1.yaml
+- ruleId: poly-oneof-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: MediaAsset"
+  schemaPath: components.schemas.MediaAsset.oneOf
+  severity: ERROR
+  contract: media-assets.v1.yaml

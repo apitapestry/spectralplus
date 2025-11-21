@@ -1,0 +1,455 @@
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: info-description
+  message: Info "description" must be present and non-empty string.
+  schemaPath: info
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-api-servers
+  message: OpenAPI "servers" must be present and non-empty array.
+  schemaPath: ""
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-parameter-description
+  message: Parameter objects must have "description".
+  schemaPath: components.parameters.IfMatch
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-parameter-description
+  message: Parameter objects must have "description".
+  schemaPath: components.parameters.IfMatchRequired
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-parameter-description
+  message: Parameter objects must have "description".
+  schemaPath: components.parameters.IfNoneMatch
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-parameter-description
+  message: Parameter objects must have "description".
+  schemaPath: components.parameters.IfNoneMatchRequired
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-schema
+  message: Property "schema" is not expected to be here.
+  schemaPath: components.headers.Content-Range.schema
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-schema
+  message: '"Content_Range" property must have required property "$ref".'
+  schemaPath: components.parameters.Content_Range
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.headers.ETag
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.headers.XResponseId
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.headers.XCorrelationId
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.TenantId
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.Authorization
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.IfMatch
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.IfMatchRequired
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.IfNoneMatch
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.IfNoneMatchRequired
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.XRequestId
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.XCorrelationId
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.Content_Range
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.Offset
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.Limit
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.PersonId
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.AccountId
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.responses.BadRequest
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.responses.UnprocessableEntity
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.responses.Conflict
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.responses.InternalServerError
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Offset
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Limit
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.PersonIdReadOnly
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Channel
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CurrencyCodeReadOnly
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CurrencyCode
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.AccountId
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Artifact
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.TenantId
+  severity: INFO
+  contract: global.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.Authorization
+  severity: INFO
+  contract: global.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.IfMatch
+  severity: INFO
+  contract: global.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.IfMatchRequired
+  severity: INFO
+  contract: global.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.IfNoneMatch
+  severity: INFO
+  contract: global.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.IfNoneMatchRequired
+  severity: INFO
+  contract: global.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.XRequestId
+  severity: INFO
+  contract: global.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.XCorrelationId
+  severity: INFO
+  contract: global.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.Content_Range
+  severity: INFO
+  contract: global.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.Offset
+  severity: INFO
+  contract: global.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.Limit
+  severity: INFO
+  contract: global.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.AccountId
+  severity: INFO
+  contract: global.models.yaml
+- ruleId: parameter-headers-not-allowed
+  message: "The following headers MUST NOT be used, there are implied: Authorization, Content-type and Accept. ref: Authorization"
+  schemaPath: components.parameters.Authorization.name
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: X-Request-Id"
+  schemaPath: components.parameters.XRequestId.name
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: X-Correlation-Id"
+  schemaPath: components.parameters.XCorrelationId.name
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: Content-Range"
+  schemaPath: components.parameters.Content_Range.name
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: X-Tenant-Id"
+  schemaPath: components.parameters.TenantId.name
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: Authorization"
+  schemaPath: components.parameters.Authorization.name
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: If-Match"
+  schemaPath: components.parameters.IfMatch.name
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: If-Match"
+  schemaPath: components.parameters.IfMatchRequired.name
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: If-None-Match"
+  schemaPath: components.parameters.IfNoneMatch.name
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: If-None-Match"
+  schemaPath: components.parameters.IfNoneMatchRequired.name
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: X-Request-Id"
+  schemaPath: components.parameters.XRequestId.name
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: X-Correlation-Id"
+  schemaPath: components.parameters.XCorrelationId.name
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: Content-Range"
+  schemaPath: components.parameters.Content_Range.name
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.responses.BadRequest.content.application/json.schema
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.responses.UnprocessableEntity.content.application/json.schema
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Error
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.ErrorItem
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.CurrencyCodeReadOnly
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.CurrencyCode
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: Offset"
+  schemaPath: components.schemas.Offset
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.parameters.Offset.schema
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.headers.XResponseId.schema.pattern
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.headers.XCorrelationId.schema.pattern
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.parameters.XCorrelationId.schema.pattern
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.ETag.pattern
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.PersonId.pattern
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.PersonIdReadOnly.pattern
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.CurrencyCodeReadOnly.pattern
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.CurrencyCode.pattern
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Error.properties
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.ErrorItem.properties
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Artifact.properties
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: objectName"
+  schemaPath: components.schemas.ErrorItem.properties.objectName
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: field"
+  schemaPath: components.schemas.ErrorItem.properties.field
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Artifact.properties.source
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Artifact.properties.location
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Error.properties.message
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.ErrorItem.properties.objectName
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.ErrorItem.properties.field
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.ErrorItem.properties.rejectedValue
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Artifact.properties.source
+  severity: ERROR
+  contract: global.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Artifact.properties.location
+  severity: ERROR
+  contract: global.models.yaml

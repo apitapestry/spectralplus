@@ -1,0 +1,208 @@
+functions:
+  - poly-base-children
+  - poly-discriminator-enum
+  - poly-discriminator-exists-base
+  - poly-explicit-discriminator
+  - poly-oneof-base
+  - poly-oneof-base-circular
+  - poly-oneof-children-allof
+  - poly-oneof-same-base
+  - poly-path-ref-base-object
+  - poly-property-name-exists
+  - poly-property-name-inline
+
+rules:
+  poly-allof-mapping:
+    description: Not defined
+    message: 'All children referenced in the base object MUST inherit from same base object. ref: {{error}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.allof && @.discriminator)]
+    then:
+      function: falsy
+
+  poly-base-children:
+    description: Not defined
+    message: 'All children referenced in the base object MUST inherit from same base object. ref: {{error}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && !@.oneOf && @.discriminator && @.discriminator.mapping)]..mapping
+    then:
+      function: poly-base-children
+
+  poly-base-circular:
+    description: Not defined
+    message: 'Base Schema and children objects MUST be defined in the same file'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..discriminator.mapping.*
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: '/^.*\.yaml.*$/'
+
+  poly-base-same-base:
+    description: Not defined
+    message: 'All children used in oneOf MUST inherit from the same base object. ref: {{error}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..oneOf
+    then:
+      function: poly-oneof-same-base
+
+  poly-discriminator-enum:
+    description: Not defined
+    message: 'discriminator property definition MUST be of type enum'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.discriminator && !@.oneof)]
+    then:
+      function: poly-discriminator-enum
+
+  poly-discriminator-exists-base:
+    description: Not defined
+    message: 'Discriminator.propertyName value MUST be in base object property list. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.discriminator && !@.oneOf)]
+    then:
+      function: poly-discriminator-exists-base
+
+  poly-explicit-discriminator:
+    description: Not defined
+    message: 'Each polymorphic child MUST have a unique list of required properties. ref: {{error}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..oneOf
+    then:
+      function: poly-explicit-discriminator
+
+  poly-oneof-base:
+    description: Not defined
+    message: 'Base object MUST have a discriminator, propertyName and mapping. ref: {{error}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..oneOf
+    then:
+      function: poly-oneof-base
+
+  poly-oneof-base-circular:
+    description: Not defined
+    message: 'All lchildren used in oneOf MUST be defined in base object mapping. ref: {{error}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..oneOf
+    then:
+      function: poly-oneof-base-circular
+
+  poly-oneof-children-allof:
+    description: Not defined
+    message: 'All children in a oneOf MUST use aggregation (allOf). ref: {{error}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.compents.schemas..oneOf
+    then:
+      function: poly-oneof-children-allof
+
+  poly-oneof-children-ref:
+    description: Not defined
+    message: 'oneOf MUST be defined in the same file as its children'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..schemas..oneOf[?(@ && @.ref && !@.$ref.match(/^#.*$/))]
+    then:
+      function: falsy
+
+  poly-oneof-discriminator:
+    description: Not defined
+    message: 'oneOf MUST have a discriminator property. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.oneOf && !@.discriminator)]
+    then:
+      function: falsy
+
+  poly-oneof-inline:
+    description: Not defined
+    message: 'oneOf MUST NOT be defined in-line'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $..paths.[?(@property === "oneOf")]
+      - $..properties.[?(@property === "oneOf")]
+      - $..items.[?(@property === "oneOf")]
+    then:
+      function: falsy
+
+  poly-oneof-mapping:
+    description: Not defined
+    message: 'Mapping MUST be defined in the base object. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.oneOf && @.discriminator && @.discriminator.mapping)]
+    then:
+      function: falsy
+
+  poly-oneof-same-base:
+    description: Not defined
+    message: 'All children used in oneOf MUST inherit from the same base object. ref: {{error}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..oneOf
+    then:
+      function: poly-oneof-same-base
+
+  poly-path-ref-base-object:
+    description: Not defined
+    message: 'Base objects MUST only be aggregated (allOf) by its children. ref: {{error}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.discriminator && @.discriminator.mapping)]
+    then:
+      function: poly-path-ref-base-object
+
+  poly-property-name-inline:
+    description: Not defined
+    message: 'PropertyName enum in a base object MUST be defined as  a $ref'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..discriminator.mapping^^
+    then:
+      function: poly-property-name-inline
+
+#  poly-property-name-exists:
+#    description: Not defined
+#    message: 'oneOf & Base object MUST have a discriminator.propertyName and MUST be equal AND MUST be an enum in base object. ref: {{error}}'
+#    documentationUrl: 'https://my.documentation.com/something#123'
+#    severity: error
+#    resolved: false
+#    given: $..oneOf^
+#    then:
+#      function: poly-property-name-exists
+
+  poly-invalid-ref:
+    description: Not defined
+    message: 'Child objects MUST NOT be used as a ref outside of the normal poly structure. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..properties.*.allOf.*.discriminator^^^^^
+    then:
+      function: falsy

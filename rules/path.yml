@@ -1,0 +1,260 @@
+functions:
+  - count-resource-types
+  - path-segment-structure
+  - path-response-404
+  - assert-http-codes-for-operation
+
+rules:
+  path-allowed-characters:
+    description: Not defined
+    message: Paths MUST ONLY contain recommended characters
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths.*~
+    then:
+      function: pattern
+      functionOptions:
+        match: '^(\/([0-9A-Za-z._~-]+|{[^]+}))*\/([0-9A-Za-z._~-]+|{[^]*})?(:[0-9A-Za-z._~-]+)?$'
+
+  path-naming:
+    description: Not defined
+    message: 'Paths MUST NOT include {request|response|info|information|details|metadata|data|properties|obj|object|search}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths.*~
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: '/(request|response|info|information|details|metadata|data|properties|obj|object|search|api)/i'
+
+  path-no-query:
+    description: Not defined
+    message: 'post, put, patch, delete paths MUST NOT use query parameters. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: true
+    given: $.paths.*.[post,put,patch,delete].parameters[?(@ && @.in === 'query')]
+    then:
+      function: falsy
+
+  path-non-empty:
+    description: Not defined
+    message: 'Paths MUST NOT be empty'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths.*~
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: //
+
+  path-non-post-query:
+    description: Not defined
+    message: '/query MUST ONLY be use with POST. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..paths[?(@ && !@.post)]~
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: query
+
+  path-request-body-no-array:
+    description: Not defined
+    message: 'requestBody MUST NOT accept an array'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..requestBody.content.*.schema.type
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: array
+
+  path-request-body-not-allowed:
+    description: Not defined
+    message: 'A GET, DELETE operation MUST NOT accept a requestBody'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths.*.[get,delete].requestBody
+    then:
+      function: falsy
+
+  path-request-body-required:
+    description: Not defined
+    message: 'requestBody MUST contain a required property'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths..requestBody
+    then:
+      field: requestBody
+      function: truthy
+
+  path-request-body-read-only:
+    description: Not defined
+    message: 'requestBody MUST NOT contain readOnly properties'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $..requestBody.content.*.schema
+      - $..requestBody.content.*.schema.items
+    then:
+      field: readOnly
+      function: falsy
+
+  path-request-response-schema-type:
+    description: Not defined
+    message: 'requestBody and response MUST NOT contain ''type: object'''
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - '$..requestBody..[?(@ && @.type === "object")]'
+      - '$..responses..[?(@ && @.type === "object")]'
+    then:
+      function: falsy
+
+  path-required-path-parameter:
+    description: Not defined
+    message: 'PATCH, DELETE and PUT operations MUST provide a path parameter as last node in path'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths.*.[patch,delete,put]^~
+    then:
+      function: pattern
+      functionOptions:
+        match: '/\}$/'
+
+  path-resource-limit:
+    description: Not defined
+    message: 'Number of paths nodes MUST NOT exceed 5. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths.*~
+    then:
+      function: count-resource-types
+      functionOptions:
+        max: 5
+
+  path-resource-separation:
+    description: Not defined
+    message: 'Path nodes MUST be separated by parameters and MUST NOT begin with a parameter'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..paths[?(@ && !@.post)]~
+    then:
+      function: path-segment-structure
+
+  path-response-201-no-array:
+    description: Not defined
+    message: '201 response MUST NOT return an array'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths..responses.201.content.*.schema.type
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: 'array'
+
+  path-response-204-no-body:
+    description: Not defined
+    message: '204 response MUST NOT return a response body'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths..responses.204.content
+    then:
+      function: falsy
+
+  path-response-404-not-allowed:
+    description: Not defined
+    message: '404 response is NOT allowed for paths that do not include a path parameter or follow the action pattern'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths..responses
+    then:
+      function: path-response-404
+      functionOptions:
+        is404Needed: false
+
+  path-response-404-required:
+    description: Not defined
+    message: 'Paths including a path parameter MUST include a 404 response'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths..responses
+    then:
+      function: path-response-404
+      functionOptions:
+        is404Needed: true
+
+  path-response-404-description:
+    description: Not defined
+    message: '404 response MUST contain a description'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths..responses.404
+    then:
+      field: description
+      function: pattern
+      functionOptions:
+        match: '^Could not find the given resource[.]$'
+
+  path-security-public:
+    description: Not defined
+    message: 'Security definitions MUST NOT be public'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths..security
+    then:
+      function: length
+      functionOptions:
+        min: 1
+
+  path-security-required:
+    description: Not defined
+    message: 'Each operation MUST define security requirements'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: info
+    resolved: false
+    given: $.paths.*.*
+    then:
+      field: security
+      function: truthy
+
+  path-status-codes:
+    description: Not defined
+    message: 'HTTP Status codes MUST be appropriate for the operation'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: '$.paths.*'
+    then:
+      function: assert-http-codes-for-operation
+      functionOptions:
+        wellUnderstood:
+          '200': [GET, PUT, PATCH, POST]
+          '201': [PUT, POST]
+          '204': [DELETE, PUT, PATCH, POST]
+          '400': [ALL]
+          '404': [ALL]
+          '409': [ALL]
+          '412': [ALL]
+          '422': [ALL]
+          '428': [ALL]
+          '500': [ALL]

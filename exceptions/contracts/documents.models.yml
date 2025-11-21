@@ -1,0 +1,165 @@
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: appian_caseId"
+  schemaPath: components.parameters.AppianCaseId.name
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: pega_caseId"
+  schemaPath: components.parameters.PegaCaseId.name
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: general-version-format
+  message: "info.version MUST follow vX or vX.Y formatting. ref: 1.0.0"
+  schemaPath: info.version
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: info-description
+  message: Info "description" must be present and non-empty string.
+  schemaPath: info
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: invalid-ref
+  schemaPath: components.schemas.Document.properties.personId.$ref
+  message: "ENOENT: no such file or directory, open 'global.models.yaml'"
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: oas3-api-servers
+  message: OpenAPI "servers" must be present and non-empty array.
+  schemaPath: ""
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.DocumentId
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.AccountId
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.ApplicantId
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.AppianCaseId
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.PegaCaseId
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Document
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.AccountId
+  severity: INFO
+  contract: documents.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.ApplicantId
+  severity: INFO
+  contract: documents.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.AppianCaseId
+  severity: INFO
+  contract: documents.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.PegaCaseId
+  severity: INFO
+  contract: documents.models.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: appian_caseId"
+  schemaPath: components.parameters.AppianCaseId.name
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: pega_caseId"
+  schemaPath: components.parameters.PegaCaseId.name
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Document.properties.alternateKeys
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: schema-boolean
+  message: "Properties declared as 'type: boolean' MUST have a previx of is or has. ref: allowSend"
+  schemaPath: components.schemas.Document.properties.allowSend
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Document
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.AlternateKey
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Document.properties.type
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Document.properties.status
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.AlternateKey.properties.type
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Document.properties.description.pattern
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Document.properties.title.pattern
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.AlternateKey.properties.value.pattern
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Document.properties
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.AlternateKey.properties
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Document.properties.personId
+  severity: ERROR
+  contract: documents.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Document.properties.fileType
+  severity: ERROR
+  contract: documents.models.yaml

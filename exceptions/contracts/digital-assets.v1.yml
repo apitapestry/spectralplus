@@ -1,0 +1,560 @@
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./digital-assets.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./digital-assets.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./digital-assets/{digitalAssetId}.patch.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.DigitalAssetsId
+  severity: INFO
+  contract: digital-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.TitleQueryOptional
+  severity: INFO
+  contract: digital-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.SummaryQueryOptional
+  severity: INFO
+  contract: digital-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.FilenameQueryOptional
+  severity: INFO
+  contract: digital-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.FileSizeMinQueryOptional
+  severity: INFO
+  contract: digital-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.FileSizeMaxQueryOptional
+  severity: INFO
+  contract: digital-assets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.GenresQueryOptional
+  severity: INFO
+  contract: digital-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./digital-assets.get.parameters.1
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./digital-assets.get.parameters.2
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./digital-assets.get.parameters.3
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./digital-assets.get.parameters.4
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./digital-assets.get.parameters.5
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./digital-assets.get.parameters.6
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./digital-assets.post.requestBody
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./digital-assets/{digitalAssetId}.patch.requestBody
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /digital-assets"
+  schemaPath: paths./digital-assets
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /digital-assets/{digitalAssetId}"
+  schemaPath: paths./digital-assets/{digitalAssetId}
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./digital-assets/{digitalAssetId}.get.responses
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./digital-assets/{digitalAssetId}.patch.responses
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./digital-assets/{digitalAssetId}.delete.responses
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./digital-assets.post
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./digital-assets.get
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./digital-assets/{digitalAssetId}.get
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./digital-assets/{digitalAssetId}.patch
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./digital-assets/{digitalAssetId}.delete
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: poly-base-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: DigitalAsset"
+  schemaPath: components.schemas.DigitalAsset.oneOf
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: poly-discriminator-enum
+  message: discriminator property definition MUST be of type enum
+  schemaPath: components.schemas.DigitalAssetBase
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: poly-explicit-discriminator
+  message: "Each polymorphic child MUST have a unique list of required properties. ref: components.schemas.DigitalAsset.oneOf"
+  schemaPath: components.schemas.DigitalAsset.oneOf
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: poly-oneof-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: DigitalAsset"
+  schemaPath: components.schemas.DigitalAsset.oneOf
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./digital-assets.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.parameters.GenresQueryOptional.schema
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.DigitalAssetMovie.properties.genres
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.DigitalAssetMovie.properties.directors
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.DigitalAssetMovie.properties.writers
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.DigitalAssetMovie.properties.roles
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.DigitalAssetTvShow.properties.genres
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.DigitalAssetTvShow.properties.directors
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.DigitalAssetTvShow.properties.writers
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.DigitalAssetTvShow.properties.roles
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.DigitalAsset
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: DigitalAssetsUpdate"
+  schemaPath: components.schemas.DigitalAssetsUpdate
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: DigitalAsset"
+  schemaPath: components.schemas.DigitalAsset
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: DigitalAssetBase"
+  schemaPath: components.schemas.DigitalAssetBase
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: DigitalAssetType"
+  schemaPath: components.schemas.DigitalAssetType
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: DigitalAssetMovie"
+  schemaPath: components.schemas.DigitalAssetMovie
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: DigitalAssetTvShow"
+  schemaPath: components.schemas.DigitalAssetTvShow
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: DigitalAssetMusic"
+  schemaPath: components.schemas.DigitalAssetMusic
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: DigitalAssetAudioBook"
+  schemaPath: components.schemas.DigitalAssetAudioBook
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: DigitalAssetsId"
+  schemaPath: components.schemas.DigitalAssetsId
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-number-format
+  message: "Properties declared as type: number MUST have a format of float, double or decimal"
+  schemaPath: components.parameters.FileSizeMinQueryOptional.schema.format
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-number-format
+  message: "Properties declared as type: number MUST have a format of float, double or decimal"
+  schemaPath: components.parameters.FileSizeMaxQueryOptional.schema.format
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-number-format
+  message: "Properties declared as type: number MUST have a format of float, double or decimal"
+  schemaPath: components.schemas.DigitalAssetBase.properties.fileSize.format
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.DigitalAssetMusic.properties.bitrate
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.DigitalAssetMusic.properties.totalAudioChannels
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.DigitalAssetAudioBook.properties.bitrate
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.DigitalAssetAudioBook.properties.audioChannels
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.DigitalAssetsUpdate.properties
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.DigitalAssetBase.properties
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.DigitalAssetMovie.properties
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.DigitalAssetTvShow.properties
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.DigitalAssetMusic.properties
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.DigitalAssetAudioBook.properties
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: digitalAssetId"
+  schemaPath: components.schemas.DigitalAssetBase.properties.digitalAssetId
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: digitalAssetType"
+  schemaPath: components.schemas.DigitalAssetBase.properties.digitalAssetType
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: addedDate"
+  schemaPath: components.schemas.DigitalAssetBase.properties.addedDate
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: releasedDate"
+  schemaPath: components.schemas.DigitalAssetMovie.properties.releasedDate
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: releasedDate"
+  schemaPath: components.schemas.DigitalAssetTvShow.properties.releasedDate
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetBase.properties.digitalAssetId
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetBase.properties.digitalAssetType
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetBase.properties.title
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetBase.properties.summary
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetBase.properties.filePath
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetMusic.properties.duration
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetMusic.properties.bitrate
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetMusic.properties.totalAudioChannels
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetMusic.properties.audioCodec
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetMusic.properties.containerType
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetAudioBook.properties.duration
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetAudioBook.properties.bitrate
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetAudioBook.properties.audioChannels
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetAudioBook.properties.audioCodec
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.DigitalAssetAudioBook.properties.container
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetsUpdate.properties.filePath
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetsUpdate.properties.fileName
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetMovie.properties.directors
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetMovie.properties.tagline
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetMovie.properties.writers
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetMovie.properties.roles
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetMovie.properties.country
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetMovie.properties.studio
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetMovie.properties.contentRating
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetMovie.properties.rating
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetMovie.properties.audienceRating
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetMovie.properties.duration
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetTvShow.properties.directors
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetTvShow.properties.tagline
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetTvShow.properties.writers
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetTvShow.properties.roles
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetTvShow.properties.country
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetTvShow.properties.studio
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetTvShow.properties.contentRating
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetTvShow.properties.audienceRating
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetTvShow.properties.duration
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetMusic.properties.duration
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetMusic.properties.audioCodec
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetMusic.properties.containerType
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetAudioBook.properties.duration
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetAudioBook.properties.audioCodec
+  severity: ERROR
+  contract: digital-assets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.DigitalAssetAudioBook.properties.container
+  severity: ERROR
+  contract: digital-assets.v1.yaml

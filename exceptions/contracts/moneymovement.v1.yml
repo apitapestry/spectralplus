@@ -1,0 +1,1110 @@
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: checking"
+  schemaPath: components.schemas.ExternalAccount.properties.type.enum.0
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: savings"
+  schemaPath: components.schemas.ExternalAccount.properties.type.enum.1
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: active"
+  schemaPath: components.schemas.ExternalAccount.properties.status.enum.0
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: deleted"
+  schemaPath: components.schemas.ExternalAccount.properties.status.enum.1
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: scheduled"
+  schemaPath: components.schemas.Schedule.properties.state.enum.0
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: posted"
+  schemaPath: components.schemas.Schedule.properties.state.enum.1
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: cancelled"
+  schemaPath: components.schemas.Schedule.properties.state.enum.2
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: failed"
+  schemaPath: components.schemas.Schedule.properties.state.enum.3
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: inactive"
+  schemaPath: components.schemas.Schedule.properties.state.enum.4
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: scheduled"
+  schemaPath: components.schemas.TransferTransaction.properties.state.enum.0
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: posted"
+  schemaPath: components.schemas.TransferTransaction.properties.state.enum.1
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: cancelled"
+  schemaPath: components.schemas.TransferTransaction.properties.state.enum.2
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: failed"
+  schemaPath: components.schemas.TransferTransaction.properties.state.enum.3
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: inactive"
+  schemaPath: components.schemas.TransferTransaction.properties.state.enum.4
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: ExternalAccountType"
+  schemaPath: paths./v1/external-accounts.get.parameters.2.name
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: contact-properties
+  message: Contact object must have "name", "url" and "email".
+  schemaPath: info.contact
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: general-boolean-example
+  message: Boolean properties MUST NOT provide examples
+  schemaPath: components.schemas.ExternalAccount.properties.creditBalanceRefund.example
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: general-boolean-example
+  message: Boolean properties MUST NOT provide examples
+  schemaPath: components.schemas.ExternalAccount.properties.hasAcceptedTermsAndConditions.example
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: general-boolean-example
+  message: Boolean properties MUST NOT provide examples
+  schemaPath: components.schemas.Schedule.properties.hasAcceptedTermsAndConditions.example
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: general-boolean-example
+  message: Boolean properties MUST NOT provide examples
+  schemaPath: components.schemas.TransferTransaction.properties.hasAcceptedTermsAndConditions.example
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: general-boolean-example
+  message: Boolean properties MUST NOT provide examples
+  schemaPath: components.schemas.Notification.allOf.1.properties.isDelivered.example
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: general-info-description-max-length
+  message: info.description MUST be less than 250 characters.
+  schemaPath: info.description
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: general-info-title-summary-word-check
+  message: The info.summary & info.title MUST NOT contain the words REST, Public, Service or Developer.
+  schemaPath: info.title
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getTransferTransactions"
+  schemaPath: paths./v1/transfer-transactions.get
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getTransferTransaction"
+  schemaPath: paths./v1/transfer-transactions/{transactionId}.get
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: deleteTransferTransaction"
+  schemaPath: paths./v1/transfer-transactions/{transactionId}.delete
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getTransferTransactionNotifications"
+  schemaPath: paths./v1/transfer-transaction-notifications.get
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./v1/external-accounts.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./v1/schedules.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./v1/transfer-transactions.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./v1/transfer-transaction-notifications.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./v1/external-accounts.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./v1/schedules.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: operation-summary-ending-period
+  message: Operation summaries MUST not end with a period
+  schemaPath: paths./v1/schedules.post.summary
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: operation-summary-ending-period
+  message: Operation summaries MUST not end with a period
+  schemaPath: paths./v1/transfer-transactions/{transactionId}.get.summary
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./v1/external-accounts.get.parameters.1
+  severity: INFO
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./v1/external-accounts.get.parameters.2
+  severity: INFO
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./v1/transfer-transactions.get.parameters.1
+  severity: INFO
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./v1/transfer-transactions.get.parameters.2
+  severity: INFO
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./v1/transfer-transactions.get.parameters.3
+  severity: INFO
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./v1/transfer-transactions.get.parameters.4
+  severity: INFO
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./v1/transfer-transaction-notifications.get.parameters.1
+  severity: INFO
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./v1/transfer-transaction-notifications.get.parameters.2
+  severity: INFO
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./v1/transfer-transaction-notifications.get.parameters.3
+  severity: INFO
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./v1/transfer-transaction-notifications.get.parameters.4
+  severity: INFO
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.AccountId
+  severity: INFO
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.ExternalAccountId
+  severity: INFO
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.ScheduleId
+  severity: INFO
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.TransferTransactionId
+  severity: INFO
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./v1/external-accounts/{externalAccountId}.get.parameters.1
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./v1/external-accounts/{externalAccountId}.delete.parameters.1
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./v1/schedules/{scheduleId}.get.parameters.1
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./v1/schedules/{scheduleId}.delete.parameters.1
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./v1/transfer-transactions/{transactionId}.get.parameters.1
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./v1/transfer-transactions/{transactionId}.delete.parameters.1
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: components.parameters.AccountId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: ExternalAccountType"
+  schemaPath: paths./v1/external-accounts.get.parameters.2.name
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: AccountId"
+  schemaPath: components.parameters.AccountId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./v1/external-accounts.post.requestBody
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./v1/schedules.post.requestBody
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /v1/external-accounts"
+  schemaPath: paths./v1/external-accounts
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /v1/external-accounts/{externalAccountId}"
+  schemaPath: paths./v1/external-accounts/{externalAccountId}
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /v1/schedules"
+  schemaPath: paths./v1/schedules
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /v1/schedules/{scheduleId}"
+  schemaPath: paths./v1/schedules/{scheduleId}
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /v1/transfer-transactions"
+  schemaPath: paths./v1/transfer-transactions
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /v1/transfer-transactions/{transactionId}"
+  schemaPath: paths./v1/transfer-transactions/{transactionId}
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /v1/transfer-transaction-notifications"
+  schemaPath: paths./v1/transfer-transaction-notifications
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./v1/external-accounts/{externalAccountId}.get.responses
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./v1/external-accounts/{externalAccountId}.delete.responses
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./v1/schedules/{scheduleId}.get.responses
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./v1/schedules/{scheduleId}.delete.responses
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./v1/transfer-transactions/{transactionId}.get.responses
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./v1/transfer-transactions/{transactionId}.delete.responses
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./v1/external-accounts.get
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./v1/external-accounts.post
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./v1/external-accounts/{externalAccountId}.get
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./v1/external-accounts/{externalAccountId}.delete
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./v1/schedules.get
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./v1/schedules.post
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./v1/schedules/{scheduleId}.get
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./v1/schedules/{scheduleId}.delete
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./v1/transfer-transactions.get
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./v1/transfer-transactions/{transactionId}.get
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./v1/transfer-transactions/{transactionId}.delete
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./v1/transfer-transaction-notifications.get
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.Notification.allOf.1
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./v1/external-accounts.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./v1/schedules.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./v1/transfer-transactions.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./v1/transfer-transaction-notifications.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-boolean
+  message: "Properties declared as 'type: boolean' MUST have a previx of is or has. ref: creditBalanceRefund"
+  schemaPath: components.schemas.ExternalAccount.properties.creditBalanceRefund
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-boolean
+  message: "Properties declared as 'type: boolean' MUST have a previx of is or has. ref: suppress"
+  schemaPath: components.schemas.Header.properties.suppress
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-datetime-name
+  message: "Properties named as 'type: string' and 'format: date-time'. Name MUST end with 'DateTime'"
+  schemaPath: components.schemas.ExternalAccount.properties.termsAndConditionsAcceptedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-datetime-name
+  message: "Properties named as 'type: string' and 'format: date-time'. Name MUST end with 'DateTime'"
+  schemaPath: components.schemas.Schedule.properties.termsAndConditionsAcceptedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-datetime-name
+  message: "Properties named as 'type: string' and 'format: date-time'. Name MUST end with 'DateTime'"
+  schemaPath: components.schemas.TransferTransaction.properties.termsAndConditionsAcceptedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-datetime-name
+  message: "Properties named as 'type: string' and 'format: date-time'. Name MUST end with 'DateTime'"
+  schemaPath: components.schemas.Header.properties.auditSourceTimeStamp
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.ExternalAccount
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Schedule
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.TransferTransaction
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Header
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Notification
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.ExternalAccount.properties.type
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.ExternalAccount.properties.status
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.ExternalAccount.properties
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Schedule.properties
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.TransferTransaction.properties
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Header.properties
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Notification.allOf.1.properties
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: accountNumber"
+  schemaPath: components.schemas.ExternalAccount.properties.accountNumber
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: routingNumber"
+  schemaPath: components.schemas.ExternalAccount.properties.routingNumber
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: termsAndConditionsAcceptedDate"
+  schemaPath: components.schemas.ExternalAccount.properties.termsAndConditionsAcceptedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: cancelledDate"
+  schemaPath: components.schemas.Schedule.properties.cancelledDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: paymentDate"
+  schemaPath: components.schemas.Schedule.properties.paymentDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: failedDate"
+  schemaPath: components.schemas.Schedule.properties.failedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: postedDate"
+  schemaPath: components.schemas.Schedule.properties.postedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: preset"
+  schemaPath: components.schemas.Schedule.properties.preset
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: timeZone"
+  schemaPath: components.schemas.Schedule.properties.timeZone
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: termsAndConditionsAcceptedDate"
+  schemaPath: components.schemas.Schedule.properties.termsAndConditionsAcceptedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: cancelledDate"
+  schemaPath: components.schemas.TransferTransaction.properties.cancelledDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: paymentDate"
+  schemaPath: components.schemas.TransferTransaction.properties.paymentDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: failedDate"
+  schemaPath: components.schemas.TransferTransaction.properties.failedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: postedDate"
+  schemaPath: components.schemas.TransferTransaction.properties.postedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: preset"
+  schemaPath: components.schemas.TransferTransaction.properties.preset
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: timeZone"
+  schemaPath: components.schemas.TransferTransaction.properties.timeZone
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: termsAndConditionsAcceptedDate"
+  schemaPath: components.schemas.TransferTransaction.properties.termsAndConditionsAcceptedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: auditMessageOutDateTime"
+  schemaPath: components.schemas.Header.properties.auditMessageOutDateTime
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: auditSourceTimeStamp"
+  schemaPath: components.schemas.Header.properties.auditSourceTimeStamp
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: sourceHostname"
+  schemaPath: components.schemas.Header.properties.sourceHostname
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ExternalAccount.properties.externalAccountid
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ExternalAccount.properties.accountNumber
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ExternalAccount.properties.routingNumber
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ExternalAccount.properties.type
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ExternalAccount.properties.fundingType
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ExternalAccount.properties.last4Account
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ExternalAccount.properties.nickname
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ExternalAccount.properties.status
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ExternalAccount.properties.termsAndConditionsId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ExternalAccount.properties.hasAcceptedTermsAndConditions
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ExternalAccount.properties.termsAndConditionsAcceptedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.paymentId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.accountId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.personId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.amount
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.currencyCode
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.frequency
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.externalAccountId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.cancelledDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.paymentDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.failedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.failedReasonCode
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.postedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.preset
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.rcode
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.rcodeReason
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.referenceId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.specificDay
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.state
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.timeZone
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.termsAndConditionsId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.hasAcceptedTermsAndConditions
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Schedule.properties.termsAndConditionsAcceptedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.paymentId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.accountId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.personId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.amount
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.currencyCode
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.frequency
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.externalAccountId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.cancelledDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.paymentDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.failedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.failedReasonCode
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.postedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.preset
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.rcode
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.rcodeReason
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.referenceId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.specificDay
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.state
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.timeZone
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.termsAndConditionsId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.hasAcceptedTermsAndConditions
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferTransaction.properties.termsAndConditionsAcceptedDate
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Header.properties.auditMessageOutDateTime
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Header.properties.auditMessageId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Header.properties.auditSourceTimeStamp
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Header.properties.eventCategory
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Header.properties.eventSubType
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Header.properties.eventType
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Header.properties.personId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Header.properties.profileId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Header.properties.sourceHostname
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Header.properties.sourceInitiator
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Header.properties.sourceServiceName
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Header.properties.suppress
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.ExternalAccount.properties.externalAccountid
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.ExternalAccount.properties.accountNumber
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.ExternalAccount.properties.routingNumber
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.ExternalAccount.properties.last4Account
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.ExternalAccount.properties.nickname
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.ExternalAccount.properties.termsAndConditionsId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Schedule.properties.accountId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Schedule.properties.amount
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Schedule.properties.referenceId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Schedule.properties.specificDay
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Schedule.properties.termsAndConditionsId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.TransferTransaction.properties.accountId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.TransferTransaction.properties.amount
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.TransferTransaction.properties.referenceId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.TransferTransaction.properties.specificDay
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.TransferTransaction.properties.termsAndConditionsId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Header.properties.auditMessageId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Header.properties.eventCategory
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Header.properties.eventSubType
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Header.properties.eventType
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Header.properties.personId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Header.properties.profileId
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Header.properties.sourceHostname
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Header.properties.sourceInitiator
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Header.properties.sourceServiceName
+  severity: ERROR
+  contract: moneymovement.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Notification.allOf.1.properties.remainingMinimumDue
+  severity: ERROR
+  contract: moneymovement.v1.yaml

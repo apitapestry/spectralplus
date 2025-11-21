@@ -1,0 +1,805 @@
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Reinstated"
+  schemaPath: paths./redemptions.get.parameters.3.schema.enum.0
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Posted"
+  schemaPath: paths./redemptions.get.parameters.3.schema.enum.1
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Forfeited"
+  schemaPath: paths./redemptions.get.parameters.3.schema.enum.2
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Pending"
+  schemaPath: paths./redemptions.get.parameters.3.schema.enum.3
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Rejected"
+  schemaPath: paths./redemptions.get.parameters.3.schema.enum.4
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: CardCharges"
+  schemaPath: paths./redemptions.get.parameters.5.schema.enum.0
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: GiftCards"
+  schemaPath: paths./redemptions.get.parameters.5.schema.enum.1
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PointsTransfers"
+  schemaPath: paths./redemptions.get.parameters.5.schema.enum.2
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PurchaseWithPoints"
+  schemaPath: paths./redemptions.get.parameters.5.schema.enum.3
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Travel"
+  schemaPath: paths./redemptions.get.parameters.5.schema.enum.4
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Reinstated"
+  schemaPath: paths./redemptions/search_results.post.parameters.3.schema.enum.0
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Posted"
+  schemaPath: paths./redemptions/search_results.post.parameters.3.schema.enum.1
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Forfeited"
+  schemaPath: paths./redemptions/search_results.post.parameters.3.schema.enum.2
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Pending"
+  schemaPath: paths./redemptions/search_results.post.parameters.3.schema.enum.3
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Rejected"
+  schemaPath: paths./redemptions/search_results.post.parameters.3.schema.enum.4
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: CardCharges"
+  schemaPath: paths./redemptions/search_results.post.parameters.5.schema.enum.0
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: GiftCards"
+  schemaPath: paths./redemptions/search_results.post.parameters.5.schema.enum.1
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PointsTransfers"
+  schemaPath: paths./redemptions/search_results.post.parameters.5.schema.enum.2
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PurchaseWithPoints"
+  schemaPath: paths./redemptions/search_results.post.parameters.5.schema.enum.3
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Travel"
+  schemaPath: paths./redemptions/search_results.post.parameters.5.schema.enum.4
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: CardCharges"
+  schemaPath: components.schemas.Redemption.properties.type.enum.0
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: GiftCards"
+  schemaPath: components.schemas.Redemption.properties.type.enum.1
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PointsTransfers"
+  schemaPath: components.schemas.Redemption.properties.type.enum.2
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PurchaseWithPoints"
+  schemaPath: components.schemas.Redemption.properties.type.enum.3
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Travel"
+  schemaPath: components.schemas.Redemption.properties.type.enum.4
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Pending"
+  schemaPath: components.schemas.Redemption.properties.status.enum.0
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Posted"
+  schemaPath: components.schemas.Redemption.properties.status.enum.1
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Rejected"
+  schemaPath: components.schemas.Redemption.properties.status.enum.2
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Points"
+  schemaPath: components.schemas.Amount.properties.currencyType.enum.0
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Cash"
+  schemaPath: components.schemas.Amount.properties.currencyType.enum.1
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Gift"
+  schemaPath: components.schemas.Amount.properties.currencyType.enum.2
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: security_token"
+  schemaPath: paths./redemptions.get.parameters.8.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: correlation_id"
+  schemaPath: paths./redemptions.get.parameters.9.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: client_id"
+  schemaPath: paths./redemptions.get.parameters.10.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: message_id"
+  schemaPath: paths./redemptions.get.parameters.11.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: security_token"
+  schemaPath: paths./redemptions/search_results.post.parameters.8.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: correlation_id"
+  schemaPath: paths./redemptions/search_results.post.parameters.9.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: client_id"
+  schemaPath: paths./redemptions/search_results.post.parameters.10.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: message_id"
+  schemaPath: paths./redemptions/search_results.post.parameters.11.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: security_token"
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.1.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: correlation_id"
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.2.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: client_id"
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.3.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: message_id"
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.4.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: card_account_token"
+  schemaPath: paths./redemptions.get.parameters.0.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: start_date"
+  schemaPath: paths./redemptions.get.parameters.1.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: end_date"
+  schemaPath: paths./redemptions.get.parameters.2.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: posted_only"
+  schemaPath: paths./redemptions.get.parameters.4.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: card_number6"
+  schemaPath: paths./redemptions/search_results.post.parameters.0.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: start_date"
+  schemaPath: paths./redemptions/search_results.post.parameters.1.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: end_date"
+  schemaPath: paths./redemptions/search_results.post.parameters.2.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: posted_only"
+  schemaPath: paths./redemptions/search_results.post.parameters.4.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: casing-paths
+  message: "Paths MUST be kebab-case. ref: /redemptions/search_results"
+  schemaPath: paths./redemptions/search_results
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: general-info-description-max-length
+  message: info.description MUST be less than 250 characters.
+  schemaPath: info.description
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: general-info-title-summary-word-check
+  message: The info.summary & info.title MUST NOT contain the words REST, Public, Service or Developer.
+  schemaPath: info.title
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: createRedemptionSearch_result"
+  schemaPath: paths./redemptions/search_results.post
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getRedemption"
+  schemaPath: paths./redemptions/{redemptionId}.get
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./redemptions.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./redemptions/search_results.post.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./redemptions/search_results.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: operation-summary-ending-period
+  message: Operation summaries MUST not end with a period
+  schemaPath: paths./redemptions/{redemptionId}.get.summary
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions.get.parameters.0
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions.get.parameters.1
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions.get.parameters.2
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions.get.parameters.6
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions.get.parameters.7
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions.get.parameters.8
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions.get.parameters.9
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions.get.parameters.10
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions.get.parameters.11
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions/search_results.post.parameters.0
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions/search_results.post.parameters.1
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions/search_results.post.parameters.2
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions/search_results.post.parameters.6
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions/search_results.post.parameters.7
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions/search_results.post.parameters.8
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions/search_results.post.parameters.9
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions/search_results.post.parameters.10
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions/search_results.post.parameters.11
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.0
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.1
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.2
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.3
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.4
+  severity: INFO
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: security_token"
+  schemaPath: paths./redemptions.get.parameters.8.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: correlation_id"
+  schemaPath: paths./redemptions.get.parameters.9.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: client_id"
+  schemaPath: paths./redemptions.get.parameters.10.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: message_id"
+  schemaPath: paths./redemptions.get.parameters.11.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: security_token"
+  schemaPath: paths./redemptions/search_results.post.parameters.8.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: correlation_id"
+  schemaPath: paths./redemptions/search_results.post.parameters.9.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: client_id"
+  schemaPath: paths./redemptions/search_results.post.parameters.10.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: message_id"
+  schemaPath: paths./redemptions/search_results.post.parameters.11.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: security_token"
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.1.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: correlation_id"
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.2.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: client_id"
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.3.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: message_id"
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.4.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./redemptions/search_results.post.parameters.0
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./redemptions/search_results.post.parameters.1
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./redemptions/search_results.post.parameters.2
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./redemptions/search_results.post.parameters.3
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./redemptions/search_results.post.parameters.4
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./redemptions/search_results.post.parameters.5
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./redemptions/search_results.post.parameters.6
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./redemptions/search_results.post.parameters.7
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: card_account_token"
+  schemaPath: paths./redemptions.get.parameters.0.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: start_date"
+  schemaPath: paths./redemptions.get.parameters.1.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: end_date"
+  schemaPath: paths./redemptions.get.parameters.2.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: posted_only"
+  schemaPath: paths./redemptions.get.parameters.4.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: security_token"
+  schemaPath: paths./redemptions.get.parameters.8.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: correlation_id"
+  schemaPath: paths./redemptions.get.parameters.9.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: client_id"
+  schemaPath: paths./redemptions.get.parameters.10.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: message_id"
+  schemaPath: paths./redemptions.get.parameters.11.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: card_number6"
+  schemaPath: paths./redemptions/search_results.post.parameters.0.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: start_date"
+  schemaPath: paths./redemptions/search_results.post.parameters.1.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: end_date"
+  schemaPath: paths./redemptions/search_results.post.parameters.2.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: posted_only"
+  schemaPath: paths./redemptions/search_results.post.parameters.4.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: security_token"
+  schemaPath: paths./redemptions/search_results.post.parameters.8.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: correlation_id"
+  schemaPath: paths./redemptions/search_results.post.parameters.9.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: client_id"
+  schemaPath: paths./redemptions/search_results.post.parameters.10.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: message_id"
+  schemaPath: paths./redemptions/search_results.post.parameters.11.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: security_token"
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.1.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: correlation_id"
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.2.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: client_id"
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.3.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: message_id"
+  schemaPath: paths./redemptions/{redemptionId}.get.parameters.4.name
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: path-naming
+  message: Paths MUST NOT include {request|response|info|information|details|metadata|data|properties|obj|object|search}
+  schemaPath: paths./redemptions/search_results
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: 0"
+  schemaPath: paths./redemptions/search_results.post.parameters.0
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: 1"
+  schemaPath: paths./redemptions/search_results.post.parameters.1
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: 2"
+  schemaPath: paths./redemptions/search_results.post.parameters.2
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: 3"
+  schemaPath: paths./redemptions/search_results.post.parameters.3
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: 4"
+  schemaPath: paths./redemptions/search_results.post.parameters.4
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: 5"
+  schemaPath: paths./redemptions/search_results.post.parameters.5
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: 6"
+  schemaPath: paths./redemptions/search_results.post.parameters.6
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: 7"
+  schemaPath: paths./redemptions/search_results.post.parameters.7
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./redemptions/search_results.post.requestBody
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /redemptions"
+  schemaPath: paths./redemptions
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /redemptions/search_results"
+  schemaPath: paths./redemptions/search_results
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /redemptions/{redemptionId}"
+  schemaPath: paths./redemptions/{redemptionId}
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: path-response-404-description
+  message: 404 response MUST contain a description
+  schemaPath: paths./redemptions/{redemptionId}.get.responses.404.description
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./redemptions.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./redemptions/search_results.post.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Redemption.properties.descriptions
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Redemption.properties.type
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Redemption.properties.status
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: paths./redemptions.get.parameters.6.schema
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: paths./redemptions.get.parameters.7.schema
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: paths./redemptions/search_results.post.parameters.6.schema
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: paths./redemptions/search_results.post.parameters.7.schema
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Amount.properties.value
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Redemption.properties.cardNumber.pattern
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.AccountId.properties
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Redemption.properties
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Amount.properties
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: cardNumber"
+  schemaPath: components.schemas.Redemption.properties.cardNumber
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: postedDate"
+  schemaPath: components.schemas.Redemption.properties.postedDate
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Redemption.properties.accountKey
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Redemption.properties.amount
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.AccountId.properties.accountId
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Redemption.properties.descriptions
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Redemption.properties.orderId
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Amount.properties.currencyCode
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Amount.properties.currencyDescription
+  severity: ERROR
+  contract: loyalty.redemptions.v1.yaml

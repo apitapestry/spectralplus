@@ -1,0 +1,175 @@
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: components.schemas.Promotion.properties.eligibleProducts.$ref
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: components.schemas.Promotion.properties.platform.$ref
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: general-version-format
+  message: "info.version MUST follow vX or vX.Y formatting. ref: 1.0.0"
+  schemaPath: info.version
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: info-description
+  message: Info "description" must be present and non-empty string.
+  schemaPath: info
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: invalid-ref
+  schemaPath: components.schemas.PromotionEnrollment.properties.personId.$ref
+  message: "ENOENT: no such file or directory, open '../global/global.models.yaml'"
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: invalid-ref
+  schemaPath: components.schemas.Promotion.properties.eligibleProducts.$ref
+  message: "ENOENT: no such file or directory, open 'products.yaml'"
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: oas3-api-servers
+  message: OpenAPI "servers" must be present and non-empty array.
+  schemaPath: ""
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.PromotionEnrollment
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.PromotionEnrollment.properties.accounts
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Promotion.properties.descriptionList
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.PromotionEnrollment.properties.status
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Promotion.properties.status
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.PromotionEnrollment.properties
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Promotion.properties
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: descriptionList"
+  schemaPath: components.schemas.Promotion.properties.descriptionList
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PromotionEnrollment.properties.enrollmentId
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PromotionEnrollment.properties.personId
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PromotionEnrollment.properties.promotionId
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PromotionEnrollment.properties.promotion
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PromotionEnrollment.properties.status
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Promotion.properties.promotionId
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Promotion.properties.promotionType
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Promotion.properties.eligibleProducts
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Promotion.properties.platform
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Promotion.properties.description
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Promotion.properties.termsAndConditions
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Promotion.properties.summary
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Promotion.properties.status
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-string-format
+  message: "Properties defined as type: string MUST use appropriate format values. ref: format"
+  schemaPath: components.schemas.PromotionId.format
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.PromotionEnrollment.properties.accounts
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Promotion.properties.description
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Promotion.properties.descriptionList
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Promotion.properties.termsAndConditions
+  severity: ERROR
+  contract: promotions.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Promotion.properties.summary
+  severity: ERROR
+  contract: promotions.yaml

@@ -1,0 +1,95 @@
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: general-version-format
+  message: "info.version MUST follow vX or vX.Y formatting. ref: 1.0.0"
+  schemaPath: info.version
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: info-description
+  message: Info "description" must be present and non-empty string.
+  schemaPath: info
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: invalid-ref
+  schemaPath: components.schemas.Referral.properties.personId.$ref
+  message: "ENOENT: no such file or directory, open 'global.models.yaml'"
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: oas3-api-servers
+  message: OpenAPI "servers" must be present and non-empty array.
+  schemaPath: ""
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Referral
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Referral.properties.benefits
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: schema-date-name
+  message: "Properties named as 'type: string' and 'format: date'. Name MUST end with 'Date'"
+  schemaPath: components.schemas.ReferralBenefit.properties.fulfilledAt
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.ReferralBenefit.properties.status
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.ReferralBenefit.properties.type
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.ReferralId.pattern
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Referral.properties
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.ReferralBenefit.properties
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: startDate"
+  schemaPath: components.schemas.ReferralBenefit.properties.startDate
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: endDate"
+  schemaPath: components.schemas.ReferralBenefit.properties.endDate
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Referral.properties.referralId
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Referral.properties.personId
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ReferralBenefit.properties.status
+  severity: ERROR
+  contract: marketing.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ReferralBenefit.properties.referredBy
+  severity: ERROR
+  contract: marketing.models.yaml

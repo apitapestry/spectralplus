@@ -1,0 +1,150 @@
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: general-version-format
+  message: "info.version MUST follow vX or vX.Y formatting. ref: 1.0.0"
+  schemaPath: info.version
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: info-description
+  message: Info "description" must be present and non-empty string.
+  schemaPath: info
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: oas3-api-servers
+  message: OpenAPI "servers" must be present and non-empty array.
+  schemaPath: ""
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.AccountEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.ExternalAccountEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.PersonAddressEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.PersonEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CardsEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.TransactionEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CoreBankingEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.StatementEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.OutboundCheckEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.ConsentEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.PreferenceEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.PlatformCommsEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.TransferEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.AccountEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.ExternalAccountEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.PersonAddressEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.PersonEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.CardsEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.TransactionEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.CoreBankingEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.StatementEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.OutboundCheckEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.ConsentEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.PreferenceEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.PlatformCommsEventType
+  severity: ERROR
+  contract: event-types.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.TransferEventType
+  severity: ERROR
+  contract: event-types.models.yaml

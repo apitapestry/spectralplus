@@ -1,0 +1,900 @@
+- ruleId: general-info-description-max-length
+  message: info.description MUST be less than 250 characters.
+  schemaPath: info.description
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-info-title-summary-word-check
+  message: The info.summary & info.title MUST NOT contain the words REST, Public, Service or Developer.
+  schemaPath: info.title
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons.post.requestBody.content.application/json.schema.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/search.post.responses.200.content.application/json.schema.items.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}.get.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}.get.responses.200.content.application/json.schema.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}.patch.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}.patch.requestBody.content.application/json.schema.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/addresses.post.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/addresses.post.requestBody.content.application/json.schema.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/addresses.get.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/addresses.get.responses.200.content.application/json.schema.items.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.get.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.get.parameters.1.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.get.responses.200.content.application/json.schema.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.put.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.put.parameters.1.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.put.requestBody.content.application/json.schema.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.delete.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.delete.parameters.1.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/phone-numbers.post.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/phone-numbers.post.requestBody.content.application/json.schema.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/phone-numbers.get.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/phone-numbers.get.responses.200.content.application/json.schema.items.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.get.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.get.responses.200.content.application/json.schema.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.delete.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/email-addresses.post.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/email-addresses.post.requestBody.content.application/json.schema.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/email-addresses.get.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/email-addresses.get.responses.200.content.application/json.schema.items.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.get.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.get.responses.200.content.application/json.schema.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.delete.parameters.0.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: paths./persons/accounts/{accountId}.get.responses.200.content.application/json.schema.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: components.schemas.PersonSearch.properties.alternateId.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: components.schemas.PersonSearch.properties.nationalId.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: components.schemas.PersonSearch.properties.email.$ref
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-servers-url
+  message: servers.url MUST exist and MUST begin with https://
+  schemaPath: servers.0.url
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: invalid-ref
+  schemaPath: components.schemas.Person.allOf.0.properties.accountLinks.items.allOf.1.properties.productFamily.$ref
+  message: "ENOENT: no such file or directory, open '../models/products.models.yaml'"
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"AGENT" must be listed among scopes.'
+  schemaPath: paths./persons/search.post.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ" must be listed among scopes.'
+  schemaPath: paths./persons/search.post.security.0.Bearer.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"AGENT" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}.get.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CUSTOMER" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}.get.security.0.Bearer.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}.get.security.0.Bearer.2
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"AGENT" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}.patch.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CUSTOMER" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}.patch.security.0.Bearer.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ_WRITE" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}.patch.security.0.Bearer.2
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/addresses.post.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"AGENT" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/addresses.get.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/addresses.get.security.0.Bearer.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"AGENT" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.get.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.get.security.0.Bearer.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"AGENT" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.delete.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ_WRITE" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.delete.security.0.Bearer.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/phone-numbers.post.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"AGENT" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/phone-numbers.get.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/phone-numbers.get.security.0.Bearer.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"AGENT" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.get.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.get.security.0.Bearer.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"AGENT" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.delete.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.delete.security.0.Bearer.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/email-addresses.post.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"AGENT" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/email-addresses.get.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/email-addresses.get.security.0.Bearer.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"AGENT" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.get.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.get.security.0.Bearer.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"AGENT" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.delete.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ" must be listed among scopes.'
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.delete.security.0.Bearer.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"AGENT" must be listed among scopes.'
+  schemaPath: paths./persons/accounts/{accountId}.get.security.0.Bearer.0
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: oas3-operation-security-defined
+  message: '"CFT_SYSTEM_READ_WRITE" must be listed among scopes.'
+  schemaPath: paths./persons/accounts/{accountId}.get.security.0.Bearer.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: createPersonSearch"
+  schemaPath: paths./persons/search.post
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: createPersonAddress"
+  schemaPath: paths./persons/{personId}/addresses.post
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getPersonAddresses"
+  schemaPath: paths./persons/{personId}/addresses.get
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getPersonAddress"
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.get
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: replacePersonAddress,upsertPersonAddress"
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.put
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: deletePersonAddress"
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.delete
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: createPersonPhoneNumber"
+  schemaPath: paths./persons/{personId}/phone-numbers.post
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getPersonPhoneNumbers"
+  schemaPath: paths./persons/{personId}/phone-numbers.get
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getPersonPhoneNumber"
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.get
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: deletePersonPhoneNumber"
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.delete
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: createPersonEmailAddress"
+  schemaPath: paths./persons/{personId}/email-addresses.post
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getPersonEmailAddresses"
+  schemaPath: paths./persons/{personId}/email-addresses.get
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getPersonEmailAddress"
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.get
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: deletePersonEmailAddress"
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.delete
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getPersonAccount"
+  schemaPath: paths./persons/accounts/{accountId}.get
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./persons/search.post.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./persons/{personId}/addresses.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./persons/{personId}/phone-numbers.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./persons/{personId}/email-addresses.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./persons.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./persons/search.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./persons/{personId}.patch.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./persons/{personId}/addresses.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.put.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./persons/{personId}/phone-numbers.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./persons/{personId}/email-addresses.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-summary-ending-period
+  message: Operation summaries MUST not end with a period
+  schemaPath: paths./persons/{personId}.patch.summary
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: operation-summary-ending-period
+  message: Operation summaries MUST not end with a period
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.put.summary
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}.get.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}.patch.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/addresses.post.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/addresses.get.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.get.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.get.parameters.1
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.put.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.put.parameters.1
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.delete.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.delete.parameters.1
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/phone-numbers.post.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/phone-numbers.get.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.get.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.delete.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/email-addresses.post.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/email-addresses.get.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.get.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.delete.parameters.0
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.PhoneNumberId
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.EmailAddressId
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.AccountId
+  severity: INFO
+  contract: customers.v2.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.get.parameters.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.put.parameters.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.delete.parameters.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.get.parameters.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.delete.parameters.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.get.parameters.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.delete.parameters.1
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-naming
+  message: Paths MUST NOT include {request|response|info|information|details|metadata|data|properties|obj|object|search}
+  schemaPath: paths./persons/search
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./persons.post.requestBody
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./persons/search.post.requestBody
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./persons/{personId}.patch.requestBody
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./persons/{personId}/addresses.post.requestBody
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.put.requestBody
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./persons/{personId}/phone-numbers.post.requestBody
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./persons/{personId}/email-addresses.post.requestBody
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /persons"
+  schemaPath: paths./persons
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /persons/search"
+  schemaPath: paths./persons/search
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /persons/{personId}"
+  schemaPath: paths./persons/{personId}
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /persons/{personId}/addresses"
+  schemaPath: paths./persons/{personId}/addresses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /persons/{personId}/addresses/{addressId}"
+  schemaPath: paths./persons/{personId}/addresses/{addressId}
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /persons/{personId}/phone-numbers"
+  schemaPath: paths./persons/{personId}/phone-numbers
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /persons/{personId}/phone-numbers/{phoneNumberId}"
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /persons/{personId}/email-addresses"
+  schemaPath: paths./persons/{personId}/email-addresses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /persons/{personId}/email-addresses/{emailAddressId}"
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /persons/accounts/{accountId}"
+  schemaPath: paths./persons/accounts/{accountId}
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}.get.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}.patch.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}/addresses.post.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}/addresses.get.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.get.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.put.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.delete.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}/phone-numbers.post.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}/phone-numbers.get.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.get.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}/phone-numbers/{phoneNumberId}.delete.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}/email-addresses.post.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}/email-addresses.get.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.get.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/{personId}/email-addresses/{emailAddressId}.delete.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./persons/accounts/{accountId}.get.responses
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./persons.post
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./persons/{personId}/addresses/{addressId}.put
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./persons/accounts/{accountId}.get.responses.304
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./persons/search.post.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./persons/{personId}/addresses.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./persons/{personId}/phone-numbers.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./persons/{personId}/email-addresses.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.PersonSearch.properties.nameFirst.pattern
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.PersonSearch.properties.nameLast.pattern
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.PersonSearch.properties.phoneNumber.pattern
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.PersonSearch.properties
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: phoneNumber"
+  schemaPath: components.schemas.PersonSearch.properties.phoneNumber
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: email"
+  schemaPath: components.schemas.PersonSearch.properties.email
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PersonSearch.properties.nameFirst
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PersonSearch.properties.nameLast
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PersonSearch.properties.alternateId
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PersonSearch.properties.nationalId
+  severity: ERROR
+  contract: customers.v2.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PersonSearch.properties.email
+  severity: ERROR
+  contract: customers.v2.yaml

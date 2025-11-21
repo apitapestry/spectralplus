@@ -1,0 +1,230 @@
+functions:
+  - general-extensions-invalid
+  - general-ref-circular
+
+rules:
+  general-boolean-example:
+    description: Not defined
+    message: Boolean properties MUST NOT provide examples
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.type === 'boolean')]
+    then:
+      field: example
+      function: undefined
+
+  general-deprecated-date:
+    description: Not defined
+    message: x-deprecated value MUST be a valid ISO date
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..x-deprecated^
+    then:
+      field: x-deprecated
+      function: pattern
+      functionOptions:
+        match: '^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$'
+
+  general-deprecated-level:
+    description: Not defined
+    message: x-deprecated value MUST be set at path level
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $.paths..requestBody..x-deprecated~
+      - $.paths..responses..x-deprecated~
+      - $.components..x-deprecated~
+    then:
+      function: falsy
+
+  general-enum-example:
+    description: Not defined
+    message: 'Enum properties MUST NOT provide examples'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @property === 'enum')]^
+    then:
+      field: example
+      function: undefined
+
+  general-extensions-invalid:
+    description: Not defined
+    message: Only whitelisted extensions can be used. To add new exetension, review with API Governance
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..*~
+    then:
+      function: general-extensions-invalid
+      functionOptions:
+        values:
+          - x-abstract
+          - x-api-tools-config
+          - x-avro-nullable
+          - x-deprecated
+          - x-error-codes
+          - x-ignore
+          - x-internal-only
+          - x-loggable
+          - x-protected
+          - x-return-unknown
+          - x-service-name
+          - x-singnature
+
+  general-info-description-max-length:
+    description: Not defined
+    message: info.description MUST be less than 2500 characters.
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.info
+    then:
+      field: description
+      function: length
+      functionOptions:
+        max: 2500
+
+  general-info-title-max-length:
+    description: Not defined
+    message: The info.title MUST be less than 50 characters.
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.info
+    then:
+      field: title
+      function: length
+      functionOptions:
+        max: 50
+
+  general-info-title-summary-word-check:
+    description: Not defined
+    message: The info.summary & info.title MUST NOT contain the words REST, Public, Service or Developer.
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.info
+    then:
+      - field: title
+        function: pattern
+        functionOptions:
+          notMatch: '\b(REST|Public|Developer|Service)\b'
+      - field: description
+        function: pattern
+        functionOptions:
+          notMatch: '\b(REST|Public|Developer|Service)\b'
+
+#  general-info-version-file:
+#    description: Not defined
+#    message: 'File name and info version MUST be the same. ref: {{value}}'
+#    documentationUrl: 'https://my.documentation.com/something#123'
+#    severity: error
+#    resolved: false
+#    given: $.info.version
+#    then:
+#      function: info-version-file
+
+  general-ref-circular:
+    description: Not defined
+    message: Ref definitions MUST NOT use same file name as source contract
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.$ref && @.$ref.match(/.*yaml.*/i))].$ref
+    then:
+      function: general-ref-circular
+
+  general-ref-limit:
+    description: Not defined
+    message: 'Use of ../.. MUST NOT be used. ref: {{value}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..$ref
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: '^.*\.\.\/\.\..*$'
+
+  general-ref-models:
+    description: Not defined
+    message: 'External models can ONLY be referenced from model or shared files'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..$ref
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: '/^.(?!.*model|.*shared).+\.yaml.*$/'
+
+  general-no-http-basic:
+    description: Not defined
+    message: 'HTTP Basic MUST NOT be used as a security Scheme'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.components.securitySchemes[*]
+    then:
+      field: scheme
+      function: pattern
+      functionOptions:
+        notMatch: 'basic'
+
+  general-request-response-example:
+    description: Not defined
+    message: 'Use of ''example'' for multiple examples in requestBody or response is NOT allowed, use ''examples'' instead'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $..paths..requestBody..example^
+      - $..paths..responses..example^
+    then:
+      field: example
+      function: undefined
+
+  general-servers-url:
+    description: Not defined
+    message: 'servers.url MUST exist and MUST begin with https://'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.servers.*.url
+    then:
+      - function: truthy
+      - function: pattern
+        functionOptions:
+          match: '/^https:\/\//i'
+
+  general-version:
+    description: Not defined
+    message: openapi.version MUST be 3.0.3
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $
+    then:
+      field: openapi
+      function: pattern
+      functionOptions:
+        match: 3.0.3
+
+  general-version-format:
+    description: Not defined
+    message: 'info.version MUST follow vX or vX.Y formatting. ref: {{value}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.info
+    then:
+      field: version
+      function: schema
+      functionOptions:
+        schema:
+          type: string
+          pattern: '(^v[0-9]{1,2}.[0-9]{1}$)|(^v[0-9]{1,2}$)'

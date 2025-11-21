@@ -1,0 +1,405 @@
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: components.schemas.Card.properties.productFamily.$ref
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: general-version-format
+  message: "info.version MUST follow vX or vX.Y formatting. ref: 1.0.0"
+  schemaPath: info.version
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: info-description
+  message: Info "description" must be present and non-empty string.
+  schemaPath: info
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: invalid-ref
+  schemaPath: components.schemas.Card.properties.personId.$ref
+  message: "ENOENT: no such file or directory, open 'global.models.yaml'"
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: invalid-ref
+  schemaPath: components.schemas.Card.properties.productFamily.$ref
+  message: "ENOENT: no such file or directory, open 'products.yaml'"
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: oas3-api-servers
+  message: OpenAPI "servers" must be present and non-empty array.
+  schemaPath: ""
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.CardId
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CardType
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.FulfillmentHistory
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CardActionValidate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CardActionPinSet
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CardActionActivate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CardActionTerminate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CardActionHold
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CardActionReplacement
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CardActionFreeze
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CardActionUnfreeze
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Card
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CardDetails
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.CardId
+  severity: INFO
+  contract: cards.models.yaml
+- ruleId: poly-discriminator-enum
+  message: discriminator property definition MUST be of type enum
+  schemaPath: components.schemas.CardAction
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.CardActionValidate.allOf.1
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.CardActionPinSet.allOf.1
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.CardActionReplacement.allOf.1
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-datetime-name
+  message: "Properties named as 'type: string' and 'format: date-time'. Name MUST end with 'DateTime'"
+  schemaPath: components.schemas.Card.properties.lastPinResetDate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-datetime-name
+  message: "Properties named as 'type: string' and 'format: date-time'. Name MUST end with 'DateTime'"
+  schemaPath: components.schemas.Card.properties.lastActivatedDate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-datetime-name
+  message: "Properties named as 'type: string' and 'format: date-time'. Name MUST end with 'DateTime'"
+  schemaPath: components.schemas.Card.properties.terminatedDate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-datetime-name
+  message: "Properties named as 'type: string' and 'format: date-time'. Name MUST end with 'DateTime'"
+  schemaPath: components.schemas.Card.properties.lastCardStatusChangeDate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.CardAction
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.CardActionValidate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.CardActionPinSet
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.CardActionActivate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.CardActionTerminate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.CardActionHold
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.CardActionReplacement
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.CardActionFreeze
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.CardActionUnfreeze
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Card
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: CardActionValidate"
+  schemaPath: components.schemas.CardActionValidate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: CardActionPinSet"
+  schemaPath: components.schemas.CardActionPinSet
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: CardDetails"
+  schemaPath: components.schemas.CardDetails
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.FulfillmentHistory.properties.status
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.CardAction.properties.type
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Card.properties.type
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Card.properties.status
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.CardActionValidate.allOf.1.properties.activationCode.pattern
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.CardActionPinSet.allOf.1.properties.pin.pattern
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Card.properties.cardNumberLastFour.pattern
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Card.properties.expirationYYMM.pattern
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.CardDetails.properties.cardVerificationValue.pattern
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.CardDetails.properties.expirationDate.pattern
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.FulfillmentHistory.properties
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.CardAction.properties
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.CardActionValidate.allOf.1.properties
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.CardActionPinSet.allOf.1.properties
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.CardActionReplacement.allOf.1.properties
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Card.properties
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.CardDetails.properties
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: statusDateTime"
+  schemaPath: components.schemas.FulfillmentHistory.properties.statusDateTime
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: cardNumberLastFour"
+  schemaPath: components.schemas.Card.properties.cardNumberLastFour
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: lastPinResetDate"
+  schemaPath: components.schemas.Card.properties.lastPinResetDate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: lastActivatedDate"
+  schemaPath: components.schemas.Card.properties.lastActivatedDate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: terminatedDate"
+  schemaPath: components.schemas.Card.properties.terminatedDate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: lastCardStatusChangeDate"
+  schemaPath: components.schemas.Card.properties.lastCardStatusChangeDate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: statusUpdateChannel"
+  schemaPath: components.schemas.Card.properties.statusUpdateChannel
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: requestedChannel"
+  schemaPath: components.schemas.Card.properties.requestedChannel
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: expirationDate"
+  schemaPath: components.schemas.CardDetails.properties.expirationDate
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: cardNumber"
+  schemaPath: components.schemas.CardDetails.properties.cardNumber
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.FulfillmentHistory.properties.statusDateTime
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.FulfillmentHistory.properties.status
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.CardAction.properties.channel
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.CardAction.properties.type
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Card.properties.personId
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Card.properties.productFamily
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Card.properties.status
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Card.properties.fulfillmentStatus
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Card.properties.issueType
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Card.properties.reasonCode
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Card.properties.statusUpdateChannel
+  severity: ERROR
+  contract: cards.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Card.properties.requestedChannel
+  severity: ERROR
+  contract: cards.models.yaml

@@ -1,0 +1,163 @@
+functions:
+  - operation-id-naming
+  - operation-response-media-type-application-json
+  - operation-security-defined
+
+rules:
+  operation-array:
+    description: Not defined
+    message: If path does NOT use the primary key in the path, the response MUST be an array.
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $.paths[?(@property.match('.*query$'))].post.responses[?(@property.match('2.*'))].content.application/json.schema
+      - $.paths[?(!@property.match('.*}$'))].get.responses[?(@property.match('2.*'))].content.application/json.schema
+    then:
+      - field: type
+        function: truthy
+      - field: type
+        function: pattern
+        functionOptions:
+          match: '/array/'
+
+  operation-id-naming:
+    description: Not defined
+    message: 'Operations MUST follow naming strategy. Expecting: {{error}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths.*[get,put,post,patch,delete,options,head]
+    then:
+      function: operation-id-naming
+
+  operation-not-array:
+    description: Not defined
+    message: 'If path uses the primary key in the path, the response MUST NOT be an array.'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $.paths.*[put,patch,delete].responses[?(@property.match('2.*'))].content.*.*.type
+      - $.paths[?(!@property.match('.*query$'))].post.responses[?(@property.match('2.*'))].content.*.*.type
+      - $.paths[?(!@property.match('.*}$'))].get.responses[?(@property.match('2.*'))].content.*.*.type
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: '/array/'
+
+  operation-request-body-required:
+    description: Not defined
+    message: POST, PATCH, PUT methods MUST have request bodies.
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths.*.[post,patch,put]
+    then:
+      field: requestBody
+      function: defined
+
+  operation-request-response-examples:
+    description: Not defined
+    message: 'requestBody''s & responses MUST have examples defined.'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $.paths.*.*.requestBody.content.application/json.*
+      - $.paths.*.*.responses.*.content.content.application/json.*
+    then:
+      field: examples
+      function: defined
+
+  operation-request-response-examples-ref:
+    description: Not defined
+    message: requestBody & response examples MUST be referenced from components.examples.
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $.paths.*.*.requestBody.content.*.examples.*
+      - $.paths.*.*.responses.*.content.*.examples.*
+    then:
+      - field: $ref
+        function: defined
+      - field: $ref
+        function: pattern
+        functionOptions:
+          match: '#/components\/examples/'
+
+  operation-response-content:
+    description: Not defined
+    message: 'Every operation MUST include a content section for each response specification'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..paths..responses[?(@property.match(/2\d[0-35-9]/))]
+    then:
+      field: content
+      function: defined
+
+  operation-response-media-type:
+    description: Not defined
+    message: 'Use of custom content type not allowed'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths.*.*.responses.*.content.*~
+    then:
+      field: '@key'
+      function: enumeration
+      functionOptions:
+        values:
+          - application/json
+          - multipart/form-data
+          - text/csv
+          - text/html
+
+  operation-response-media-type-application-json:
+    description: Not defined
+    message: 'All operation responses MUST have an application/json content type.'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths.*.*.responses.*.content
+    then:
+      function: operation-response-media-type-application-json
+
+  operation-security-defined:
+    description: Not defined
+    message: 'All security schema definitions at the operation level MUST be defined in the securitySchemes object.'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..paths..security.*.*~
+    then:
+      function: operation-security-defined
+
+  operation-summary:
+    description: Not defined
+    message: 'Operation ''summary'' MUST be a present, non-empty string and length <= 50.'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths.*[get,post,patch,put,delete]
+    then:
+      - field: summary
+        function: defined
+      - field: summary
+        function: length
+        functionOptions:
+          max: 50
+
+  operation-summary-ending-period:
+    description: Not defined
+    message: 'Operation summaries MUST not end with a period'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths..summary
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: \.$

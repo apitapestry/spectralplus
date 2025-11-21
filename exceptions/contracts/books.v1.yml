@@ -1,0 +1,230 @@
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./books.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./books.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./books/{bookId}.patch.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./books.post.requestBody
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./books/{bookId}.patch.requestBody
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /books"
+  schemaPath: paths./books
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /books/{bookId}"
+  schemaPath: paths./books/{bookId}
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./books/{bookId}.get.responses
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./books/{bookId}.patch.responses
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./books/{bookId}.delete.responses
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./books.post
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./books.get
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./books/{bookId}.get
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./books/{bookId}.patch
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./books/{bookId}.delete
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: poly-base-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: Book"
+  schemaPath: components.schemas.Book.oneOf
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: poly-explicit-discriminator
+  message: "Each polymorphic child MUST have a unique list of required properties. ref: components.schemas.Book.oneOf"
+  schemaPath: components.schemas.Book.oneOf
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: poly-oneof-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: Book"
+  schemaPath: components.schemas.Book.oneOf
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: poly-property-name-inline
+  message: PropertyName enum in a base object MUST be defined as  a $ref
+  schemaPath: ""
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./books.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Book
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Name
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: BookUpdate"
+  schemaPath: components.schemas.BookUpdate
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Name.properties.prefix.pattern
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Name.properties.suffix.pattern
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Name.properties.firstName.pattern
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Name.properties.middleName.pattern
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Name.properties.lastName.pattern
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Name.properties.maidenName.pattern
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.BookUpdate.properties
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.BookBase.properties
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Name.properties
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.BookPhysical.properties
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.BookElectronic.properties
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: createdDate"
+  schemaPath: components.schemas.BookBase.properties.createdDate
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.BookUpdate.properties.customerName
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.BookUpdate.properties.baseColor
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.BookUpdate.properties.trimColor
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.BookBase.properties.bookId
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.BookBase.properties.customerName
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.BookBase.properties.bookType
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.BookPhysical.properties.backingType
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.BookElectronic.properties.isRental
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.BookUpdate.properties.customerName
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.BookUpdate.properties.baseColor
+  severity: ERROR
+  contract: books.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.BookUpdate.properties.trimColor
+  severity: ERROR
+  contract: books.v1.yaml

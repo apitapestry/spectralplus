@@ -1,0 +1,245 @@
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: male"
+  schemaPath: components.schemas.Person.properties.gender.enum.0
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: female"
+  schemaPath: components.schemas.Person.properties.gender.enum.1
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./people.get.tags.0
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./people/{id}.get.tags.0
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: general-info-title-summary-word-check
+  message: The info.summary & info.title MUST NOT contain the words REST, Public, Service or Developer.
+  schemaPath: info.title
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: oas3-operation-security-defined
+  message: Operation "security" values must match a scheme defined in the "components.securitySchemes" object.
+  schemaPath: paths./people.get.security.0.oauth
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: oas3-operation-security-defined
+  message: Operation "security" values must match a scheme defined in the "components.securitySchemes" object.
+  schemaPath: paths./people/{id}.get.security.0.oauth
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: oas3-parameter-description
+  message: Parameter objects must have "description".
+  schemaPath: paths./people/{id}.get.parameters.0
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./people.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./people/{id}.get.parameters.0
+  severity: INFO
+  contract: star-wars.v1.yaml
+- ruleId: parameter-resource-id
+  message: Id's in resource must be defined as resourceId not just 'id'.
+  schemaPath: paths./people/{id}
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /people"
+  schemaPath: paths./people
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /people/{id}"
+  schemaPath: paths./people/{id}
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./people/{id}.get.responses
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./people.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Person.properties.films
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Person.properties.species
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Person.properties.vehicles
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Person.properties.starships
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Person.properties.height
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Person.properties.mass
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Person.properties
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: url"
+  schemaPath: components.schemas.Person.properties.url
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Person.properties.name
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Person.properties.height
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Person.properties.mass
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Person.properties.hair_color
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Person.properties.skin_color
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Person.properties.eye_color
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Person.properties.birth_year
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Person.properties.gender
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Person.properties.homeworld
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Person.properties.created
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Person.properties.edited
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Person.properties.url
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Person.properties.name
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Person.properties.hair_color
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Person.properties.skin_color
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Person.properties.eye_color
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Person.properties.birth_year
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Person.properties.homeworld
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Person.properties.films
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Person.properties.species
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Person.properties.vehicles
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Person.properties.starships
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Person.properties.created
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Person.properties.edited
+  severity: ERROR
+  contract: star-wars.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Person.properties.url
+  severity: ERROR
+  contract: star-wars.v1.yaml

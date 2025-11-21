@@ -1,0 +1,1575 @@
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: CardCharges"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.4.schema.enum.0
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: GiftCards"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.4.schema.enum.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PointsTransfers"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.4.schema.enum.2
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PayWithPoints"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.4.schema.enum.3
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Travel"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.4.schema.enum.4
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: posted_month"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.2.schema.enum.0
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: card_number"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.2.schema.enum.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: type"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.2.schema.enum.2
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: industry_category"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.2.schema.enum.3
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Reinstated"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.5.schema.enum.0
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Posted"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.5.schema.enum.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Qualified"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.5.schema.enum.2
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Forfeited"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.5.schema.enum.3
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Pending"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.5.schema.enum.4
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Rejected"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.5.schema.enum.5
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Reward"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.7.schema.enum.0
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Redemption"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.7.schema.enum.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Fees"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.8.schema.enum.0
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Adjustment"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.8.schema.enum.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Gift"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.8.schema.enum.2
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Accelerated"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.8.schema.enum.3
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Base"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.8.schema.enum.4
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Bonus"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.8.schema.enum.5
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: ReferAFriend"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.8.schema.enum.6
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: CardCharges"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.8.schema.enum.7
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: GiftCards"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.8.schema.enum.8
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PointsTransfers"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.8.schema.enum.9
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PayWithPoints"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.8.schema.enum.10
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Travel"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.8.schema.enum.11
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Adjustment"
+  schemaPath: components.schemas.Transaction.properties.type.enum.0
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Gift"
+  schemaPath: components.schemas.Transaction.properties.type.enum.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Accelerated"
+  schemaPath: components.schemas.Transaction.properties.type.enum.2
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Base"
+  schemaPath: components.schemas.Transaction.properties.type.enum.3
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Bonus"
+  schemaPath: components.schemas.Transaction.properties.type.enum.4
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: ReferAFriend"
+  schemaPath: components.schemas.Transaction.properties.type.enum.5
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: StatementCredit"
+  schemaPath: components.schemas.Transaction.properties.type.enum.6
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: CardCharges"
+  schemaPath: components.schemas.Transaction.properties.type.enum.7
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: GiftCards"
+  schemaPath: components.schemas.Transaction.properties.type.enum.8
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PointsTransfers"
+  schemaPath: components.schemas.Transaction.properties.type.enum.9
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PayWithPoints"
+  schemaPath: components.schemas.Transaction.properties.type.enum.10
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Travel"
+  schemaPath: components.schemas.Transaction.properties.type.enum.11
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Pending"
+  schemaPath: components.schemas.Transaction.properties.status.enum.0
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Posted"
+  schemaPath: components.schemas.Transaction.properties.status.enum.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Rejected"
+  schemaPath: components.schemas.Transaction.properties.status.enum.2
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Forfeited"
+  schemaPath: components.schemas.Transaction.properties.status.enum.3
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Expired"
+  schemaPath: components.schemas.Transaction.properties.status.enum.4
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: AR_Trans_ID"
+  schemaPath: components.schemas.CardCharges_Order_Item.properties.charge_id_type.enum.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: ROC_Reference_Number"
+  schemaPath: components.schemas.CardCharges_Order_Item.properties.charge_id_type.enum.2
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: AuthID"
+  schemaPath: components.schemas.CardCharges_Order_Item.properties.charge_id_type.enum.3
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PendingAmex"
+  schemaPath: components.schemas.PointsTransfer_Fullfilment_Status.properties.status.enum.0
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: RejectedBYAmex"
+  schemaPath: components.schemas.PointsTransfer_Fullfilment_Status.properties.status.enum.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PendingParnter"
+  schemaPath: components.schemas.PointsTransfer_Fullfilment_Status.properties.status.enum.2
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: AcceptedByPartner"
+  schemaPath: components.schemas.PointsTransfer_Fullfilment_Status.properties.status.enum.3
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: RejectedByPartner"
+  schemaPath: components.schemas.PointsTransfer_Fullfilment_Status.properties.status.enum.4
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: needed"
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.option_code.enum.0
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: expedited"
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.delivery_option_code.enum.0
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: SpendEvent"
+  schemaPath: components.schemas.Qualification.properties.category.enum.0
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: NonSpendEvent"
+  schemaPath: components.schemas.Qualification.properties.category.enum.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: CSREvent"
+  schemaPath: components.schemas.Qualification.properties.category.enum.2
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: security_token"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.7.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: correlation_id"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.8.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: client_id"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.9.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: message_id"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.10.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: security_token"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.2.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: correlation_id"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.3.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: client_id"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.4.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: message_id"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.5.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: security_token"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.12.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: correlation_id"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.13.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: client_id"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.14.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-path
+  message: "Path Parameter MUST be camelCase. ref: trans_id"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.1.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: card_account_number"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.1.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: start_date"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.2.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: end_date"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.3.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: card_number"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.1.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: sum_by_field"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.2.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: start_date"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.3.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: end_date"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.4.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: posted_only"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.6.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: industry_category"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.9.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: CardCharges_Order_Item"
+  schemaPath: components.schemas.CardCharges_Order_Item
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: PointsTransfer_Fullfilment_Status"
+  schemaPath: components.schemas.PointsTransfer_Fullfilment_Status
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: GiftCards_Order_Item"
+  schemaPath: components.schemas.GiftCards_Order_Item
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: Api_Error"
+  schemaPath: components.schemas.Api_Error
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: general-enum-example
+  message: Enum properties MUST NOT provide examples
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.option_code.example
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: general-enum-example
+  message: Enum properties MUST NOT provide examples
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.delivery_option_code.example
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-parameter-description
+  message: Parameter objects must have "description".
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.0
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-parameter-description
+  message: Parameter objects must have "description".
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-parameter-description
+  message: Parameter objects must have "description".
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.0
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-parameter-description
+  message: Parameter objects must have "description".
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Transactions
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.CardCharges
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.GiftCards
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.PointsTransfers
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.PayWithPoints
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Travel
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Base
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Accelerated
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Bonus
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.StatementCredit
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Adjustment
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Gift
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-valid-schema-example
+  message: '"example" property type must be string'
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.option_code.example
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-valid-schema-example
+  message: '"example" property type must be string'
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.delivery_option_code.example
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-valid-schema-example
+  message: '"example" property type must be string'
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.brand_id.example
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: oas3-valid-schema-example
+  message: '"example" property type must be string'
+  schemaPath: components.schemas.Amount.properties.currency_description.example
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: operation-array
+  message: If path does NOT use the primary key in the path, the response MUST be an array.
+  schemaPath: paths./accounts/{id}/transactions.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: operation-array
+  message: If path does NOT use the primary key in the path, the response MUST be an array.
+  schemaPath: paths./accounts/{id}/transactions.get.responses.422.content.application/json.schema
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: operation-array
+  message: If path does NOT use the primary key in the path, the response MUST be an array.
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.responses.422.content.application/json.schema
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: operation-array
+  message: If path does NOT use the primary key in the path, the response MUST be an array.
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getAccountTransactions"
+  schemaPath: paths./accounts/{id}/transactions.get
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getAccountTransactionQualifications"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getAccountTransactionSummaries"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: operation-summary-ending-period
+  message: Operation summaries MUST not end with a period
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.summary
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.0
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.1
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.2
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.3
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.5
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.6
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.7
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.8
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.9
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.10
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.0
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.1
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.2
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.3
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.4
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.5
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.0
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.1
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.3
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.4
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.9
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.10
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.11
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.12
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.13
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.14
+  severity: INFO
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: security_token"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.7.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: correlation_id"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.8.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: client_id"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.9.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: message_id"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.10.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: security_token"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.2.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: correlation_id"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.3.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: client_id"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.4.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: message_id"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.5.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: security_token"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.12.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: correlation_id"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.13.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: client_id"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.14.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-no-default
+  message: "Required parameters MUST NOT specify a default value. ref: default"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.11.schema.default
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: card_account_number"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.1.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: start_date"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.2.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: end_date"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.3.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: security_token"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.7.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: correlation_id"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.8.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: client_id"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.9.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: message_id"
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.10.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: trans_id"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.1.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: security_token"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.2.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: correlation_id"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.3.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: client_id"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.4.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: message_id"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.parameters.5.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: card_number"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.1.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: sum_by_field"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.2.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: start_date"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.3.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: end_date"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.4.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: posted_only"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.6.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: industry_category"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.9.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: security_token"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.12.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: correlation_id"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.13.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: client_id"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.14.name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-resource-id
+  message: Id's in resource must be defined as resourceId not just 'id'.
+  schemaPath: paths./accounts/{id}/transactions
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-resource-id
+  message: Id's in resource must be defined as resourceId not just 'id'.
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: parameter-resource-id
+  message: Id's in resource must be defined as resourceId not just 'id'.
+  schemaPath: paths./accounts/{id}/transactions/summaries
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /accounts/{id}/transactions"
+  schemaPath: paths./accounts/{id}/transactions
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /accounts/{id}/transactions/{trans_id}/qualifications"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /accounts/{id}/transactions/summaries"
+  schemaPath: paths./accounts/{id}/transactions/summaries
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: path-response-404-description
+  message: 404 response MUST contain a description
+  schemaPath: paths./accounts/{id}/transactions.get.responses.404.description
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: path-response-404-description
+  message: 404 response MUST contain a description
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.responses.404.description
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: path-response-404-description
+  message: 404 response MUST contain a description
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.responses.404.description
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./accounts/{id}/transactions.get.responses.401
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./accounts/{id}/transactions.get.responses.403
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./accounts/{id}/transactions.get.responses.503
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./accounts/{id}/transactions.get.responses.504
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.responses.401
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.responses.403
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.responses.503
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.responses.504
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.CardCharges.allOf.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.GiftCards.allOf.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.PointsTransfers.allOf.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.PayWithPoints.allOf.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.Travel.allOf.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.Base.allOf.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.Accelerated.allOf.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.Bonus.allOf.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.StatementCredit.allOf.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.Adjustment.allOf.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.Gift.allOf.1
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./accounts/{id}/transactions/{trans_id}/qualifications.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.responses.400.content.application/json.schema
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Transactions.properties.transactions
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Transaction.properties.descriptions
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.CardCharges.allOf.1.properties.order_items
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.GiftCards.allOf.1.properties.order_items
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Summaries.properties.summaries
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-date-name
+  message: "Properties named as 'type: string' and 'format: date'. Name MUST end with 'Date'"
+  schemaPath: components.schemas.Transaction.properties.posted_date
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-date-name
+  message: "Properties named as 'type: string' and 'format: date'. Name MUST end with 'Date'"
+  schemaPath: components.schemas.PointsTransfer_Fullfilment_Status.properties.event_date
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-date-name
+  message: "Properties named as 'type: string' and 'format: date'. Name MUST end with 'Date'"
+  schemaPath: components.schemas.Qualification.properties.date_qualified
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-date-name
+  message: "Properties named as 'type: string' and 'format: date'. Name MUST end with 'Date'"
+  schemaPath: components.schemas.Summaries.properties.start_date
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-date-name
+  message: "Properties named as 'type: string' and 'format: date'. Name MUST end with 'Date'"
+  schemaPath: components.schemas.Summaries.properties.end_date
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Api_Error
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Transaction.properties.id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Transaction.properties.type
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Transaction.properties.status
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.PointsTransfer_Fullfilment_Status.properties.status
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Adjustment.allOf.1.properties.type
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.5.schema
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: paths./accounts/{id}/transactions.get.parameters.6.schema
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.10.schema
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: paths./accounts/{id}/transactions/summaries.get.parameters.11.schema
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Transactions.properties.current_page_offset
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Transactions.properties.total_records
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Transactions.properties.total_pages
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.CardCharges_Order_Item.properties.points_needed
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.quantity
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.amount
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.points_needed
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Summaries.properties.current_page_offset
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Summaries.properties.total_records
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Summaries.properties.total_pages
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Amount.properties.value
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Transactions.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Transaction.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.CardCharges.allOf.1.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.GiftCards.allOf.1.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.PointsTransfers.allOf.1.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.PayWithPoints.allOf.1.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Travel.allOf.1.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.CardCharges_Order_Item.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.PointsTransfer_Fullfilment_Status.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.GiftCards_Order_Item.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Base.allOf.1.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Accelerated.allOf.1.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Bonus.allOf.1.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.StatementCredit.allOf.1.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Adjustment.allOf.1.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Gift.allOf.1.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Qualification.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Summaries.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Summary.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Amount.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Api_Error.properties
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: current_page_offset"
+  schemaPath: components.schemas.Transactions.properties.current_page_offset
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: card_number"
+  schemaPath: components.schemas.Transaction.properties.card_number
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: posted_date"
+  schemaPath: components.schemas.Transaction.properties.posted_date
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: event_date"
+  schemaPath: components.schemas.PointsTransfer_Fullfilment_Status.properties.event_date
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: date_qualified"
+  schemaPath: components.schemas.Qualification.properties.date_qualified
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: start_date"
+  schemaPath: components.schemas.Summaries.properties.start_date
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: end_date"
+  schemaPath: components.schemas.Summaries.properties.end_date
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: current_page_offset"
+  schemaPath: components.schemas.Summaries.properties.current_page_offset
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: field_name"
+  schemaPath: components.schemas.Api_Error.properties.field_name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: more_information"
+  schemaPath: components.schemas.Api_Error.properties.more_information
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Transaction.properties.amount
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.CardCharges_Order_Item.properties.charge_id_type
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.CardCharges_Order_Item.properties.charge_amount
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.line_item_id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.category
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Qualification.properties.charge_amount
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Summaries.properties.opening_balance
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Summaries.properties.ending_balance
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Summary.properties.total_amount
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Summary.properties.total_charge_amount
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Api_Error.properties.error_code
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Api_Error.properties.user_message
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Api_Error.properties.developer_message
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Api_Error.properties.more_information
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-format
+  message: "Properties defined as type: string MUST use appropriate format values. ref: format"
+  schemaPath: components.schemas.Amount.properties.currency_code.format
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Transaction.properties.id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Transaction.properties.descriptions
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.CardCharges.allOf.1.properties.requestor_order_id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.CardCharges.allOf.1.properties.roc_reference_id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.PointsTransfers.allOf.1.properties.transfer_partner_id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.PayWithPoints.allOf.1.properties.merchant_service_establishment_id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.PayWithPoints.allOf.1.properties.merchant_order_details
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Travel.allOf.1.properties.travel_order_details
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.CardCharges_Order_Item.properties.charge_id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.PointsTransfer_Fullfilment_Status.properties.rejected_reason_description
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.line_item_id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.brand
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.sub_code
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.GiftCards_Order_Item.properties.brand_id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Base.allOf.1.properties.benefit_id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Accelerated.allOf.1.properties.benefit_id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Accelerated.allOf.1.properties.multiplier
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Bonus.allOf.1.properties.benefit_id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Bonus.allOf.1.properties.multiplier
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.StatementCredit.allOf.1.properties.benefit_id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Adjustment.allOf.1.properties.benefit_id
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Adjustment.allOf.1.properties.reason_code
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Adjustment.allOf.1.properties.csr_credentials
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Gift.allOf.1.properties.description
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Qualification.properties.industry_category
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Summary.properties.sum_by
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Amount.properties.currency_description
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Api_Error.properties.error_code
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Api_Error.properties.user_message
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Api_Error.properties.developer_message
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Api_Error.properties.field_name
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Api_Error.properties.more_information
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml
+- ruleId: schema-type
+  message: All properties MUST have a type defined
+  schemaPath: components.schemas.Transaction.properties.category
+  severity: ERROR
+  contract: lolalty.transactions.v1.yaml

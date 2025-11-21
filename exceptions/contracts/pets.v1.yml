@@ -1,0 +1,835 @@
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: placed"
+  schemaPath: components.schemas.OrderStatus.enum.0
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: approved"
+  schemaPath: components.schemas.OrderStatus.enum.1
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: delivered"
+  schemaPath: components.schemas.OrderStatus.enum.2
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: clueless"
+  schemaPath: components.schemas.Cat.allOf.1.properties.huntingSkill.enum.0
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: lazy"
+  schemaPath: components.schemas.Cat.allOf.1.properties.huntingSkill.enum.1
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: adventurous"
+  schemaPath: components.schemas.Cat.allOf.1.properties.huntingSkill.enum.2
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: aggressive"
+  schemaPath: components.schemas.Cat.allOf.1.properties.huntingSkill.enum.3
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./pets.post.tags.0
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./pets.get.tags.0
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./pets/{petId}.get.tags.0
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./pets/{petId}.patch.tags.0
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./pets/{petId}.delete.tags.0
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./pets/{petId}/images.post.tags.0
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./orders/{orderId}.delete.tags.0
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./users.post.tags.0
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./users/{userId}/actions.post.tags.0
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./users/{userId}.get.tags.0
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./users/{userId}.put.tags.0
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./users/{userId}.delete.tags.0
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: contact-properties
+  message: Contact object must have "name", "url" and "email".
+  schemaPath: info.contact
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: general-info-description-max-length
+  message: info.description MUST be less than 250 characters.
+  schemaPath: info.description
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: general-version-format
+  message: "info.version MUST follow vX or vX.Y formatting. ref: 1.0.17"
+  schemaPath: info.version
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.PetType
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getOrder"
+  schemaPath: paths./orders/{orderId}.get
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: executeUserAction"
+  schemaPath: paths./users/{userId}/actions.post
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getUser"
+  schemaPath: paths./users/{userId}.get
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: replaceUser,upsertUser"
+  schemaPath: paths./users/{userId}.put
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./pets.get.responses.200.content.application/xml.schema.type
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./pets.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-request-body-required
+  message: POST, PATCH, PUT methods MUST have request bodies.
+  schemaPath: paths./users/{userId}/actions.post
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./pets.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./pets/{petId}.patch.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./orders.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./users.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./users/{userId}.put.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-response-media-type
+  message: Use of custom content type not allowed
+  schemaPath: paths./pets.post.responses.201.content.application/xml
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-response-media-type
+  message: Use of custom content type not allowed
+  schemaPath: paths./pets.get.responses.200.content.application/xml
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-response-media-type
+  message: Use of custom content type not allowed
+  schemaPath: paths./pets/{petId}.get.responses.200.content.application/xml
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-response-media-type
+  message: Use of custom content type not allowed
+  schemaPath: paths./pets/{petId}.patch.responses.200.content.application/xml
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-response-media-type
+  message: Use of custom content type not allowed
+  schemaPath: paths./orders/{orderId}.get.responses.200.content.application/xml
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-response-media-type
+  message: Use of custom content type not allowed
+  schemaPath: paths./users.post.responses.201.content.application/xml
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-response-media-type
+  message: Use of custom content type not allowed
+  schemaPath: paths./users/{userId}.get.responses.200.content.application/xml
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: operation-response-media-type
+  message: Use of custom content type not allowed
+  schemaPath: paths./users/{userId}.put.responses.200.content.application/xml
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./pets.get.parameters.1
+  severity: INFO
+  contract: pets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./pets/{petId}/images.post.parameters.1
+  severity: INFO
+  contract: pets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./orders/{orderId}.get.parameters.0
+  severity: INFO
+  contract: pets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./orders/{orderId}.delete.parameters.0
+  severity: INFO
+  contract: pets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./users/{userId}/actions.post.parameters.1
+  severity: INFO
+  contract: pets.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.UserId
+  severity: INFO
+  contract: pets.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./pets/{petId}/images.post.parameters.1
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./users/{userId}/actions.post.parameters.1
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: 1"
+  schemaPath: paths./pets/{petId}/images.post.parameters.1
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: 1"
+  schemaPath: paths./users/{userId}/actions.post.parameters.1
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./pets.post.requestBody
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./pets/{petId}.patch.requestBody
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./pets/{petId}/images.post.requestBody
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./orders.post.requestBody
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./users.post.requestBody
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./users/{userId}.put.requestBody
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /pets/{petId}"
+  schemaPath: paths./pets/{petId}
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /pets/{petId}/images"
+  schemaPath: paths./pets/{petId}/images
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /orders"
+  schemaPath: paths./orders
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /orders/{orderId}"
+  schemaPath: paths./orders/{orderId}
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /users"
+  schemaPath: paths./users
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /users/{userId}/actions"
+  schemaPath: paths./users/{userId}/actions
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /users/{userId}"
+  schemaPath: paths./users/{userId}
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-response-404-description
+  message: 404 response MUST contain a description
+  schemaPath: paths./pets/{petId}.get.responses.404.description
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-response-404-description
+  message: 404 response MUST contain a description
+  schemaPath: paths./orders/{orderId}.get.responses.404.description
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-response-404-description
+  message: 404 response MUST contain a description
+  schemaPath: paths./orders/{orderId}.delete.responses.404.description
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-response-404-description
+  message: 404 response MUST contain a description
+  schemaPath: paths./users/{userId}.get.responses.404.description
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-response-404-description
+  message: 404 response MUST contain a description
+  schemaPath: paths./users/{userId}.delete.responses.404.description
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./pets/{petId}.patch.responses
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./pets/{petId}.delete.responses
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./pets/{petId}/images.post.responses
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./users/{userId}/actions.post.responses
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./users/{userId}.put.responses
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./orders.post
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./orders/{orderId}.get
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./orders/{orderId}.delete
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./users.post
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./users/{userId}/actions.post
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./users/{userId}.get
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./users/{userId}.put
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./users/{userId}.delete
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./pets.post.responses.405
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./pets/{petId}.patch.responses.405
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./orders.post.responses.405
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: poly-base-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: Pet"
+  schemaPath: components.schemas.Pet.oneOf
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: poly-discriminator-enum
+  message: discriminator property definition MUST be of type enum
+  schemaPath: components.schemas.PetBase
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: poly-explicit-discriminator
+  message: "Each polymorphic child MUST have a unique list of required properties. ref: components.schemas.Pet.oneOf"
+  schemaPath: components.schemas.Pet.oneOf
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: poly-oneof-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: Pet"
+  schemaPath: components.schemas.Pet.oneOf
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: poly-property-name-inline
+  message: PropertyName enum in a base object MUST be defined as  a $ref
+  schemaPath: ""
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.Cat.allOf.1
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.Dog.allOf.1
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./pets.get.parameters.1.schema
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./pets.get.responses.200.content.application/xml.schema
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./pets.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.User.properties.petIds
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.User.properties.address
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.PetBase.properties.imageUrls
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.PetBase.properties.tags
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.PetUpdate.properties.tags
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Order
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Address
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.User
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Tag
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.PetType
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.PetBase
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.PetUpdate
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Pet
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: PetUpdate"
+  schemaPath: components.schemas.PetUpdate
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: paths./orders/{orderId}.get.parameters.0.schema
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: paths./orders/{orderId}.delete.parameters.0.schema
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Order.properties.quantity
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.User.properties.userStatus
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-pattern-lengths
+  message: Pattern definitions MUST contain minLength and maxLength. e.g. ^[a-z]{1,10}$
+  schemaPath: components.schemas.PetBase.properties.petType.pattern
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.PetBase.properties.petType.pattern
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Order.properties
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Address.properties
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.User.properties
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Tag.properties
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.PetBase.properties
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.PetUpdate.properties
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Cat.allOf.1.properties
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Dog.allOf.1.properties
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: shipDateTime"
+  schemaPath: components.schemas.Order.properties.shipDateTime
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: email"
+  schemaPath: components.schemas.User.properties.email
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: imageUrls"
+  schemaPath: components.schemas.PetBase.properties.imageUrls
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Order.properties.petId
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Order.properties.quantity
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Order.properties.shipDateTime
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Order.properties.orderStatus
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Order.properties.isComplete
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Address.properties.street
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Address.properties.city
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Address.properties.state
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Address.properties.zip
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.User.properties.userId
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.User.properties.firstName
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.User.properties.lastName
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.User.properties.email
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.User.properties.password
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.User.properties.phone
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Tag.properties.petId
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Tag.properties.name
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PetBase.properties.petId
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PetBase.properties.petType2
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PetBase.properties.petType
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PetBase.properties.name
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PetBase.properties.orderStatus
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PetUpdate.properties.name
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PetUpdate.properties.orderStatus
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Address.properties.street
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Address.properties.city
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Address.properties.state
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Address.properties.zip
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.User.properties.firstName
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.User.properties.lastName
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.User.properties.email
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.User.properties.password
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.User.properties.phone
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Tag.properties.name
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.PetBase.properties.imageUrls
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.PetBase.properties.name
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.PetUpdate.properties.name
+  severity: ERROR
+  contract: pets.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Cat.allOf.1.properties.purr
+  severity: ERROR
+  contract: pets.v1.yaml

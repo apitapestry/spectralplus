@@ -1,0 +1,118 @@
+functions:
+  - casing-path
+
+rules:
+  casing-enums:
+    description: MUST declare enum values using UPPER_SNAKE_CASE
+    message: 'Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: {{value}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.type === 'string')].enum.*
+    then:
+      field: enum
+      function: casing
+      functionOptions:
+        type: snake
+
+  casing-operationid: #Todo: need function to validate against path def.
+    description: OperationId MUST must be camelCase
+    message: 'OperationId MUST be camelCase. ref: {{value}}'
+    documentationUrl: 'https://github.com/baloise-incubator/spectral-ruleset/blob/main/doc/rules/property-names-must-be-ascii-camel-case.md'
+    severity: error
+    resolved: false
+    given: "$..operationId"
+    then:
+      function: casing
+      functionOptions:
+        type: camel
+
+  casing-parameters-header:
+    description: MUST use hyphenated-pascal-case for HTTP header fields
+    message: 'Header parameters MUST be Hyphenated-Pascal-Case. ref: {{value}}'
+    documentationUrl: 'https://opensource.zalando.com/restful-api-guidelines/#132'
+    severity: error
+    resolved: false
+    given: $..parameters[?(@ && @.in === 'header')]
+    then:
+      field: name
+      function: casing
+      functionOptions:
+        type: pascal
+        separator:
+          char: '-'
+
+  casing-parameters-path:
+    description: Path parameter names must be kebab-case
+    message: 'Path Parameter MUST be camelCase. ref: {{value}}'
+    documentationUrl: 'https://github.com/baloise-incubator/spectral-ruleset/blob/main/doc/rules/query-parameter-names-must-be-ascii-camel-case.md'
+    severity: error
+    resolved: false
+    given: $..parameters[?(@ && @.in=='path')]
+    then:
+      field: name
+      function: casing
+      functionOptions:
+        type: snake
+
+  casing-parameters-query:
+    description: Query parameter names must be camelCase
+    message: 'Query Parameters MUST be camelCase. ref: {{value}}'
+    documentationUrl: 'https://github.com/baloise-incubator/spectral-ruleset/blob/main/doc/rules/query-parameter-names-must-be-ascii-camel-case.md'
+    severity: error
+    resolved: false
+    given: $..parameters[?(@ && @.in=='query')].name
+    then:
+      function: casing
+      functionOptions:
+        type: snake
+
+  casing-paths:
+    description: Paths must be kebab-case.
+    message: 'Paths MUST be kebab-case. ref: {{property}}'
+    severity: error
+    resolved: false
+    given: $.paths.*~
+    then:
+      function: casing-path
+      functionOptions:
+        type: snake
+
+  casing-schema:
+    description: Schema names MUST be PascalCase.
+    message: 'Schema & example names MUST be PascalCase. ref: {{property}}'
+    severity: error
+    resolved: false
+    given:
+      - $.components.schemas.*~
+      - $.components.examples.*~
+    then:
+      function: casing
+      functionOptions:
+        type: pascal
+
+  casing-schema-properties:
+    description: Property names MUST must be camelCase
+    message: 'Properties MUST be camelCase. ref: {{property}}'
+    documentationUrl: 'https://github.com/baloise-incubator/spectral-ruleset/blob/main/doc/rules/property-names-must-be-ascii-camel-case.md'
+    severity: error
+    resolved: false
+    given: $..components.schemas.*.*properties.*~
+    then:
+      function: casing
+      functionOptions:
+        type: camel
+
+  casing-tags:
+    description: Property names MUST must be camelCase
+    message: 'Tags MUST be CamelCase. ref: {{values}}'
+    documentationUrl: 'https://github.com/baloise-incubator/spectral-ruleset/blob/main/doc/rules/property-names-must-be-ascii-camel-case.md'
+    severity: error
+    resolved: false
+    given: $.paths..[tags].*
+    then:
+      function: casing
+      functionOptions:
+        type: pascal
+        separator:
+          char: ' '

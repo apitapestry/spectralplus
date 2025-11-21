@@ -1,0 +1,1025 @@
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: International"
+  schemaPath: components.schemas.USAddress.allOf.1.properties.locale.enum.0
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: UnitedStates"
+  schemaPath: components.schemas.USAddress.allOf.1.properties.locale.enum.1
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Military"
+  schemaPath: components.schemas.USAddress.allOf.1.properties.locale.enum.2
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Canada"
+  schemaPath: components.schemas.USAddress.allOf.1.properties.locale.enum.3
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: UKAddress"
+  schemaPath: components.schemas.UKAddress
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: USAddress"
+  schemaPath: components.schemas.USAddress
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: USPostalCode"
+  schemaPath: components.schemas.USPostalCode
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: USPhoneNumber"
+  schemaPath: components.schemas.USPhoneNumber
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: UKPhoneNumber"
+  schemaPath: components.schemas.UKPhoneNumber
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: general-info-title-summary-word-check
+  message: The info.summary & info.title MUST NOT contain the words REST, Public, Service or Developer.
+  schemaPath: info.title
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: general-servers-url
+  message: servers.url MUST exist and MUST begin with https://
+  schemaPath: servers.0.url
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: invalid-ref
+  schemaPath: paths./customers.post.requestBody.content.application/json.schema.$ref
+  message: "'#/components/schemas/Customer' does not exist"
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: invalid-ref
+  schemaPath: components.schemas.AccountLink.allOf.1.properties.productFamily.$ref
+  message: "ENOENT: no such file or directory, open '../models/products.models.yaml'"
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.PersonId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.AddressId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Person
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.PhoneNumber
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.PhoneNumberV2
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.USPhoneNumber
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.UKPhoneNumber
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.EmailAddress
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.BankruptcyStatus
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.SourceOfWealth
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.SourceOfWealthV2
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: operation-array
+  message: If path does NOT use the primary key in the path, the response MUST be an array.
+  schemaPath: paths./customers/{customerId}/addresses.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./customers.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./customers.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./customers/{customerId}.patch.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: operation-summary-ending-period
+  message: Operation summaries MUST not end with a period
+  schemaPath: paths./customers/{customerId}.patch.summary
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.PersonId
+  severity: INFO
+  contract: customers.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.AddressId
+  severity: INFO
+  contract: customers.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.CustomerId
+  severity: INFO
+  contract: customers.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./customers.post.requestBody
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./customers/{customerId}.patch.requestBody
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /customers"
+  schemaPath: paths./customers
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /customers/{customerId}"
+  schemaPath: paths./customers/{customerId}
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /customers/{customerId}/addresses"
+  schemaPath: paths./customers/{customerId}/addresses
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./customers/{customerId}.get.responses
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./customers/{customerId}.patch.responses
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./customers/{customerId}/addresses.get.responses
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./customers.post
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./customers.get
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./customers/{customerId}.get
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./customers/{customerId}.patch
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./customers/{customerId}/addresses.get
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: poly-base-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: Address"
+  schemaPath: components.schemas.Address.oneOf
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: poly-explicit-discriminator
+  message: "Each polymorphic child MUST have a unique list of required properties. ref: components.schemas.Address.oneOf"
+  schemaPath: components.schemas.Address.oneOf
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: poly-oneof-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: Address"
+  schemaPath: components.schemas.Address.oneOf
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: poly-property-name-inline
+  message: PropertyName enum in a base object MUST be defined as  a $ref
+  schemaPath: ""
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.AccountLink.allOf.1
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.UKAddress.allOf.1
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.USAddress.allOf.1
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.GenericAddress.allOf.1
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.USPhoneNumber.allOf.1
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.UKPhoneNumber.allOf.1
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./customers.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.CustomerBase.properties.nationalIdNumbers
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.CustomerBase.properties.customFields
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.PersonBase.properties.nationalIdNumbers
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.PersonBase.properties.customFields
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.PersonBase.properties.citizenships
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.PersonBase.properties.accountLinks
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.USAddress.allOf.1.properties.addressLines
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.GenericAddress.allOf.1.properties.addressLines
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Person
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.PersonAccountRole
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Name
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Address
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.UKAddress
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.USAddress
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.GenericAddress
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.PhoneNumber
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.PhoneNumberV2
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.PhoneNumberBase
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.USPhoneNumber
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.UKPhoneNumber
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.EmailAddress
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: PhoneNumber"
+  schemaPath: components.schemas.PhoneNumber
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: PhoneNumberV2"
+  schemaPath: components.schemas.PhoneNumberV2
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: PhoneNumberBase"
+  schemaPath: components.schemas.PhoneNumberBase
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: USPhoneNumber"
+  schemaPath: components.schemas.USPhoneNumber
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: UKPhoneNumber"
+  schemaPath: components.schemas.UKPhoneNumber
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: EmailAddress"
+  schemaPath: components.schemas.EmailAddress
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: Email"
+  schemaPath: components.schemas.Email
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.AddressBase.properties.type
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.PhoneNumber.properties.type
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.PhoneNumberV2.properties.type
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.PhoneNumberBase.properties.type
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.EmailAddress.properties.type
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.NationalIdentification.properties.type
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.PersonBase.properties.residenceCountry.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.AccountLink.allOf.1.properties.accountId.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.AccountPreferences.properties.nickName.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Name.properties.prefix.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Name.properties.suffix.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Name.properties.firstName.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Name.properties.middleName.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Name.properties.lastName.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Name.properties.maidenName.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.UKAddress.allOf.1.properties.buildingName.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.UKAddress.allOf.1.properties.subBuilding.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.UKAddress.allOf.1.properties.buildingNumber.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.UKAddress.allOf.1.properties.street.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.UKAddress.allOf.1.properties.city.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.UKAddress.allOf.1.properties.county.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.USAddress.allOf.1.properties.addressLines.items.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.USAddress.allOf.1.properties.city.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.USAddress.allOf.1.properties.stateOrProvince.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.USPostalCode.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.GenericAddress.allOf.1.properties.addressLines.items.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.GenericAddress.allOf.1.properties.countryCode.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.PhoneNumber.properties.countryCode.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.PhoneNumber.properties.areaCode.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.PhoneNumber.properties.number.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.PhoneNumberV2.properties.countryCode.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.PhoneNumberV2.properties.number.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.PhoneNumberBase.properties.countryCode.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.USPhoneNumber.allOf.1.properties.USNumber.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.UKPhoneNumber.allOf.1.properties.UKNumber.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Email.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.NationalId.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.NationalIdentification.properties.issuingCountryCode.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Citizenship.properties.countryCode.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.SourceOfWealth.properties.value.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.SourceOfWealthV2.properties.value.pattern
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.CustomerBase.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Person.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.PersonBase.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.AccountLink.allOf.1.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.AccountPreferences.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Name.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.AddressBase.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.UKAddress.allOf.1.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.USAddress.allOf.1.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.GenericAddress.allOf.1.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.PhoneNumber.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.PhoneNumberV2.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.PhoneNumberBase.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.USPhoneNumber.allOf.1.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.UKPhoneNumber.allOf.1.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.EmailAddress.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.NationalIdentification.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Citizenship.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.SourceOfWealth.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.SourceOfWealthV2.properties
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: nationalIdNumbers"
+  schemaPath: components.schemas.CustomerBase.properties.nationalIdNumbers
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: customFields"
+  schemaPath: components.schemas.CustomerBase.properties.customFields
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: createdDate"
+  schemaPath: components.schemas.CustomerBase.properties.createdDate
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: lastModifiedDateTime"
+  schemaPath: components.schemas.CustomerBase.properties.lastModifiedDateTime
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: myfield"
+  schemaPath: components.schemas.Person.properties.myfield
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: nationalIdNumbers"
+  schemaPath: components.schemas.PersonBase.properties.nationalIdNumbers
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: birthDate"
+  schemaPath: components.schemas.PersonBase.properties.birthDate
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: customFields"
+  schemaPath: components.schemas.PersonBase.properties.customFields
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: deathDate"
+  schemaPath: components.schemas.PersonBase.properties.deathDate
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: createdDate"
+  schemaPath: components.schemas.PersonBase.properties.createdDate
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: lastModifiedDateTime"
+  schemaPath: components.schemas.PersonBase.properties.lastModifiedDateTime
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: phoneNumberId"
+  schemaPath: components.schemas.AccountPreferences.properties.phoneNumberId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: emailAddressId"
+  schemaPath: components.schemas.AccountPreferences.properties.emailAddressId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: schema"
+  schemaPath: components.schemas.AddressBase.properties.schema
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: phoneNumberId"
+  schemaPath: components.schemas.PhoneNumber.properties.phoneNumberId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: number"
+  schemaPath: components.schemas.PhoneNumber.properties.number
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: endDate"
+  schemaPath: components.schemas.PhoneNumber.properties.endDate
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: phoneNumberId"
+  schemaPath: components.schemas.PhoneNumberV2.properties.phoneNumberId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: number"
+  schemaPath: components.schemas.PhoneNumberV2.properties.number
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: endDate"
+  schemaPath: components.schemas.PhoneNumberV2.properties.endDate
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: phoneNumberId"
+  schemaPath: components.schemas.PhoneNumberBase.properties.phoneNumberId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: number"
+  schemaPath: components.schemas.PhoneNumberBase.properties.number
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: endDate"
+  schemaPath: components.schemas.PhoneNumberBase.properties.endDate
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: emailAddressId"
+  schemaPath: components.schemas.EmailAddress.properties.emailAddressId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: email"
+  schemaPath: components.schemas.EmailAddress.properties.email
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: addedDate"
+  schemaPath: components.schemas.EmailAddress.properties.addedDate
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: expireDate"
+  schemaPath: components.schemas.NationalIdentification.properties.expireDate
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: lastModifiedDateTime"
+  schemaPath: components.schemas.Citizenship.properties.lastModifiedDateTime
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.CustomerBase.properties.name
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.CustomerBase.properties.alternateId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.CustomerBase.properties.maritalStatus
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Person.properties.myfield
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PersonBase.properties.name
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PersonBase.properties.alternateId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PersonBase.properties.maritalStatus
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.AccountPreferences.properties.addressId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.AccountPreferences.properties.phoneNumberId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.AccountPreferences.properties.emailAddressId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.AddressBase.properties.schema
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.AddressBase.properties.deliveryVerificationStatus
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PhoneNumber.properties.priority
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PhoneNumber.properties.isVerified
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PhoneNumberV2.properties.priority
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PhoneNumberV2.properties.isVerified
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PhoneNumberBase.properties.priority
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.PhoneNumberBase.properties.isVerified
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.EmailAddress.properties.type
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.EmailAddress.properties.email
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.EmailAddress.properties.deliveryVerificationStatus
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.NationalIdentification.properties.nationalId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.NationalIdentification.properties.type
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.SourceOfWealth.properties.name
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.SourceOfWealth.properties.value
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.SourceOfWealthV2.properties.sourceOfWealthId
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.SourceOfWealthV2.properties.value
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Person.properties.myfield
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.PhoneNumberBase.properties.number
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-unused-objects
+  message: "All schemas must be used in the API starting with a request or response. ref: PersonId"
+  schemaPath: ""
+  severity: ERROR
+  contract: customers.v1.yaml
+- ruleId: schema-unused-objects
+  message: "All schemas must be used in the API starting with a request or response. ref: AddressId"
+  schemaPath: ""
+  severity: ERROR
+  contract: customers.v1.yaml

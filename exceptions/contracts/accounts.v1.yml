@@ -1,0 +1,410 @@
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: card-number6"
+  schemaPath: components.parameters.CardNumber6QueryOptional.name
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: start-date"
+  schemaPath: components.parameters.StartDateQueryOptional.name
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: end-date"
+  schemaPath: components.parameters.EndDateQueryOptional.name
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: general-info-description-max-length
+  message: info.description MUST be less than 250 characters.
+  schemaPath: info.description
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: oas3-parameter-description
+  message: Parameter objects must have "description".
+  schemaPath: components.parameters.AccountNumber
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.SecurityToekenHeaderOptional
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: createAccountSearch"
+  schemaPath: paths./accounts/search.post
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getAccountBalances"
+  schemaPath: paths./accounts/{accountId}/balances.get
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: createAccountRelationship"
+  schemaPath: paths./accounts/{accountId}/relationships.post
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./accounts/search.post.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./accounts/{accountId}/balances.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./accounts/{accountId}/relationships.post.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: operation-request-body-required
+  message: POST, PATCH, PUT methods MUST have request bodies.
+  schemaPath: paths./accounts/{accountId}/relationships.post
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./accounts/search.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.CardNumber6QueryOptional
+  severity: INFO
+  contract: accounts.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.StartDateQueryOptional
+  severity: INFO
+  contract: accounts.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.EndDateQueryOptional
+  severity: INFO
+  contract: accounts.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.CountryCodeHeaderOptional
+  severity: INFO
+  contract: accounts.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.SecurityToekenHeaderOptional
+  severity: INFO
+  contract: accounts.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: Country-Code"
+  schemaPath: components.parameters.CountryCodeHeaderOptional.name
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: Security-Token"
+  schemaPath: components.parameters.SecurityToekenHeaderOptional.name
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./accounts/{accountId}/balances.get.parameters.1
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./accounts/{accountId}/balances.get.parameters.2
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./accounts/{accountId}/balances.get.parameters.3
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./accounts/{accountId}/balances.get.parameters.4
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./accounts/{accountId}/relationships.post.parameters.1
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./accounts/{accountId}/relationships.post.parameters.2
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: components.parameters.CardNumber6QueryOptional
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: card-number6"
+  schemaPath: components.parameters.CardNumber6QueryOptional.name
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: start-date"
+  schemaPath: components.parameters.StartDateQueryOptional.name
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: end-date"
+  schemaPath: components.parameters.EndDateQueryOptional.name
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: Country-Code"
+  schemaPath: components.parameters.CountryCodeHeaderOptional.name
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: Security-Token"
+  schemaPath: components.parameters.SecurityToekenHeaderOptional.name
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: path-naming
+  message: Paths MUST NOT include {request|response|info|information|details|metadata|data|properties|obj|object|search}
+  schemaPath: paths./accounts/search
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: CardNumber6QueryOptional"
+  schemaPath: components.parameters.CardNumber6QueryOptional
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./accounts/search.post.requestBody
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /accounts/{accountId}"
+  schemaPath: paths./accounts/{accountId}
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /accounts/search"
+  schemaPath: paths./accounts/search
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /accounts/{accountId}/balances"
+  schemaPath: paths./accounts/{accountId}/balances
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /accounts/{accountId}/relationships"
+  schemaPath: paths./accounts/{accountId}/relationships
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./accounts/{accountId}.get.responses
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./accounts/{accountId}/balances.get.responses
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./accounts/{accountId}/relationships.post.responses
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./accounts/search.post.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./accounts/{accountId}/balances.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./accounts/{accountId}/relationships.post.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Account.properties.relationships
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Relationship.properties.status
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.CobrandPartner.properties.status
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Balance.properties.type
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Amount.properties.value
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-pattern-min-max
+  message: Properties defined with a pattern MUST NOT have a minLength or maxLength
+  schemaPath: components.schemas.Relationship.properties.cardNumber
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.parameters.CardNumber6QueryOptional.schema.pattern
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.AccountSearch.properties.cardNumber.pattern
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Relationship.properties.cardNumber.pattern
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.AccountSearch.properties
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Account.properties
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Relationship.properties
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.CobrandPartner.properties
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Balance.properties
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Amount.properties
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: cardNumber"
+  schemaPath: components.schemas.AccountSearch.properties.cardNumber
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: cardNumber"
+  schemaPath: components.schemas.Relationship.properties.cardNumber
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: startDate"
+  schemaPath: components.schemas.Relationship.properties.startDate
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: endDate"
+  schemaPath: components.schemas.Relationship.properties.endDate
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: accountNumber"
+  schemaPath: components.schemas.CobrandPartner.properties.accountNumber
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Account.properties.primaryRelationship
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Account.properties.currentBalance
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Account.properties.cobrandPartner
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Balance.properties.amount
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Account.properties.accountId
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Account.properties.tierCode
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Account.properties.tierDescription
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Relationship.properties.name
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.CobrandPartner.properties.accountNumber
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.CobrandPartner.properties.customerName
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.CobrandPartner.properties.status
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.CobrandPartner.properties.tier
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.CobrandPartner.properties.tierDescription
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Amount.properties.currencyCode
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Amount.properties.currencyDescription
+  severity: ERROR
+  contract: accounts.v1.yaml
+- ruleId: schema-unused-objects
+  message: "All schemas must be used in the API starting with a request or response. ref: SecurityToekenHeaderOptional"
+  schemaPath: ""
+  severity: ERROR
+  contract: accounts.v1.yaml

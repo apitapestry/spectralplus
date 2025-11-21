@@ -1,0 +1,360 @@
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: start-date"
+  schemaPath: components.parameters.ProductFamilyQueryOptional.name
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: oas3-schema
+  message: '"application~1binary" property must not be valid.'
+  schemaPath: paths./products.post.responses.201.content.application/binary
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./products.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./products.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./products/{productId}.patch.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: operation-response-media-type
+  message: Use of custom content type not allowed
+  schemaPath: paths./products.post.responses.201.content.application/binary
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.ProductId
+  severity: INFO
+  contract: products.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.ProductFamilyQueryOptional
+  severity: INFO
+  contract: products.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./products.get.parameters.1
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: start-date"
+  schemaPath: components.parameters.ProductFamilyQueryOptional.name
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./products.post.requestBody
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./products/{productId}.patch.requestBody
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /products"
+  schemaPath: paths./products
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /products/{productId}"
+  schemaPath: paths./products/{productId}
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./products/{productId}.get.responses
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./products/{productId}.patch.responses
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./products/{productId}.delete.responses
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: poly-base-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: Product"
+  schemaPath: components.schemas.Product.oneOf
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: poly-discriminator-enum
+  message: discriminator property definition MUST be of type enum
+  schemaPath: components.schemas.ProductBase
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: poly-explicit-discriminator
+  message: "Each polymorphic child MUST have a unique list of required properties. ref: components.schemas.Product.oneOf"
+  schemaPath: components.schemas.Product.oneOf
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: poly-oneof-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: Product"
+  schemaPath: components.schemas.Product.oneOf
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./products.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.ProductFamily
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.ProductName
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Product
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.ProductChecking
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.ProductSavings
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.ProductCd
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.ProductNoPenaltyCd
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.ProductCards
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: ProductUpdate"
+  schemaPath: components.schemas.ProductUpdate
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.ProductChecking.properties.minimumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.ProductChecking.properties.maximumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.ProductSavings.properties.minimumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.ProductSavings.properties.maximumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.ProductCd.properties.minimumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.ProductCd.properties.maximumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.ProductNoPenaltyCd.properties.minimumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.ProductNoPenaltyCd.properties.maximumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.ProductCards.properties.creditLineAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-pattern-lengths
+  message: Pattern definitions MUST contain minLength and maxLength. e.g. ^[a-z]{1,10}$
+  schemaPath: components.schemas.ProductName.pattern
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.ProductName.pattern
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.ProductUpdate.properties
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.ProductBase.properties
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.ProductChecking.properties
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.ProductSavings.properties
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.ProductCd.properties
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.ProductNoPenaltyCd.properties
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.ProductCards.properties
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductUpdate.properties.alternateProductId
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductUpdate.properties.productFamily
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductUpdate.properties.productType
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductUpdate.properties.productName
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductBase.properties.productId
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductBase.properties.alternateProductId
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductBase.properties.productFamily
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductBase.properties.productType
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductBase.properties.productName
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductChecking.properties.minimumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductChecking.properties.maximumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductSavings.properties.minimumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductSavings.properties.maximumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductCd.properties.minimumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductCd.properties.maximumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductCd.properties.termPeriod
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductCd.properties.termLength
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductNoPenaltyCd.properties.minimumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductNoPenaltyCd.properties.maximumFundingAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductNoPenaltyCd.properties.termPeriod
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductNoPenaltyCd.properties.termLength
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductCards.properties.creditLineAmount
+  severity: ERROR
+  contract: products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ProductCards.properties.cardArtId
+  severity: ERROR
+  contract: products.v1.yaml

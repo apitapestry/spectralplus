@@ -1,0 +1,50 @@
+- ruleId: contact-properties
+  message: Contact object must have "name", "url" and "email".
+  schemaPath: info.contact
+  severity: ERROR
+  contract: standard-mods.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: standard-mods.yaml
+- ruleId: invalid-ref
+  schemaPath: paths./template.get.parameters.0.$ref
+  message: "ENOENT: no such file or directory, open '../global.models.yaml'"
+  severity: ERROR
+  contract: standard-mods.yaml
+- ruleId: operation-success-response
+  message: Operation must have at least one "2xx" or "3xx" response.
+  schemaPath: paths./template.get.responses
+  severity: ERROR
+  contract: standard-mods.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./template.get.parameters.1
+  severity: ERROR
+  contract: standard-mods.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /template"
+  schemaPath: paths./template
+  severity: ERROR
+  contract: standard-mods.yaml
+- ruleId: path-security-public
+  message: Security definitions MUST NOT be public
+  schemaPath: paths./template.get.security
+  severity: ERROR
+  contract: standard-mods.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./template.get.responses.401
+  severity: ERROR
+  contract: standard-mods.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./template.get.responses.403
+  severity: ERROR
+  contract: standard-mods.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./template.get.responses.429
+  severity: ERROR
+  contract: standard-mods.yaml

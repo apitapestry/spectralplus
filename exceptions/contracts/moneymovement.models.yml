@@ -1,0 +1,335 @@
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: 2_BUSINESS_DAYS"
+  schemaPath: components.schemas.DeliveryDays.enum.0
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: 3_BUSINESS_DAYS"
+  schemaPath: components.schemas.DeliveryDays.enum.1
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Checking"
+  schemaPath: components.schemas.AccountTypeIndicator.enum.0
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Savings"
+  schemaPath: components.schemas.AccountTypeIndicator.enum.1
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: general-boolean-example
+  message: Boolean properties MUST NOT provide examples
+  schemaPath: components.schemas.TransferBase.properties.hasAcceptedTermsAndConditions.example
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: general-version-format
+  message: "info.version MUST follow vX or vX.Y formatting. ref: 1.0.0"
+  schemaPath: info.version
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: info-description
+  message: Info "description" must be present and non-empty string.
+  schemaPath: info
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: invalid-ref
+  schemaPath: components.schemas.TransferBase.properties.personId.$ref
+  message: "ENOENT: no such file or directory, open 'global.models.yaml'"
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-api-servers
+  message: OpenAPI "servers" must be present and non-empty array.
+  schemaPath: ""
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.TransferImmediate
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.TransferOneTime
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.TransferWeekly
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.TransferEveryTwoWeeks
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.TransferMonthly
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.AccountType
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.DebitCreditIndicator
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.TransferChannel
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.PaymentTypeCode
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.AccountTypeIndicator
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Currency
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.GsEntity
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.TreasuryResponseCode
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.TreasuryRejectStatusCode
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.ReturnReasonCode
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: poly-discriminator-enum
+  message: discriminator property definition MUST be of type enum
+  schemaPath: components.schemas.TransferBase
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.TransferImmediate.allOf.1
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.TransferOneTime.allOf.1
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.TransferWeekly.allOf.1
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.TransferEveryTwoWeeks.allOf.1
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.TransferMonthly.allOf.1
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-datetime-name
+  message: "Properties named as 'type: string' and 'format: date-time'. Name MUST end with 'DateTime'"
+  schemaPath: components.schemas.TransferBase.properties.termsAndConditionsAcceptedDate
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.TransferBase
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.TransferImmediate
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.TransferOneTime
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.TransferWeekly
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.TransferEveryTwoWeeks
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.TransferMonthly
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: TransferOneTime"
+  schemaPath: components.schemas.TransferOneTime
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: StartDate"
+  schemaPath: components.schemas.StartDate
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: EndDate"
+  schemaPath: components.schemas.EndDate
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: TreasuryResponseCode"
+  schemaPath: components.schemas.TreasuryResponseCode
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.TransferBase.properties.status
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-pattern-lengths
+  message: Pattern definitions MUST contain minLength and maxLength. e.g. ^[a-z]{1,10}$
+  schemaPath: components.schemas.TransferBase.properties.memo.pattern
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-pattern-start-end
+  message: Properties defined with a pattern MUST start a ^ and end with a $
+  schemaPath: components.schemas.TransferBase.properties.fromAccountId.pattern
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-pattern-start-end
+  message: Properties defined with a pattern MUST start a ^ and end with a $
+  schemaPath: components.schemas.TransferBase.properties.toAccountId.pattern
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-pattern-start-end
+  message: Properties defined with a pattern MUST start a ^ and end with a $
+  schemaPath: components.schemas.TransferBase.properties.memo.pattern
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.TransferBase.properties.fromAccountId.pattern
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.TransferBase.properties.toAccountId.pattern
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.TransferBase.properties.memo.pattern
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.TransferBase.properties
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.TransferOneTime.allOf.1.properties
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.TransferWeekly.allOf.1.properties
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.TransferEveryTwoWeeks.allOf.1.properties
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.TransferMonthly.allOf.1.properties
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: fromAccountId"
+  schemaPath: components.schemas.TransferBase.properties.fromAccountId
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: cancelledDate"
+  schemaPath: components.schemas.TransferBase.properties.cancelledDate
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: timeZone"
+  schemaPath: components.schemas.TransferBase.properties.timeZone
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: termsAndConditionsAcceptedDate"
+  schemaPath: components.schemas.TransferBase.properties.termsAndConditionsAcceptedDate
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferBase.properties.transferId
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferBase.properties.personId
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferBase.properties.frequency
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferBase.properties.deliveryDays
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferBase.properties.originationChannel
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferBase.properties.amount
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransferBase.properties.transactionType
+  severity: ERROR
+  contract: moneymovement.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.TransferBase.properties.termsAndConditionsId
+  severity: ERROR
+  contract: moneymovement.models.yaml

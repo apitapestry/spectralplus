@@ -1,0 +1,290 @@
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: countryCode"
+  schemaPath: components.parameters.CountryCodeHeaderOptional.name
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: securityToken"
+  schemaPath: components.parameters.SecurityTokenHeaderOptional.name
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: CardNumber6"
+  schemaPath: components.parameters.CardNumber6QueryOptional.name
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: oas3-api-servers
+  message: OpenAPI "servers" must be present and non-empty array.
+  schemaPath: ""
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.AccountTypeQueryOptional
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.StartDateQueryOptional
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.EndDateQueryOptional
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.CountryCodeHeaderOptional
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.SecurityTokenHeaderOptional
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.CardNumber6QueryOptional
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.AccountQuery
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Account
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.StartDateQueryOptional
+  severity: INFO
+  contract: accounts.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.EndDateQueryOptional
+  severity: INFO
+  contract: accounts.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.CountryCodeHeaderOptional
+  severity: INFO
+  contract: accounts.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.SecurityTokenHeaderOptional
+  severity: INFO
+  contract: accounts.models.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.CardNumber6QueryOptional
+  severity: INFO
+  contract: accounts.models.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: countryCode"
+  schemaPath: components.parameters.CountryCodeHeaderOptional.name
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: securityToken"
+  schemaPath: components.parameters.SecurityTokenHeaderOptional.name
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: CardNumber6"
+  schemaPath: components.parameters.CardNumber6QueryOptional.name
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.AccountEmbeddables.properties.relationships
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-format-minmax
+  message: All properties MUST NOT have a format defined with a minLength or maxLength
+  schemaPath: components.schemas.AccountQuery.properties.cardNumber
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Relationship.properties.status
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.CobrandPartner.properties.status
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Balance.properties.type
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Amount.properties.value
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.AccountQuery.properties.cardNumber.pattern
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Relationship.properties.cardNumber.pattern
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.AccountQuery.properties
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Account.properties
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Relationship.properties
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.CobrandPartner.properties
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Balance.properties
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Amount.properties
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.AccountEmbeddables.properties
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: cardNumber"
+  schemaPath: components.schemas.AccountQuery.properties.cardNumber
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: cardNumber"
+  schemaPath: components.schemas.Relationship.properties.cardNumber
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: startDate"
+  schemaPath: components.schemas.Relationship.properties.startDate
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: endDate"
+  schemaPath: components.schemas.Relationship.properties.endDate
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: accountNumber"
+  schemaPath: components.schemas.CobrandPartner.properties.accountNumber
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Account.properties.primaryRelationship
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Account.properties.currentBalance
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Account.properties.cobrandPartner
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Account.properties.embedded
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Balance.properties.amount
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-string-format
+  message: "Properties defined as type: string MUST use appropriate format values. ref: format"
+  schemaPath: components.schemas.AccountQuery.properties.cardNumber.format
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.AccountQuery.properties.accountId
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Account.properties.tierCode
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Account.properties.tierDescription
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Relationship.properties.name
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.CobrandPartner.properties.accountNumber
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.CobrandPartner.properties.customerName
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.CobrandPartner.properties.status
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.CobrandPartner.properties.tier
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.CobrandPartner.properties.tierDescription
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Amount.properties.currencyCode
+  severity: ERROR
+  contract: accounts.models.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Amount.properties.currencyDescription
+  severity: ERROR
+  contract: accounts.models.yaml

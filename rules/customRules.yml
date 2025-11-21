@@ -1,0 +1,709 @@
+functions:
+  - assert-http-codes-for-operation
+  - consistent-response-body
+  - count-resource-types
+  - delete-204-response
+  - ensureAllOfOrder
+  - ensureCorrectVerbsInTitles
+  - ensureSchemaHasType
+  - is-object-schema
+  - operation-id
+  - operation-security
+  - pagination-parameters
+  - pagination-response
+  - param-names-unique
+  - param-order
+  - path-param-names
+  - path-param-schema
+  - schema-type-and-format
+  - security-requirements
+
+rules:
+  paths-no-api:
+    message: Path should not start with /api
+    description: MUST not use /api as base path [135]
+    documentationUrl: 'https://opensource.zalando.com/restful-api-guidelines/#135'
+    severity: error
+    given: $.paths.*~
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: '^/api'
+
+#  "ruleId" : "ONE_OF_MAPPING",
+#  "description" : "Mapping MUST be defined in Base object, NOT oneOf declaration",
+#  "severity" : "ERROR",
+#  "standardsReference" : "https://swagger.io/specification",
+#  "artifact" : "gs-openapi-lib",
+#  "sourceType" : "OBJECT_NAME",
+#  "reference" : "PaymentV2",
+#  "contractName" : "oneOfMappingTest.v1.yaml"
+
+  request-response-required-objects:
+    message: 'Top-level data structure must be an object'
+    description: MUST always return objects as top-level data structures
+    documentationUrl: 'https://opensource.zalando.com/restful-api-guidelines/#110'
+    severity: warn
+    given: $.paths.*.*[responses,requestBody]..content..schema
+    then:
+      function: is-object-schema #todo: need to exclude type array & oneOf
+
+  info-version:
+    message: '{{error}}'
+    description: Info.version must be of format V1
+    documentationUrl: 'https://opensource.zalando.com/restful-api-guidelines/#116'
+    severity: error
+    given: $.info.version
+    then:
+      function: schema
+      functionOptions:
+        schema:
+          type: string
+          pattern: '^v[0-9]?$'
+
+  paths-segments-non-empty:
+    message: Empty path segments are not allowed
+    description: MUST use normalized paths without empty path segments and trailing slashes [136]
+    documentationUrl: 'https://opensource.zalando.com/restful-api-guidelines/#136'
+    severity: error
+    given: $.paths.*~
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: //
+
+  paths-no-trailing-slash:
+    message: Path with trailing slash is not allowed
+    description: MUST use normalized paths without empty path segments and trailing slashes [136]
+    documentationUrl: 'https://opensource.zalando.com/restful-api-guidelines/#136'
+    severity: error
+    given: $.paths.*~
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: /$
+
+  resource-type-limit:
+    message: '{{error}}'
+    description: MUST limit number of resource types
+    documentationUrl: 'https://opensource.zalando.com/restful-api-guidelines/#146'
+    severity: error
+    given: $.paths
+    then:
+      function: count-resource-types
+      functionOptions:
+        max: 8
+
+  resource-level-limit:
+    message: Sub-resource levels should by <= 3
+    description: MUST limit number of sub-resource levels
+    documentationUrl: 'https://opensource.zalando.com/restful-api-guidelines/#147'
+    severity: error
+    given: $.paths.*~
+    then:
+      function: pattern
+      functionOptions:
+        match: ^\/[^\/]*((\/{[^}]*})*\/[^\/]*(\/{[^}]*})*){0,3}\/?$
+
+  http-status-codes:
+    message: '{{error}}'
+    description: MUST use standard HTTP status codes [150]
+    documentationUrl: 'https://opensource.zalando.com/restful-api-guidelines/#150'
+    severity: error
+    given: $.paths.*
+    then:
+      function: assert-http-codes-for-operation
+      functionOptions:
+        wellUnderstood:
+          # Success Codes
+          '200': [ALL]
+          '201': [POST, PUT]
+#          '202': [POST, PUT, DELETE, PATCH]
+          '204': [POST, PUT, DELETE, PATCH]
+#          '207': [POST]
+
+          # Redirection Codes
+#          '301': [ALL]
+#          '303': [PATCH, POST, PUT, DELETE]
+#          '304': [GET, HEAD]
+
+          # Client Side Error Codes
+          '400': [ALL]
+#          '401': [ALL]
+#          '403': [ALL]
+          '404': [ALL]
+#          '405': [ALL]
+#          '406': [ALL]
+#          '408': [ALL]
+#          '409': [POST, PUT, DELETE, PATCH]
+#          '410': [ALL]
+#          '412': [PUT, DELETE, PATCH]
+#          '415': [POST, PUT, DELETE, PATCH]
+#          '423': [PUT, DELETE, PATCH]
+#          '428': [ALL]
+#          '429': [ALL]
+
+          # Server Side Error Codes
+          '500': [ALL]
+#          '501': [ALL]
+#          '503': [ALL]
+
+          # OpenApi
+#          'default': [ALL]
+
+  response-default-required:
+    description: All operations should have a default (error) response.
+    message: Operation is missing a default response.
+    documentationUrl: 'https://opensource.zalando.com/restful-api-guidelines/#151'
+    severity: off
+    given: $.paths.*.*.responses
+    then:
+      field: default
+      function: truthy
+
+  formats-number:
+    message: Numeric properties must have valid format specified
+    description: MUST define a format for number and integer types [171]
+    documentationUrl: 'https://opensource.zalando.com/restful-api-guidelines/#171'
+    severity: error
+    given: $.paths.*.*..schema..properties..[?(@.type=='number')]
+    then:
+      - field: format
+        function: defined
+      - field: format
+        function: pattern
+        functionOptions:
+          match: ^(float|double|decimal)$
+
+  formats-integer:
+    message: '''type: integer'' properties must have a valid format specified'
+    description: MUST define a format for integer types
+    documentationUrl: 'https://opensource.zalando.com/restful-api-guidelines/#171'
+    severity: warn
+    given: $.paths.*.*..schema..properties..[?(@.type=='integer')]
+    then:
+      - field: format
+        function: defined
+      - field: format
+        function: pattern
+        functionOptions:
+          match: ^(int32|int64|bigint)$
+
+  media-types-standard:
+    message: Custom media types should only be used for versioning
+    description: MUST use standard media type name application/json [172]
+    documentationUrl: 'https://opensource.zalando.com/restful-api-guidelines/#172'
+    severity: error
+    given: $.paths.*.*.responses.*.content.*~
+    then:
+      function: pattern
+      functionOptions: # todo: need to support binary
+        match: ^application\/json$|^[a-zA-Z0-9_]+\/[-+.a-zA-Z0-9_]+;(v|version)=[0-9]+$
+
+  info-description:
+    message: Missing `info.description`.
+    description: MUST contain API meta information [218]
+    documentationUrl: 'https://opensource.zalando.com/restful-api-guidelines/#218'
+    severity: error
+    given: $.info
+    then:
+      field: description
+      function: truthy
+
+  additional-properties-needs-testing:
+    description: Don't specify additionalProperties as a sibling of properties.
+    severity: error
+    formats: ['oas2', 'oas3']
+    given: $..[?(@object() && @.type === 'object' && @.properties)]
+    then:
+      field: additionalProperties
+      function: falsy
+
+  additional-properties-object-needs-testing:
+    description: additionalProperties with type object is a common error.
+    severity: info
+    formats: ['oas2', 'oas3']
+    # This rule produces redundant errors if run on the resolved spec.
+    resolved: false
+    given: $..[?(@property == 'additionalProperties' && @.type == 'object' && @.properties == undefined)]
+    then:
+      function: falsy
+
+  response-consistent-response-body:
+    description: Ensure the get, put, and patch response body schemas are consistent.
+    message: '{{error}}'
+    severity: error
+    formats: ['oas2']
+    given: $.paths.*
+    then:
+      function: consistent-response-body
+
+  paths-delete-204-response:
+    description: A delete operation should have a 204 response.
+    message: A delete operation should have a `204` response.
+    severity: error
+    formats: ['oas2','oas3']
+    given: $.paths[*].delete.responses
+    then:
+      function: delete-204-response
+
+  request-response-formdata-needs-testing:
+    description: Check for appropriate use of formData parameters.
+    severity: info
+    formats: ['oas2']
+    given: $.paths.*[get,put,post,patch,delete,options,head].parameters.[?(@.in == "formData")]
+    then:
+      function: falsy
+
+  parameters-header-disallowed:
+    description: Authorization, Content-type, and Accept headers should not be defined explicitly.
+    message: 'Header parameter "{{value}}" should not be defined explicitly.'
+    severity: off
+    # oas3 support has broken - disable for now todo: fix for oas3
+    formats: ['oas2']
+    given:
+      - $.paths[*].parameters.[?(@.in == 'header')]
+      - $.paths.*[get,put,post,patch,delete,options,head].parameters.[?(@.in == 'header')]
+    then:
+      function: pattern
+      field: name
+      functionOptions:
+        notMatch: '/^(authorization|content-type|accept)$/i'
+
+  response-body-204-none:
+    description: A 204 response should have no response body.
+    severity: error
+    formats: ['oas2']
+    given: $.paths[*][*].responses.204
+    then:
+      field: schema
+      function: falsy
+
+  nullable-avoid:
+    description: Avoid the use of x-nullable.
+    severity: error
+    formats: ['oas2', 'oas3']
+    resolved: false
+    given: $..x-nullable
+    then:
+      function: undefined
+
+  operation-id-naming:
+    description: OperationId should conform to Azure API Guidelines
+    message: '{{error}}'
+    severity: off
+    given:
+      - $.paths.*[get,put,post,patch,delete,options,head]
+    then:
+      function: operation-id # update to our naming standard
+
+#  operation-id-naming2:
+#    description: An operation ID must follow our required format
+#    given: $.paths[*][*]
+#    severity: error
+#    recommended: true
+#    resolved: true
+#    message: "{{error}}"
+#    then:
+#      function: validateOperationIdFormat #todo: resolve duplicate functions
+
+  operations-security-required:
+    description: Operation should have a security requirement or globally.
+    message: Operation should have a security requirement.
+    severity: error
+    formats: ['oas2', 'oas3']
+    given: $.paths.*[get,put,post,patch,delete,options,head]
+    then:
+      function: operation-security
+
+  operations-summary-and-description:
+    description: Operation should have a summary or description.
+    message: Operation should have a summary or description. #todo: change to AND
+    severity: error
+    given:
+      - $.paths[*][?( @property === 'get' && !@.summary && !@.description )]
+      - $.paths[*][?( @property === 'put' && !@.summary && !@.description )]
+      - $.paths[*][?( @property === 'post' && !@.summary && !@.description )]
+      - $.paths[*][?( @property === 'patch' && !@.summary && !@.description )]
+      - $.paths[*][?( @property === 'delete' && !@.summary && !@.description )]
+      - $.paths[*][?( @property === 'options' && !@.summary && !@.description )]
+      - $.paths[*][?( @property === 'head' && !@.summary && !@.description )]
+      - $.paths[*][?( @property === 'trace' && !@.summary && !@.description )]
+    then:
+      function: falsy
+
+  parameters-pagination:
+    description: Pagination parameters must conform to Azure guidelines.
+    message: '{{error}}'
+    severity: error
+    formats: ['oas3']
+    given:
+      - $.paths.*[get,post]
+    then:
+      function: pagination-parameters #todo: update to our standards
+
+  response-pagination:
+    description: An operation that returns a list that is potentially large should support pagination.
+    message: '{{error}}'
+    severity: error
+    formats: ['oas2'] #todo: update to support oas3
+    given:
+      - $.paths.*[get,post]
+    then:
+      function: pagination-response #todo: update to our standards
+
+  parameters-no-default:
+    description: A required parameter should not specify a default value.
+    severity: error
+    # oas3 support has broken - restrict to oas2 for now
+    formats: ['oas2'] #todo: fix for oas3
+    given:
+      - $.paths[*].parameters.[?(@.required)]
+      - $.paths.*[get,put,post,patch,delete,options,head].parameters.[?(@.required)]
+    then:
+      field: default
+      function: falsy
+
+  parameters-description:
+    description: All parameters should have a description.
+    message: Parameter should have a description.
+    severity: error
+    given:
+      - $.paths[*].parameters.*
+      - $.paths.*[get,put,post,patch,delete,options,head].parameters.*
+    then:
+      field: description
+      function: truthy
+
+  parameters-names-unique:
+    description: All parameter names for an operation should be case-insensitive unique.
+    message: '{{error}}'
+    severity: error
+    formats: ['oas2', 'oas3']
+    given: $.paths[*]
+    then:
+      function: param-names-unique
+
+  parameters-order:
+    description: Path parameters must be in the same order as in the path.
+    message: '{{error}}'
+    severity: error
+    formats: ['oas2', 'oas3']
+    given: $.paths
+    then:
+      function: param-order
+
+  # Patch on a path that does not end in path parameter is uncommon.
+  paths-patch-no-parameter:
+    description: Patch on a path that does not end with a path parameter is uncommon.
+    severity: warn
+    formats: ['oas2', 'oas3']
+    given: $.paths[*].patch^~
+    then:
+      function: pattern
+      functionOptions:
+        match: '/\}$/'
+
+  paths-put-no-parameters:
+    description: Put on a path that does not end with a path parameter is uncommon.
+    severity: info
+    formats: ['oas2', 'oas3']
+    given: $.paths[*].put^~
+    then:
+      function: pattern
+      functionOptions:
+        match: '/\}$/'
+
+  # DO limit your URLs characters to 0-9 A-Z a-z - . _ ~ :
+  paths-allowed-characters:
+    description: Path should contain only recommended characters.
+    message: Path contains non-recommended characters.
+    severity: info
+    formats: ['oas2', 'oas3']
+    given: $.paths.*~
+    then:
+      function: pattern
+      functionOptions:
+        # Check each path segment individually and ignore param segments
+        # Note: the ':' is only allowed in the final path segment
+        match: '^(\/([0-9A-Za-z._~-]+|{[^}]+}))*\/([0-9A-Za-z._~-]+|{[^}]*})?(:[0-9A-Za-z._~-]+)?$'
+
+  parameter-paths-names-needs-testing:
+    description: Path parameter names should be consistent across all paths.
+    message: '{{error}}'
+    severity: error
+    formats: ['oas2', 'oas3']
+    given: $.paths
+    then:
+      function: path-param-names
+
+  parameters-path-schema:
+    description: 'Path parameter should be type: string and specify maxLength and pattern.'
+    message: '{{error}}'
+    severity: info
+    formats: ['oas2', 'oas3']
+    given:
+      - $.paths[*].parameters[?(@.in == 'path')]
+      - $.paths[*][get,put,post,patch,delete,options,head].parameters[?(@.in == 'path')]
+    then:
+      function: path-param-schema
+
+  properties-description:
+    description: All schema properties should have a description.
+    message: 'Property {{property}} should have a description.'
+    severity: error
+    resolved: false
+    given: $..properties[?(@object() && @.$ref == undefined)]
+    then:
+      field: description
+      function: truthy
+
+  casing-object-properties-off:
+    description: Property names should be camel case.
+    message: Property name should be camel case.
+    severity: off
+    # This rule can report false positives if run on the resolved spec.
+    # Issue: https://github.com/stoplightio/spectral/issues/1316
+    resolved: false
+    given: $..[?(@.type === 'object' && @.properties)].properties.*~
+    then:
+      function: casing
+      functionOptions: #todo: look into this approach - could be interesting
+        type: camel
+
+  properties-type:
+    description: All schema properties should have a defined type.
+    message: Property should have a defined type.
+    severity: error
+    resolved: false
+    # Exclude properties that contains allOf to avoid false positives.
+    given: $..properties[?(@object() && @.$ref == undefined && @.allOf == undefined)]
+    then:
+      field: type
+      function: truthy
+
+  request-body-not-allowed:
+    description: A get or delete operation must not accept a body parameter.
+    severity: error
+    formats: ['oas2'] #todo: update to oas3
+    given:
+      - $.paths[*].[get,delete].parameters[*]
+    then:
+      field: in
+      function: pattern
+      functionOptions:
+        notMatch: '/^body$/'
+
+  request-body-optional:
+    description: Flag optional request body -- common oversight.
+    message: The body parameter is not marked as required.
+    severity: info
+    formats: ['oas2'] #todo: update to oas3
+    given:
+      - $.paths[*].[put,post,patch].parameters.[?(@.in == 'body')]
+    then:
+      field: required
+      function: truthy
+
+  response-body-type:
+    description: Response body schema must not be a bare array.
+    severity: error
+    formats: ['oas2', 'oas3']
+    given: $.paths[*][*][responses][*].schema
+    then:
+      field: type
+      function: pattern
+      functionOptions:
+        notMatch: '/^array$/'
+
+#  response-schema-readonly:
+#    description: Properties in response-only schemas should not be marked as readOnly true
+#    severity: error
+#    formats: ['oas2']
+#    given: $.definitions[*]
+#    then:
+#      function: readonly-in-response-schema
+
+  schema-description:
+    description: All schemas should have a description.
+    message: 'Schema ''{{value}}'' should have a description.'
+    severity: error
+    formats: ['oas3']
+    given: $.components.schemas[?(!@.description)]
+    then:
+      function: falsy
+
+  schema-type-and-format:
+    description: Schema should use well-defined type and format.
+    message: '{{error}}'
+    severity: off #todo: review function - can this be updated?
+    formats: ['oas2']
+    given:
+      - $.paths[*].[put,post,patch].parameters.[?(@.in == 'body')].schema
+      - $.paths[*].[get,put,post,patch,delete].responses[*].schema
+    then:
+      function: schema-type-and-format
+
+  security-definition-description:
+    description: A security definition should have a description.
+    message: Security definition should have a description.
+    severity: error
+    formats: ['oas2', 'oas3']
+    given:
+      - $.securityDefinitions[*]
+      - $.components.securitySchemes[*]
+    then:
+      field: description
+      function: truthy
+
+  security-requirements:
+    description: The security requirement should reference a defined security scheme.
+    message: '{{error}}'
+    severity: error
+    # Drop oas3 format for now
+    formats: ['oas2']
+    given:
+      - $.security
+      - $.paths.*[get,put,post,patch,delete,options,head].security
+    then:
+      function: security-requirements #todo: needs testing and likely updating
+
+  security-min-length:
+    description: Security property should specify at least one security requirement.
+    severity: error
+    formats: ['oas2', 'oas3']
+    given:
+      - $.security
+      - $.paths.*[get,put,post,patch,delete,options,head].security
+    then:
+      function: length
+      functionOptions:
+        min: 1
+
+  response-body-success:
+    description: All success responses except 202 & 204 should define a response body.
+    severity: error
+    formats: ['oas2']
+    # list http methods explicitly to exclude head
+    given: $.paths[*][get,put,post,patch,delete].responses[?(@property >= 200 && @property < 300 && @property != '202' && @property != '204')]
+    then:
+      field: schema
+      function: truthy
+
+  operations-summary:
+    description: Endpoints must have a summary.
+    given: $.paths[*][*]
+    severity: error
+    recommended: true
+    message: "{{error}}"
+    then:
+      field: summary
+      function: truthy
+
+  response-description:
+    message: 'Responses MUST have a description. see: {{property}}'
+    description: Responses must have a description.
+    given: $.components.schemas[*]
+    severity: error
+    recommended: true
+    then:
+      field: description
+      function: truthy
+
+  parameter-examples:
+    description: Parameters must have examples.
+    given: $..*.parameters[*]
+    severity: error
+    recommended: true
+    message: "{{error}}"
+    then:
+      field: example
+      function: truthy
+
+#  properties-example:
+#    description: Properties must have examples.
+#    given: $..*.properties[*]
+#    severity: error
+#    recommended: true
+#    resolved: true
+#    message: "{{error}}"
+#    then:
+#      function: ensurePropertiesExample
+#
+#  object-properties-additional-properties-example:
+#    description: Additional properties must have examples.
+#    given: $..*.additionalProperties
+#    severity: error
+#    recommended: true
+#    resolved: true
+#    message: "{{error}}"
+#    then:
+#      function: ensurePropertiesExample
+
+#  object-properties-additional-properties-oneof-example:
+#    description: Additional properties (oneOf) must have examples.
+#    given: $..*.additionalProperties.oneOf[*]
+#    severity: error
+#    recommended: true
+#    resolved: true
+#    message: "{{error}}"
+#    then:
+#      function: ensurePropertiesExample
+
+  allof-order-testing-needed:
+    description: Ensures order of items in an allOf
+    given: '$..*.allOf'
+    severity: error
+    recommended: true
+    resolved: false
+    message: "{{error}}"
+    then:
+      function: ensureAllOfOrder
+
+  # ensure-local-references-in-allof:
+  #   description: Ensures order of items in an allOf for properties
+  #   given: '$.paths..*.properties..*'
+  #   severity: error
+  #   recommended: true
+  #   resolved: false
+  #   message: "{{error}}"
+  #   then:
+  #     function: ensureLocalReferencesInAllOf
+
+#  arrays-properties-items-with-type:
+#    description: Ensures all array properties have an items attribute with a type
+#    given: '$..*.properties[*]'
+#    severity: error
+#    recommended: true
+#    resolved: false
+#    message: "{{error}}"
+#    then:
+#      function: ensureAllArraysHaveItemTypes
+#
+#  array-params-items-with-type:
+#    description: Ensures all array parameters have an items attribute with a type
+#    given: '$..*.parameters[*]'
+#    severity: error
+#    recommended: true
+#    resolved: false
+#    message: "{{error}}"
+#    then:
+#      function: ensureAllArraysHaveItemTypes
+
+  paths-verb: # todo: needs research
+    description: Titles must have the right verbs
+    given: $.paths[*][*]
+    severity: error
+    recommended: true
+    message: "{{error}}"
+    then:
+      function: ensureCorrectVerbsInTitles
+
+  schema-type:
+    description: Schemas must have a type
+    given: $..schema
+    severity: error
+    recommended: true
+    message: "{{error}}"
+    then:
+      function: ensureSchemaHasType

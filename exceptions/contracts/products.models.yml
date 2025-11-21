@@ -1,0 +1,100 @@
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: ProductFamilyRW"
+  schemaPath: components.schemas.ProductFamilyRW
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: general-version-format
+  message: "info.version MUST follow vX or vX.Y formatting. ref: 1.0.0"
+  schemaPath: info.version
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: oas3-api-servers
+  message: OpenAPI "servers" must be present and non-empty array.
+  schemaPath: ""
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.ProductFamily
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.ProductType
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.ProductFamilyRW
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Product
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Product.properties.annualPercentageRate
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Product.properties.annualPercentageYield
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Product.properties
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Product.properties.productId
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Product.properties.productFamily
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Product.properties.productType
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Product.properties.annualPercentageRate
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Product.properties.annualPercentageYield
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Product.properties.termPeriod
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Product.properties.termLength
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Product.properties.minimumFundingAmount
+  severity: ERROR
+  contract: products.models.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Product.properties.maximumFundingAmount
+  severity: ERROR
+  contract: products.models.yaml

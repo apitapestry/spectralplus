@@ -1,0 +1,552 @@
+functions:
+  - schema-allof-duplicate-properties
+  - schema-anti-pattern
+  - schema-array-object
+  - schema-required-not-found
+  - schema-required-not-readonly
+  - schema-string-length
+  - schema-unused-objects
+
+rules:
+  schema-additional-properties-object:
+    description: Not defined
+    message: 'Parent object of additionalProperties MUST be an object'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..proerties.*.additionalProperties^
+    then:
+      field: additionalProperties
+      function: schema
+      functionOptions:
+        schema:
+          type: object
+
+  schema-additional-properties-type-object:
+    description: Not defined
+    message: 'If additionalProperties is type: object, the object MUST have properties'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: '$..properties.*.additionalProperties[?(@ && @property === "type" && @.type === "object")]~'
+    then:
+      - field: properties
+        function: truthy
+      - field: properties
+        function: length
+        functionOptions:
+          min: 1
+
+  schema-allof-duplicate-properties:
+    description: Not defined
+    message: 'All objects in an allOf array MUST have unique properties'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..oneOf.*
+    then:
+      function: schema-allof-duplicate-properties
+
+  schema-allof-ref-only:
+    description: Not defined
+    message: 'Only a list of $refs are permitted in an allOf'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..allOf[?(@ && !@.$ref)]
+    then:
+      function: falsy
+
+  schema-anti-pattern:
+    description: Not defined
+    message: 'Patterns MUST be valid and provide meaningful restriction'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..pattern
+    then:
+      function: schema-anti-pattern
+
+  schema-no-anyof:
+    description: Not defined
+    message: 'anyOf MUST NOT be used. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..pattern
+    then:
+      function: schema-anti-pattern
+
+  schema-array-min-max:
+    description: Not defined
+    message: 'Properties declared as type: array MUST have a minItems and maxItems defined'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $..[?(@ && @.type === "array" && !@.minItems && @.minItems != 0)]
+      - $..[?(@ && @.type === "array" && !@.mxItems)]
+    then:
+      function: falsy
+
+  schema-array-max-item-limit:
+    description: Not defined
+    message: 'maxItems property MUST be positive AND MUST NOT have a value greater than 2000'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.type === "array" && !@.maxItems > 2000)]
+    then:
+      function: falsy
+
+  schema-array-min-item-limit:
+    description: Not defined
+    message: 'minItems property MUST be positive AND MUST NOT have a value smaller than 0'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.type === "array" && !@.minItems > 10)]
+    then:
+      function: falsy
+
+  schema-array-object:
+    description: Not defined
+    message: 'Objects MUST NOT be defined as ONLY having an ARRAY.'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..components.schemas.*.properties[?(@ && @.type === 'array')]^
+    then:
+      function: schema-array-object
+
+  schema-boolean:
+    description: Not defined
+    message: 'Properties declared as ''type: boolean'' MUST have a previx of is or has. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..properties[?(@ && @.type === 'boolean')]~
+    then:
+      function: pattern
+      functionOptions:
+        match: /^(is|has)/
+
+  schema-byte-max-length:
+    description: Not defined
+    message: 'Properties declared as type: string and format: byte MUST have a maxLength of 1000. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.format == 'byte' && (!@.maxLength || @.maxLength > 1000))]
+    then:
+      function: falsy
+
+  schema-date-name:
+    description: Not defined
+    message: 'Properties named as ''type: string'' and ''format: date''. Name MUST end with ''Date'''
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..properties[?(@ && @.type === 'string' && @.format === 'date' && !@.oneof && !@.allOf && !@.$ref)]~
+    then:
+      function: pattern
+      functionOptions:
+        match: /Date$/
+
+  schema-datetime-name:
+    description: Not defined
+    message: 'Properties named as ''type: string'' and ''format: date-time''. Name MUST end with ''DateTime'''
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..properties[?(@ && @.type === 'string' && @.format === 'date-time' && !@.oneof && !@.allOf && !@.$ref)]~
+    then:
+      function: pattern
+      functionOptions:
+        match: /DateTime$/
+
+  schema-description:
+    description: Not defined
+    message: 'Schema description MUST be present'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: '$.components.schemas[?(@ && @.type !== "array")]'
+    then:
+      field: description
+      function: truthy
+
+  schema-property-description:
+    description: Not defined
+    message: 'Schema.property description MUST be present'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: '$.components.schemas.*.properties[?(@ && @.type !== "array")]'
+    then:
+      field: description
+      function: truthy
+
+  schema-properties-inline:
+    description: Not defined
+    message: 'Schema MUST NOT be defined inline'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: '$..properties'
+    then:
+      function: falsy
+
+  schema-enum-invalid-values:
+    description: Not defined
+    message: 'Enums MUST NOT use the following values: {on|off|yes|no|true|false|0|1|null}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..enum.*
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: /^(on|off|yes|no|true|false|0|1|null)$/i
+
+  schema-enum-min-max:
+    description: Not defined
+    message: 'Enums MUST NOT have minLength/maxLength defined'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.enum && (@.maxLength || @.minLength))]
+    then:
+      function: falsy
+
+  schema-integer-format:
+    description: Not defined
+    message: 'Properties declared as type: integer MUST have a format of int32 or int64'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.type === "integer")]
+    then:
+      field: format
+      function: pattern
+      functionOptions:
+        match: /^(int32|int64)$/
+
+  schema-number-int32-max-range:
+    description: Not defined
+    message: 'Max value for int32 is +/-2147483647. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.type === "integer" && @.format !== "int64")]
+    then:
+      field: maximum
+      function: length
+      functionOptions:
+        min: -2147483647
+        max: 2147483647
+
+  schema-number-int32-min-range:
+    description: Not defined
+    message: 'Max value for int32 is +/-2147483647. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.type === "integer" && @.format !== "int64")]
+    then:
+      field: minimum
+      function: length
+      functionOptions:
+        min: -2147483647
+        max: 2147483647
+
+  schema-number-int64-min-range:
+    description: Not defined
+    message: 'Max value for int64 is +/-9223372036854775807. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.type === "integer" && @.format === "int64")]
+    then:
+      field: minimum
+      function: length
+      functionOptions:
+        min: -9223372036854775807
+        max: 9223372036854775807
+
+  schema-number-int64-max-range:
+    description: Not defined
+    message: 'Max value for int64 is +/-9223372036854775807. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.type === "integer" && @.format === "int64")]
+    then:
+      field: maximum
+      function: length
+      functionOptions:
+        min: -9223372036854775807
+        max: 9223372036854775807
+
+  schema-name:
+    description: Not defined
+    message: 'Object names MUST NOT include any of the restricted values. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.components.schemas.*~
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: /(Schema|Request|Response|Object|obj|info|detail|data|metadata|dto|envelope|propert|field|Array|List|Map|Set|String|Number|Integer|Boolean|Date|DateTime|Time|UUID|URI|URL|Email|Hostname|IPv4|IPv6|CIDR|MAC|RegEx|JSON|JSONSchema)/i
+
+  schema-properties-name-reserved:
+    description: Not defined
+    message: 'Property names MUST NOT include any of the restricted values. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.components.schemas.*.properties.*~
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: /(Schema|Request|Response|Object|obj|info|detail|data|metadata|dto|envelope|propert|field|Array|List|Map|Set|String|Number|Integer|Boolean|Date|DateTime|Time|UUID|URI|URL|Email|Hostname|IPv4|IPv6|CIDR|MAC|RegEx|JSON|JSONSchema)/i
+
+  schema-property-name:
+    description: Not defined
+    message: 'Property names MUST start with lower alpha or underscore. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.components.schemas.*.properties.*~
+    then:
+      function: pattern
+      functionOptions:
+        match: /^[a-z_].*$/
+
+  schema-property-name-length:
+    description: Not defined
+    message: 'Object names MUST length shorter than 60. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.components.schemas
+    then:
+      field: '@key'
+      function: length
+      functionOptions:
+        max: 60
+
+  schema-name-length:
+    description: Not defined
+    message: 'Schema names MUST be shorter than 60. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.components.schemas
+    then:
+      field: '@key'
+      function: length
+      functionOptions:
+        max: 60
+
+  schema-number-format:
+    description: Not defined
+    message: 'Properties declared as type: number MUST have a format of float, double or decimal'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.type === "number")]
+    then:
+      field: format
+      function: pattern
+      functionOptions:
+        match: /^(float|double|decimal)$/
+
+  schema-number-min-max:
+    description: Not defined
+    message: 'Numeric types MUST have a minimum and maximum defined'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $.paths.*.*.parameters.*[?(@ && @.type === "number"|| @.type === "integer")]
+      - $.components.parameters.*[?(@ && @.type === "number"|| @.type === "integer")]
+      - $.components.schemas.*.properties.[?(@ && @.type === "number"|| @.type === "integer")]
+    then:
+      - field: minimum
+        function: defined
+      - field: maximum
+        function: defined
+
+  schema-pattern-lengths:
+    description: Not defined
+    message: 'Pattern definitions MUST contain minLength and maxLength. e.g. ^[a-z]{1,10}$'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..pattern
+    then:
+      function: pattern
+      functionOptions:
+        match: /^.*((\{\d{1,4},\d{1,4})|(\{\d{1,4}})).*$/
+
+  schema-pattern-min-max:
+    description: Not defined
+    message: 'Properties defined with a pattern MUST NOT have a minLength or maxLength'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.pattern && (@.maxLength || @.minLength))]
+    then:
+      function: falsy
+
+  schema-pattern-start-end:
+    description: Not defined
+    message: 'Properties defined with a pattern MUST start a ^ and end with a $'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..pattern
+    then:
+      function: pattern
+      functionOptions:
+        match: /^.*(\^.*\$$)/
+
+  schema-pattern-whitespace:
+    description: Not defined
+    message: 'Properties defined with a pattern MUST NOT use whitespace in the pattern. use \s instead.'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..pattern
+    then:
+      function: pattern
+      functionOptions:
+        match: /^.* .*$/
+
+  schema-properties-names-length:
+    description: Not defined
+    message: 'Schema property names MUST be shorter than 60 characters'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..properties
+    then:
+      field: '@key'
+      function: length
+      functionOptions:
+        max: 60
+
+  schema-names-not-valid:
+    description: Not defined
+    message: 'Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}. '
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..properties.*~
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: /^(id|type|status|date|dateTime|additionalProperties)$/i
+
+  schema-required-not-found:
+    description: Not defined
+    message: 'All properties defined in required MUST be present in the properties section'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.components.schemas..*[?(@ && @.required)]
+    then:
+      function: schema-required-not-found
+
+  schema-required-not-readonly:
+    description: Not defined
+    message: 'All properties defined in required MUST NOT be readOnly'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.components.schemas..*[?(@ && @.required)]
+    then:
+      function: schema-required-not-readonly
+
+  schema-string-format:
+    description: Not defined
+    message: 'Properties defined as type: string MUST use appropriate format values. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..[?(@ && @.type === "string")]
+    then:
+      field: format
+      function: pattern
+      functionOptions:
+        match: /^(binary|byte|date|date-time|email|uuid|password|uri)$/
+
+  schema-string-min-length:
+    description: Not defined
+    message: 'String properties MUST NOT have a minLength of 0'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: '$..[?(@ && (@property === "pattern" || @property === "maxLength"))]'
+    then:
+      function: schema-string-length
+      functionOptions:
+        type: min
+
+  schema-string-max-length:
+    description: Not defined
+    message: 'String properties MUST NOT have a maxLength greater than 255'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: '$..[?(@ && (@property === "pattern" || @property === "maxLength"))]'
+    then:
+      function: schema-string-length
+      functionOptions:
+        type: max
+
+  schema-string-pattern:
+    description: Not defined
+    message: 'Pattern OR format MUST be defined for string properties'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $..components.schemas.[?(@ && @.type === 'string' && !@.enum && @property !== 'items' && !@.format && !@.pattern && @.readOnly !== true && @parent.readOnly !== true)]~
+      - $..components.schemas.[?(@ && @.items && @.items.type === 'string' && !@.items.$ref && !@.items.enum && !@.items.format && !@.items.pattern && @.items.readOnly !== true && @parent.readOnly !== true)]~
+    then:
+      function: falsy
+
+  schema-type:
+    description: Not defined
+    message: 'All properties MUST have a type defined'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..properties[?(@ && !@.type && !@.$ref && !@.allOf && !@.additionalProperties)]
+    then:
+      function: falsy
+
+  schema-format-minmax:
+    description: Not defined
+    message: 'All properties MUST NOT have a format defined with a minLength or maxLength'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $..[?(@ && @.type === 'string' && !@.enum && @property !== 'items' && @.format && @.pattern)]~
+      - $..[?(@ && @.items && @.items.type === 'string' && !@.items.$ref && !@.items.enum && @.items.format && @.items.pattern)]~
+    then:
+      function: falsy
+
+  schema-unused-objects:
+    description: Not defined
+    message: 'All schemas must be used in the API starting with a request or response. ref: {{error}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $
+    then:
+      function: schema-unused-objects

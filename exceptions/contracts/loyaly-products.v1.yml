@@ -1,0 +1,925 @@
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Rewards"
+  schemaPath: paths./products/{card_account_token}.get.parameters.1.schema.enum.0
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Redemptions"
+  schemaPath: paths./products/{card_account_token}.get.parameters.1.schema.enum.1
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Acquisition_Spend"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.0
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Spend"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.1
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Add_a_Supp"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.2
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Add_a_Supp_Spend"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.3
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Anniversary"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.4
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Product_Transfer"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.5
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Product_Transfer_Spend"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.6
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Refer_a_Friend"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.7
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Retention"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.8
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Catalog"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.9
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: CardCharges"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.10
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: GiftCards"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.11
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PointsTransfers"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.12
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PayWithPoints"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.13
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Travel"
+  schemaPath: paths./products/{card_account_token}.get.parameters.2.schema.enum.14
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Rewards"
+  schemaPath: paths./products/search_results.post.parameters.0.schema.enum.0
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Redemptions"
+  schemaPath: paths./products/search_results.post.parameters.0.schema.enum.1
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Acquisition_Spend"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.0
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Spend"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.1
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Add_a_Supp"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.2
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Add_a_Supp_Spend"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.3
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Anniversary"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.4
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Product_Transfer"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.5
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Product_Transfer_Spend"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.6
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Refer_a_Friend"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.7
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Retention"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.8
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Catalog"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.9
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: CardCharges"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.10
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: GiftCards"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.11
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PointsTransfers"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.12
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PayWithPoints"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.13
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Travel"
+  schemaPath: paths./products/search_results.post.parameters.1.schema.enum.14
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Rewards"
+  schemaPath: components.schemas.Product.properties.category.enum.0
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Redemptions"
+  schemaPath: components.schemas.Product.properties.category.enum.1
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Acquisition_Spend"
+  schemaPath: components.schemas.Product.properties.type.enum.0
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Spend"
+  schemaPath: components.schemas.Product.properties.type.enum.1
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Add_a_Supp"
+  schemaPath: components.schemas.Product.properties.type.enum.2
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Add_a_Supp_Spend"
+  schemaPath: components.schemas.Product.properties.type.enum.3
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Anniversary"
+  schemaPath: components.schemas.Product.properties.type.enum.4
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Product_Transfer"
+  schemaPath: components.schemas.Product.properties.type.enum.5
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Product_Transfer_Spend"
+  schemaPath: components.schemas.Product.properties.type.enum.6
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Refer_a_Friend"
+  schemaPath: components.schemas.Product.properties.type.enum.7
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Retention"
+  schemaPath: components.schemas.Product.properties.type.enum.8
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Catalog"
+  schemaPath: components.schemas.Product.properties.type.enum.9
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: CardCharges"
+  schemaPath: components.schemas.Product.properties.type.enum.10
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: GiftCards"
+  schemaPath: components.schemas.Product.properties.type.enum.11
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PointsTransfers"
+  schemaPath: components.schemas.Product.properties.type.enum.12
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: PayWithPoints"
+  schemaPath: components.schemas.Product.properties.type.enum.13
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: Travel"
+  schemaPath: components.schemas.Product.properties.type.enum.14
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: country_code"
+  schemaPath: paths./products/{card_account_token}.get.parameters.3.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: security_token"
+  schemaPath: paths./products/{card_account_token}.get.parameters.4.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: country_code"
+  schemaPath: paths./products/search_results.post.parameters.2.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: security_token"
+  schemaPath: paths./products/search_results.post.parameters.3.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: correlation_id"
+  schemaPath: paths./products/search_results.post.parameters.4.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: client_id"
+  schemaPath: paths./products/search_results.post.parameters.5.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: country_code"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.2.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: security_token"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.3.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: correlation_id"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.4.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: client_id"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.5.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-parameters-path
+  message: "Path Parameter MUST be camelCase. ref: card_account_token"
+  schemaPath: paths./products/{card_account_token}.get.parameters.0.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-parameters-path
+  message: "Path Parameter MUST be camelCase. ref: benefit_id"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.0.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: previous_period"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.1.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-paths
+  message: "Paths MUST be kebab-case. ref: /products/search_results"
+  schemaPath: paths./products/search_results
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-paths
+  message: "Paths MUST be kebab-case. ref: /products/{benefit_id}/search_results"
+  schemaPath: paths./products/{benefit_id}/search_results
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: Card_Number"
+  schemaPath: components.schemas.Card_Number
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: Api_Error"
+  schemaPath: components.schemas.Api_Error
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: general-info-description-max-length
+  message: info.description MUST be less than 250 characters.
+  schemaPath: info.description
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: general-info-title-summary-word-check
+  message: The info.summary & info.title MUST NOT contain the words REST, Public, Service or Developer.
+  schemaPath: info.title
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: oas3-api-servers
+  message: OpenAPI "servers" must be present and non-empty array.
+  schemaPath: ""
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: oas3-valid-schema-example
+  message: '"example" property must match format "date"'
+  schemaPath: components.schemas.Tracker.properties.start_date.example
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: oas3-valid-schema-example
+  message: '"example" property must match format "date"'
+  schemaPath: components.schemas.Tracker.properties.end_date.example
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: oas3-valid-schema-example
+  message: '"example" property must match format "date"'
+  schemaPath: components.schemas.Tracker.properties.goal_achieved_date.example
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: oas3-valid-schema-example
+  message: '"example" property type must be string'
+  schemaPath: components.schemas.Amount.properties.currency_description.example
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getProduct"
+  schemaPath: paths./products/{card_account_token}.get
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: createProductSearch_result"
+  schemaPath: paths./products/search_results.post
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: createProductSearch_result"
+  schemaPath: paths./products/{benefit_id}/search_results.post
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./products/search_results.post.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: operation-summary
+  message: Operation 'summary' MUST be a present, non-empty string and length <= 50.
+  schemaPath: paths./products/{benefit_id}/search_results.post.summary
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: operation-summary-ending-period
+  message: Operation summaries MUST not end with a period
+  schemaPath: paths./products/{card_account_token}.get.summary
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: operation-summary-ending-period
+  message: Operation summaries MUST not end with a period
+  schemaPath: paths./products/search_results.post.summary
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: operation-summary-ending-period
+  message: Operation summaries MUST not end with a period
+  schemaPath: paths./products/{benefit_id}/search_results.post.summary
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./products/{card_account_token}.get.parameters.0
+  severity: INFO
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./products/{card_account_token}.get.parameters.3
+  severity: INFO
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./products/{card_account_token}.get.parameters.4
+  severity: INFO
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./products/search_results.post.parameters.2
+  severity: INFO
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./products/search_results.post.parameters.3
+  severity: INFO
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./products/search_results.post.parameters.4
+  severity: INFO
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./products/search_results.post.parameters.5
+  severity: INFO
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.0
+  severity: INFO
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.2
+  severity: INFO
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.3
+  severity: INFO
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.4
+  severity: INFO
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.5
+  severity: INFO
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: country_code"
+  schemaPath: paths./products/{card_account_token}.get.parameters.3.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: security_token"
+  schemaPath: paths./products/{card_account_token}.get.parameters.4.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: country_code"
+  schemaPath: paths./products/search_results.post.parameters.2.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: security_token"
+  schemaPath: paths./products/search_results.post.parameters.3.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: correlation_id"
+  schemaPath: paths./products/search_results.post.parameters.4.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: client_id"
+  schemaPath: paths./products/search_results.post.parameters.5.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: country_code"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.2.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: security_token"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.3.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: correlation_id"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.4.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: client_id"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.5.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./products/search_results.post.parameters.0
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./products/search_results.post.parameters.1
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-post-query
+  message: "Parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.1
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: card_account_token"
+  schemaPath: paths./products/{card_account_token}.get.parameters.0.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: country_code"
+  schemaPath: paths./products/{card_account_token}.get.parameters.3.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: security_token"
+  schemaPath: paths./products/{card_account_token}.get.parameters.4.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: country_code"
+  schemaPath: paths./products/search_results.post.parameters.2.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: security_token"
+  schemaPath: paths./products/search_results.post.parameters.3.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: correlation_id"
+  schemaPath: paths./products/search_results.post.parameters.4.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: client_id"
+  schemaPath: paths./products/search_results.post.parameters.5.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: benefit_id"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.0.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: previous_period"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.1.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: country_code"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.2.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: security_token"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.3.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: correlation_id"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.4.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: client_id"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.5.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-naming
+  message: Paths MUST NOT include {request|response|info|information|details|metadata|data|properties|obj|object|search}
+  schemaPath: paths./products/search_results
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-naming
+  message: Paths MUST NOT include {request|response|info|information|details|metadata|data|properties|obj|object|search}
+  schemaPath: paths./products/{benefit_id}/search_results
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: 0"
+  schemaPath: paths./products/search_results.post.parameters.0
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: 1"
+  schemaPath: paths./products/search_results.post.parameters.1
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-no-query
+  message: "post, put, patch, delete paths MUST NOT use query parameters. ref: 1"
+  schemaPath: paths./products/{benefit_id}/search_results.post.parameters.1
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./products/search_results.post.requestBody
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./products/{benefit_id}/search_results.post.requestBody
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /products/{card_account_token}"
+  schemaPath: paths./products/{card_account_token}
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /products/search_results"
+  schemaPath: paths./products/search_results
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /products/{benefit_id}/search_results"
+  schemaPath: paths./products/{benefit_id}/search_results
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-response-404-description
+  message: 404 response MUST contain a description
+  schemaPath: paths./products/search_results.post.responses.404.description
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-response-404-description
+  message: 404 response MUST contain a description
+  schemaPath: paths./products/{benefit_id}/search_results.post.responses.404.description
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./products/{card_account_token}.get.responses
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./products/search_results.post.responses
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./products/{card_account_token}.get
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./products/{card_account_token}.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./products/{card_account_token}.get.responses.400.content.application/json.schema
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./products/search_results.post.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./products/search_results.post.responses.400.content.application/json.schema
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./products/{benefit_id}/search_results.post.responses.400.content.application/json.schema
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-date-name
+  message: "Properties named as 'type: string' and 'format: date'. Name MUST end with 'Date'"
+  schemaPath: components.schemas.Tracker.properties.start_date
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-date-name
+  message: "Properties named as 'type: string' and 'format: date'. Name MUST end with 'Date'"
+  schemaPath: components.schemas.Tracker.properties.end_date
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-date-name
+  message: "Properties named as 'type: string' and 'format: date'. Name MUST end with 'Date'"
+  schemaPath: components.schemas.Tracker.properties.goal_achieved_date
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Card_Number
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Api_Error
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: Card_Number"
+  schemaPath: components.schemas.Card_Number
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Product.properties.id
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Product.properties.type
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Amount.properties.value
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-pattern-min-max
+  message: Properties defined with a pattern MUST NOT have a minLength or maxLength
+  schemaPath: components.schemas.Card_Number.properties.card_number
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-pattern-min-max
+  message: Properties defined with a pattern MUST NOT have a minLength or maxLength
+  schemaPath: components.schemas.Product.properties.card_number
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Card_Number.properties.card_number.pattern
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Product.properties.card_number.pattern
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Card_Number.properties
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Product.properties
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Tracker.properties
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Amount.properties
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Api_Error.properties
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: card_number"
+  schemaPath: components.schemas.Card_Number.properties.card_number
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: card_number"
+  schemaPath: components.schemas.Product.properties.card_number
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: start_date"
+  schemaPath: components.schemas.Tracker.properties.start_date
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: end_date"
+  schemaPath: components.schemas.Tracker.properties.end_date
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: goal_achieved_date"
+  schemaPath: components.schemas.Tracker.properties.goal_achieved_date
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: more_information"
+  schemaPath: components.schemas.Api_Error.properties.more_information
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Product.properties.reward_amount
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Product.properties.tracker
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Tracker.properties.goal_amount
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Tracker.properties.progress_amount
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Tracker.properties.remaining_amount
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Api_Error.properties.error_code
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Api_Error.properties.user_message
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Api_Error.properties.developer_message
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Api_Error.properties.more_information
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-string-format
+  message: "Properties defined as type: string MUST use appropriate format values. ref: format"
+  schemaPath: components.schemas.Amount.properties.currency_code.format
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Product.properties.id
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Product.properties.account_id
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Product.properties.name
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Product.properties.description
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Amount.properties.currency_description
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Api_Error.properties.error_code
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Api_Error.properties.user_message
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Api_Error.properties.developer_message
+  severity: ERROR
+  contract: loyaly-products.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Api_Error.properties.more_information
+  severity: ERROR
+  contract: loyaly-products.v1.yaml

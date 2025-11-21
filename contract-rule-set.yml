@@ -1,0 +1,66 @@
+extends:
+  - spectral:oas
+  - rules/casing.yml
+  - rules/general.yml
+  - rules/operation.yml
+  - rules/parameter.yml
+  - rules/path.yml
+#  - rules/schema-wip.yml
+  - rules/poly.yml
+#  - rules/customRules.yml
+
+rules:
+  contact-properties: error
+  duplicated-entry-in-enum: error
+  info-contact: off
+  info-description: error
+  info-license: off
+  license-url: off
+  no-$ref-siblings: error
+  no-eval-in-markdown: error
+  no-script-tags-in-markdown: error
+  openapi-tags: off
+  openapi-tags-alphabetical: off
+#  openapi-tags-uniqueness: error
+  operation-description: error
+  operation-operationId: error
+  operation-operationId-unique: error
+  operation-operationId-valid-in-url: error
+  operation-parameters: error
+  operation-singular-tag: error
+  operation-success-response: error
+  operation-tags: error
+  operation-tag-defined: off
+  path-declarations-must-exist: error
+  path-keys-no-trailing-slash: error
+  path-not-include-query: error
+  path-params: error
+  tag-description: error
+  typed-enum: error
+
+#  OpenAPI v2.0-only
+  oas2-anyOf: off
+  oas2-api-host: off
+  oas2-api-schemes: off
+  oas2-discriminator: off
+  oas2-host-not-example: off
+  oas2-host-trailing-slash: off
+  oas2-oneOf: off
+  oas2-operation-formData-consume-check: off
+  oas2-operation-security-defined: off
+  oas2-parameter-description: off
+  oas2-schema: off
+  oas2-unused-definition: off
+  oas2-valid-media-example: off
+
+#  OpenAPI v3-only
+  oas3-api-servers: error
+  oas3-examples-value-or-externalValue: error
+  oas3-operation-security-defined: error
+  oas3-parameter-description: error
+  oas3-schema: error
+  oas3-server-not-example.com: error
+  oas3-server-trailing-slash: error
+  oas3-unused-component: error
+  oas3-valid-media-example: error
+  oas3-valid-schema-example: error

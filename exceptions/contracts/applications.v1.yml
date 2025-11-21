@@ -1,0 +1,745 @@
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: RETIREMENT_/_PENSION"
+  schemaPath: components.schemas.Applicant.allOf.1.properties.sourceOfWealth.enum.0
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: GIFT_/_FAMILY"
+  schemaPath: components.schemas.Applicant.allOf.1.properties.sourceOfWealth.enum.1
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: GAMBLING_/_LOTTERY"
+  schemaPath: components.schemas.Applicant.allOf.1.properties.sourceOfWealth.enum.8
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: 1_TO_25000"
+  schemaPath: components.schemas.Applicant.allOf.1.properties.incomeRange.enum.0
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: 25001_TO_50000"
+  schemaPath: components.schemas.Applicant.allOf.1.properties.incomeRange.enum.1
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: 50001_TO_75000"
+  schemaPath: components.schemas.Applicant.allOf.1.properties.incomeRange.enum.2
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: 75001_TO_125000"
+  schemaPath: components.schemas.Applicant.allOf.1.properties.incomeRange.enum.3
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: casing-enums
+  message: "Enums MUST be UPPER_SNAKE_CASE and NOT start with a numeric value. ref: 125001_TO_175000"
+  schemaPath: components.schemas.Applicant.allOf.1.properties.incomeRange.enum.4
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: KBAQuestion"
+  schemaPath: components.schemas.KBAQuestion
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: KBAAnswer"
+  schemaPath: components.schemas.KBAAnswer
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: general-info-title-summary-word-check
+  message: The info.summary & info.title MUST NOT contain the words REST, Public, Service or Developer.
+  schemaPath: info.title
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: components.schemas.SearchView.properties.alternateId.$ref
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: components.schemas.ApplicantSearch.properties.name.$ref
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: components.schemas.ApplicantSearch.properties.nationalIdentificationNumber.$ref
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: components.schemas.ApplicantSearch.properties.email.$ref
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: components.schemas.ApplicationBase.properties.alternateId.$ref
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: general-ref-models
+  message: External models can ONLY be referenced from model or shared files
+  schemaPath: components.schemas.Applicant.allOf.0.$ref
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: invalid-ref
+  schemaPath: components.schemas.SearchView.properties.alternateId.$ref
+  message: "ENOENT: no such file or directory, open 'customers.v1.yaml'"
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: invalid-ref
+  schemaPath: components.schemas.SearchView.properties.originationChannel.$ref
+  message: "ENOENT: no such file or directory, open '../global/global.models.yaml'"
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: invalid-ref
+  schemaPath: components.schemas.Application.allOf.1.properties.products.items.$ref
+  message: "ENOENT: no such file or directory, open '../models/products.models.yaml'"
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.KBAQuestion
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Document
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.DepositPersonAccounts
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Documents
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.schemas.Status
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./applications.get.responses.201.content.application/json.schema.type
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./applications.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./applications/{applicationId}.patch.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.ApplicationId
+  severity: INFO
+  contract: applications.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./applications.post.requestBody
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./applications/{applicationId}.patch.requestBody
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /applications"
+  schemaPath: paths./applications
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /applications/{applicationId}"
+  schemaPath: paths./applications/{applicationId}
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: path-response-201-no-array
+  message: 201 response MUST NOT return an array
+  schemaPath: paths./applications.get.responses.201.content.application/json.schema.type
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./applications/{applicationId}.get.responses
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./applications/{applicationId}.patch.responses
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./applications.post
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./applications.get
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./applications/{applicationId}.get
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./applications/{applicationId}.patch
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./applications.get.responses.201
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.Application.allOf.1
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.Applicant.allOf.1
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./applications.get.responses.201.content.application/json.schema
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.SearchView.properties.applicants
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.SearchView.properties.accountIds
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.KBAQuestion.properties.answers
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.ApplicationBase.properties.requiredFields
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.ApplicationBase.properties.accountIds
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.ApplicationBase.properties.fraudFields
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Application.allOf.1.properties.applicants
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Application.allOf.1.properties.products
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Applicant.allOf.1.properties.requiredFields
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Applicant.allOf.1.properties.requiredDocuments
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Applicant.allOf.1.properties.requiredConsents
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Applicant.allOf.1.properties.acceptedConsents
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.DepositPersonAccounts.properties.persons
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.DepositPersonAccounts.properties.accounts
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-datetime-name
+  message: "Properties named as 'type: string' and 'format: date-time'. Name MUST end with 'DateTime'"
+  schemaPath: components.schemas.SearchView.properties.lastModifiedDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-datetime-name
+  message: "Properties named as 'type: string' and 'format: date-time'. Name MUST end with 'DateTime'"
+  schemaPath: components.schemas.ApplicationBase.properties.lastModifiedDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-datetime-name
+  message: "Properties named as 'type: string' and 'format: date-time'. Name MUST end with 'DateTime'"
+  schemaPath: components.schemas.Documents.properties.createdDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-datetime-name
+  message: "Properties named as 'type: string' and 'format: date-time'. Name MUST end with 'DateTime'"
+  schemaPath: components.schemas.Documents.properties.lastModifiedDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.SearchView
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.ApplicantSearch
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.KBAQuestion
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.KBAAnswer
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.ApplicationBase
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Application
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Consent
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.SearchView.properties.status
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.SearchView.properties.type
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.KBAAnswer.properties.id
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Document.properties.type
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Document.properties.status
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Application.allOf.1.properties.status
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Applicant.allOf.1.properties.status
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Consent.properties.type
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Documents.properties.type
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Documents.properties.status
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.SearchView.properties.promotionCode.pattern
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.ApplicantSearch.properties.phoneNumber.pattern
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.ApplicantSearch.properties.postalCode.pattern
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.KeyValue.properties.key.pattern
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Documents.properties.fileName.pattern
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Documents.properties.createdBy.pattern
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-pattern-whitespace
+  message: Properties defined with a pattern MUST NOT use whitespace in the pattern. use /s instead.
+  schemaPath: components.schemas.Documents.properties.lastModifiedBy.pattern
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.SearchView.properties
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.ApplicantSearch.properties
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.KBAQuestion.properties
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.KBAAnswer.properties
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.ApplicationBase.properties
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Document.properties
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.KeyValue.properties
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Application.allOf.1.properties
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Applicant.allOf.1.properties
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.DepositPersonAccounts.properties
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Consent.properties
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Documents.properties
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: createdDate"
+  schemaPath: components.schemas.SearchView.properties.createdDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: lastModifiedDate"
+  schemaPath: components.schemas.SearchView.properties.lastModifiedDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: birthDate"
+  schemaPath: components.schemas.ApplicantSearch.properties.birthDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: phoneNumber"
+  schemaPath: components.schemas.ApplicantSearch.properties.phoneNumber
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: driversLicenseNumber"
+  schemaPath: components.schemas.ApplicantSearch.properties.driversLicenseNumber
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: nationalIdentificationNumber"
+  schemaPath: components.schemas.ApplicantSearch.properties.nationalIdentificationNumber
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: email"
+  schemaPath: components.schemas.ApplicantSearch.properties.email
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: requiredFields"
+  schemaPath: components.schemas.ApplicationBase.properties.requiredFields
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: fraudFields"
+  schemaPath: components.schemas.ApplicationBase.properties.fraudFields
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: createdDate"
+  schemaPath: components.schemas.ApplicationBase.properties.createdDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: lastModifiedDate"
+  schemaPath: components.schemas.ApplicationBase.properties.lastModifiedDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: createdDate"
+  schemaPath: components.schemas.Documents.properties.createdDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: lastModifiedDate"
+  schemaPath: components.schemas.Documents.properties.lastModifiedDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.SearchView.properties.alternateId
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.SearchView.properties.originationChannel
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.SearchView.properties.promotionCode
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.SearchView.properties.createdBy
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.SearchView.properties.lastModifiedBy
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.SearchView.properties.lastModifiedDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ApplicantSearch.properties.applicantId
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ApplicantSearch.properties.name
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ApplicantSearch.properties.nationalIdentificationNumber
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ApplicantSearch.properties.email
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ApplicationBase.properties.alternateId
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ApplicationBase.properties.createdBy
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ApplicationBase.properties.lastModifiedBy
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.ApplicationBase.properties.lastModifiedDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Document.properties.type
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Document.properties.documentId
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Document.properties.status
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.KeyValue.properties.key
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.KeyValue.properties.value
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Documents.properties.documentId
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Documents.properties.category
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Documents.properties.type
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Documents.properties.fileName
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Documents.properties.mimeType
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Documents.properties.status
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Documents.properties.createdBy
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Documents.properties.createdDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Documents.properties.lastModifiedBy
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Documents.properties.lastModifiedDate
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-required-not-readonly
+  message: All properties defined in required MUST NOT be readOnly
+  schemaPath: components.schemas.SearchView
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.ApplicantSearch.properties.passport
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.ApplicantSearch.properties.driversLicenseNumber
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.KBAQuestion.properties.userSelection
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.KBAAnswer.properties.id
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.ApplicationBase.properties.requiredFields
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Applicant.allOf.1.properties.requiredFields
+  severity: ERROR
+  contract: applications.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Documents.properties.mimeType
+  severity: ERROR
+  contract: applications.v1.yaml

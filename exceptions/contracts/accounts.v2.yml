@@ -1,0 +1,165 @@
+- ruleId: general-info-description-max-length
+  message: info.description MUST be less than 250 characters.
+  schemaPath: info.description
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: general-info-title-summary-word-check
+  message: The info.summary & info.title MUST NOT contain the words REST, Public, Service or Developer.
+  schemaPath: info.title
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: invalid-ref
+  schemaPath: paths./accounts.get.requestBody.content.application/json.schema.$ref
+  message: "ENOENT: no such file or directory, open '../models/accounts.models.yaml'"
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getAccounts"
+  schemaPath: paths./accounts/query.post
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: createAccountRelationshipSearch"
+  schemaPath: paths./accounts/relationships/search.post
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./accounts.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./accounts/relationships/search.post.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./accounts.get.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./accounts/query.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./balances/query.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./accounts/relationships/search.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: operation-summary-ending-period
+  message: Operation summaries MUST not end with a period
+  schemaPath: paths./accounts.get.summary
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: operation-summary-ending-period
+  message: Operation summaries MUST not end with a period
+  schemaPath: paths./accounts/query.post.summary
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./balances/query.post.parameters.1
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./balances/query.post.parameters.2
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./balances/query.post.parameters.3
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./balances/query.post.parameters.4
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./accounts/relationships/search.post.parameters.1
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: path-naming
+  message: Paths MUST NOT include {request|response|info|information|details|metadata|data|properties|obj|object|search}
+  schemaPath: paths./accounts/relationships/search
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: path-request-body-not-allowed
+  message: A GET, DELETE operation MUST NOT accept a requestBody
+  schemaPath: paths./accounts.get.requestBody
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./accounts.get.requestBody
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./accounts/query.post.requestBody
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./balances/query.post.requestBody
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./accounts/relationships/search.post.requestBody
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /accounts"
+  schemaPath: paths./accounts
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /accounts/query"
+  schemaPath: paths./accounts/query
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /balances/query"
+  schemaPath: paths./balances/query
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /accounts/relationships/search"
+  schemaPath: paths./accounts/relationships/search
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./accounts.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./accounts/query.post.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./balances/query.post.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: accounts.v2.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./accounts/relationships/search.post.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: accounts.v2.yaml

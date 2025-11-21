@@ -1,0 +1,295 @@
+- ruleId: general-servers-url
+  message: servers.url MUST exist and MUST begin with https://
+  schemaPath: servers.0.url
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./videos.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./videos.post.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: operation-request-response-examples
+  message: requestBody's & responses MUST have examples defined.
+  schemaPath: paths./videos/{videoId}.patch.requestBody.content.application/json.schema
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.VideoId
+  severity: INFO
+  contract: videos.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.TitleQueryOptional
+  severity: INFO
+  contract: videos.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.SummaryQueryOptional
+  severity: INFO
+  contract: videos.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.FilenameQueryOptional
+  severity: INFO
+  contract: videos.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.FileSizeMinQueryOptional
+  severity: INFO
+  contract: videos.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.FileSizeMaxQueryOptional
+  severity: INFO
+  contract: videos.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.GenresQueryOptional
+  severity: INFO
+  contract: videos.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./videos.get.parameters.1
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./videos.get.parameters.2
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./videos.get.parameters.3
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./videos.get.parameters.4
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./videos.get.parameters.5
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./videos.post.requestBody
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: path-request-body-required
+  message: requestBody MUST contain a required property
+  schemaPath: paths./videos/{videoId}.patch.requestBody
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /videos"
+  schemaPath: paths./videos
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /videos/{videoId}"
+  schemaPath: paths./videos/{videoId}
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./videos/{videoId}.get.responses
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./videos/{videoId}.patch.responses
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: path-response-404-required
+  message: Paths including a path parameter MUST include a 404 response
+  schemaPath: paths./videos/{videoId}.delete.responses
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./videos.post
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./videos.get
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./videos/{videoId}.get
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./videos/{videoId}.patch
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./videos/{videoId}.delete
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./videos.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.parameters.GenresQueryOptional.schema
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Video.properties.genres
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Video.properties.directors
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Video.properties.writers
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.schemas.Video.properties.roles
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: VideoUpdate"
+  schemaPath: components.schemas.VideoUpdate
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-number-format
+  message: "Properties declared as type: number MUST have a format of float, double or decimal"
+  schemaPath: components.parameters.FileSizeMinQueryOptional.schema.format
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-number-format
+  message: "Properties declared as type: number MUST have a format of float, double or decimal"
+  schemaPath: components.parameters.FileSizeMaxQueryOptional.schema.format
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-number-format
+  message: "Properties declared as type: number MUST have a format of float, double or decimal"
+  schemaPath: components.schemas.Video.properties.fileSize.format
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.VideoUpdate.properties
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Video.properties
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: addedDate"
+  schemaPath: components.schemas.Video.properties.addedDate
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: releasedDate"
+  schemaPath: components.schemas.Video.properties.releasedDate
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Video.properties.videoId
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Video.properties.title
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Video.properties.summary
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Video.properties.filePath
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.VideoUpdate.properties.filePath
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.VideoUpdate.properties.fileName
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Video.properties.directors
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Video.properties.tagline
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Video.properties.writers
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Video.properties.roles
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Video.properties.country
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Video.properties.studio
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Video.properties.contentRating
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Video.properties.rating
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Video.properties.audienceRating
+  severity: ERROR
+  contract: videos.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Video.properties.duration
+  severity: ERROR
+  contract: videos.v1.yaml

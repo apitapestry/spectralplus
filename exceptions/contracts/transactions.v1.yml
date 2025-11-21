@@ -1,0 +1,400 @@
+- ruleId: casing-tags
+  message: "Tags MUST be CamelCase. ref:"
+  schemaPath: paths./authorizations.get.tags.0
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: general-info-description-max-length
+  message: info.description MUST be less than 250 characters.
+  schemaPath: info.description
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: general-info-title-summary-word-check
+  message: The info.summary & info.title MUST NOT contain the words REST, Public, Service or Developer.
+  schemaPath: info.title
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: oas3-unused-component
+  message: Potentially unused component has been detected.
+  schemaPath: components.parameters.TransactionId
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getAuthorizations"
+  schemaPath: paths./authorizations.get
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./authorizations.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./transactions.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.TransactionId
+  severity: INFO
+  contract: transactions.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.TransactionIdsQueryOptional
+  severity: INFO
+  contract: transactions.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: Transaction-Type"
+  schemaPath: components.parameters.TransactionTypeHeaderOptional.name
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./transactions.get.parameters.1
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: parameter-name-unique
+  message: "parameters MUST be unique. ref: [object Object]"
+  schemaPath: paths./transactions.get.parameters.2
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: Transaction-Type"
+  schemaPath: components.parameters.TransactionTypeHeaderOptional.name
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /authorizations"
+  schemaPath: paths./authorizations
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /transactions"
+  schemaPath: paths./transactions
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: poly-base-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: Authorization"
+  schemaPath: components.schemas.Authorization.oneOf
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: poly-base-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: Transaction"
+  schemaPath: components.schemas.Transaction.oneOf
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: poly-explicit-discriminator
+  message: "Each polymorphic child MUST have a unique list of required properties. ref: components.schemas.Authorization.oneOf"
+  schemaPath: components.schemas.Authorization.oneOf
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: poly-explicit-discriminator
+  message: "Each polymorphic child MUST have a unique list of required properties. ref: components.schemas.Transaction.oneOf"
+  schemaPath: components.schemas.Transaction.oneOf
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: poly-oneof-base
+  message: "Base object MUST have a discriminator, propertyName and mapping. ref: Base object AuthorizationBase not found"
+  schemaPath: ""
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: poly-oneof-discriminator
+  message: "oneOf MUST have a discriminator property. ref: Authorization"
+  schemaPath: components.schemas.Authorization
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: poly-oneof-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: Authorization"
+  schemaPath: components.schemas.Authorization.oneOf
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: poly-oneof-same-base
+  message: "All children used in oneOf MUST inherit from the same base object. ref: Transaction"
+  schemaPath: components.schemas.Transaction.oneOf
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: poly-property-name-inline
+  message: PropertyName enum in a base object MUST be defined as  a $ref
+  schemaPath: ""
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.AuthorizationInstallment.allOf.1
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-allof-ref-only
+  message: Only a list of $refs are permitted in an allOf
+  schemaPath: components.schemas.Installment.allOf.1
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./authorizations.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./transactions.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: components.parameters.TransactionIdsQueryOptional.schema
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-datetime-name
+  message: "Properties named as 'type: string' and 'format: date-time'. Name MUST end with 'DateTime'"
+  schemaPath: components.schemas.Installment.allOf.1.properties.acceptedTimestamp
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-enum-min-max
+  message: Enums MUST NOT have minLength/maxLength defined
+  schemaPath: components.schemas.Amount.properties.currencyCode
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-name
+  message: "Object names MUST NOT include any of the restricted values. ref: InstallmentDetail"
+  schemaPath: components.schemas.InstallmentDetail
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Merchant.properties.id
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.InstallmentPlanTerms.properties.duration
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.InstallmentPlanTerms.properties.apr
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.InstallmentSummary.properties.perMonthPayment
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.InstallmentSummary.properties.firstMonthPayment
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.InstallmentSummary.properties.lastMonthPayment
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.InstallmentSummary.properties.totalInterestPayment
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.InstallmentDetail.properties.currentBalance
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.InstallmentDetail.properties.minDue
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.InstallmentDetail.properties.interestCharged
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.InstallmentDetail.properties.paymentsToDateAmount
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.InstallmentDetail.properties.paymentsToDateCount
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-number-min-max
+  message: Numeric types MUST have a minimum and maximum defined
+  schemaPath: components.schemas.Amount.properties.amount
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.AuthorizationBase.properties
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.TestChild.properties
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.AuthorizationInstallment.allOf.1.properties
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.TransactionBase.properties
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Merchant.properties
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Installment.allOf.1.properties
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.InstallmentPlanTerms.properties
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.InstallmentSummary.properties
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.InstallmentDetail.properties
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Amount.properties
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: expiryDateTime"
+  schemaPath: components.schemas.AuthorizationBase.properties.expiryDateTime
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: merchantDetail"
+  schemaPath: components.schemas.AuthorizationBase.properties.merchantDetail
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: lastUpdatedDateTime"
+  schemaPath: components.schemas.TransactionBase.properties.lastUpdatedDateTime
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: orderNumber"
+  schemaPath: components.schemas.Merchant.properties.orderNumber
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: invoiceNumber"
+  schemaPath: components.schemas.Merchant.properties.invoiceNumber
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: transactionDate"
+  schemaPath: components.schemas.InstallmentDetail.properties.transactionDate
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: postDate"
+  schemaPath: components.schemas.InstallmentDetail.properties.postDate
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: startDate"
+  schemaPath: components.schemas.InstallmentDetail.properties.startDate
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: originalEndDate"
+  schemaPath: components.schemas.InstallmentDetail.properties.originalEndDate
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: currentEndDate"
+  schemaPath: components.schemas.InstallmentDetail.properties.currentEndDate
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: minDueDate"
+  schemaPath: components.schemas.InstallmentDetail.properties.minDueDate
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: paymentsToDateAmount"
+  schemaPath: components.schemas.InstallmentDetail.properties.paymentsToDateAmount
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: paymentsToDateCount"
+  schemaPath: components.schemas.InstallmentDetail.properties.paymentsToDateCount
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.AuthorizationBase.properties.amount
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.AuthorizationBase.properties.merchantDetail
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransactionBase.properties.amount
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.TransactionBase.properties.merchant
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.AuthorizationBase.properties.description
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.TestChild.properties.prop
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.TransactionBase.properties.description
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Merchant.properties.orderNumber
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Merchant.properties.invoiceNumber
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.InstallmentPlanTerms.properties.installmentPlanId
+  severity: ERROR
+  contract: transactions.v1.yaml
+- ruleId: schema-unused-objects
+  message: "All schemas must be used in the API starting with a request or response. ref: TransactionId"
+  schemaPath: ""
+  severity: ERROR
+  contract: transactions.v1.yaml

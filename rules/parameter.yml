@@ -1,0 +1,197 @@
+functions:
+  - parameter-name-unique
+  - parameter-order
+
+rules:
+  parameter-bad-ref:
+    description: Not defined
+    message: 'parameter $ref MUST source from /components/parameters.ref: {{value}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths..parameters[?(@ && @.$ref)]
+    then:
+      field: $ref
+      function: pattern
+      functionOptions:
+        match: '\/components/parameters\/'
+
+  parameter-example:
+    description: Not defined
+    message: parameters MUST have examples.
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: info
+    resolved: true
+    given:
+      - $.components.parameters[?(@ && @.schema && !@.schema.enum && @.schema.type !== 'boolean' && !@.schema.example)]
+      - $.paths..parameters[?(@ && @.schema && !@.schema.enum && @.schema.type !== 'boolean' && !@.schema.example)]
+    then:
+      function: falsy
+
+  parameter-headers-not-allowed:
+    description: Not defined
+    message: 'The following headers MUST NOT be used, there are implied: Authorization, Content-type and Accept. ref: {{value}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..parameters.[?(@ && @.in === 'header')]
+    then:
+      field: name
+      function: pattern
+      functionOptions:
+        notMatch: '/^(authorization|content-type|accept)$/i'
+
+  parameter-headers-valid:
+    description: Not defined
+    message: 'Only white listed headers can be used. To add a new header, review with API Governance team. ref: {{value}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..parameters[?(@ && @.in === 'header')]
+    then:
+      field: name
+      function: enumeration
+      functionOptions:
+        values:
+          - If-Match
+          - If-None-Match
+          - X-Acting-As
+          - X-Acting-On
+          - X-Channel
+          - X-Tenant-Id
+          - Authorization
+          - Content-Type
+          - Accept
+
+  parameter-name-length:
+    description: Not defined
+    message: message
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..parameters.*
+    then:
+      field: name
+      function: length
+      functionOptions:
+        max: 25
+
+  parameter-name-unique:
+    description: Not defined
+    message: 'parameters MUST be unique. ref: {{value}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $.paths.*
+#      - $.paths..parameters[?(!@.$ref && @.in === 'query')]
+#      - $.paths..parameters[?(!@.$ref && @.in === 'path')]
+#      - $.paths..parameters[?(!@.$ref && @.in === 'header')]
+    then:
+      function: parameter-name-unique
+
+  parameter-no-default:
+    description: Not defined
+    message: 'Required parameters MUST NOT specify a default value. ref: {{property}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..parameters.[?(@ && @.required)]
+    then:
+      field: schema.default
+      function: falsy
+
+  parameter-post-query:
+    description: Not defined
+    message: 'Parameters MUST be unique. ref: {{value}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: true
+    given: $..paths..post..parameters..[?(@ && @.in === 'query')]
+    then:
+      function: falsy
+
+  parameter-no-cookie:
+    description: Not defined
+    message: 'Parameters MUST NOT be defined in a cookie.'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $..parameters..[?(@ && @.in === 'cookie')]
+    then:
+      function: falsy
+
+  parameter-order:
+    description: Not defined
+    message: Parameters MUST be in the same order as in path
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: true
+    given: $.paths
+    then:
+      function: parameter-order
+
+  parameter-resource-id:
+    description: Not defined
+    message: 'Id''s in resource must be defined as resourceId not just ''id''.'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given: $.paths.*~
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: /^.*{id}.*$/
+
+  parameter-schema-type:
+    description: Not defined
+    message: All parameters MUST define a schema.type
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $.paths.*.*.parameters.*.schema[?(@property !== '$ref')]^
+      - $.components.parameters.*.schema[?(@property !== '$ref')]^
+    then:
+      field: type
+      function: truthy
+
+  parameter-schema-external-ref:
+    description: Not defined
+    message: 'External $ref in parammeter schema is not allowed. ref: {{value}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $.components.parameters.*.schema[?(@property !== '$ref')]
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: \.yaml#
+
+  parameter-string-pattern:
+    description: Not defined
+    message: 'Patter OR format MUSt be provided for all string properties.'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: true
+    given:
+      - $..paths.parameters[?(@ && @.type == 'string' && !@.enum && @property !== 'items' && !@.format && !@.pattern)]~
+      - $..paths.parameters[?(@ && @.items && @.items.type === 'string' && !@.items.$ref && !@.items.enum && !@.items.pattern && !@.items.format)]~
+    then:
+      function: falsy
+
+  parameter-query-naming:
+    description: Not defined
+    message: 'Query parameters names MUST start with a letter and MUST be in all lowercase. ref: {{value}}'
+    documentationUrl: 'https://my.documentation.com/something#123'
+    severity: error
+    resolved: false
+    given:
+      - $.paths..parameters..name
+      - $.components.parameters.*.name
+    then:
+      function: pattern
+      functionOptions:
+          match: /^[a-z][a-zA-Z0-9_]*$/
+

@@ -1,0 +1,220 @@
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: security_token"
+  schemaPath: paths./accounts/{id}/relationships.get.parameters.3.name
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: casing-parameters-header
+  message: "Header parameters MUST be Hyphenated-Pascal-Case. ref: correlation_id"
+  schemaPath: paths./accounts/{id}/relationships.get.parameters.4.name
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: casing-parameters-query
+  message: "Query Parameters MUST be camelCase. ref: card_account_number"
+  schemaPath: paths./accounts/{id}/relationships.get.parameters.1.name
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: casing-schema
+  message: "Schema & example names MUST be PascalCase. ref: Api_Error"
+  schemaPath: components.schemas.Api_Error
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: general-info-description-max-length
+  message: info.description MUST be less than 250 characters.
+  schemaPath: info.description
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: general-info-title-summary-word-check
+  message: The info.summary & info.title MUST NOT contain the words REST, Public, Service or Developer.
+  schemaPath: info.title
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: general-version
+  message: openapi.version MUST be 3.0.3
+  schemaPath: openapi
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: general-version-format
+  message: "info.version MUST follow vX or vX.Y formatting. ref: 1.0.0-oas3"
+  schemaPath: info.version
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: operation-array
+  message: If path does NOT use the primary key in the path, the response MUST be an array.
+  schemaPath: paths./accounts/{id}/relationships.get.responses.422.content.application/json.schema
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getAccountRelationships"
+  schemaPath: paths./accounts/{id}/relationships.get
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: operation-not-array
+  message: If path uses the primary key in the path, the response MUST NOT be an array.
+  schemaPath: paths./accounts/{id}/relationships.get.responses.200.content.application/json.schema.type
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/relationships.get.parameters.0
+  severity: INFO
+  contract: loyalty.accounts.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/relationships.get.parameters.1
+  severity: INFO
+  contract: loyalty.accounts.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/relationships.get.parameters.3
+  severity: INFO
+  contract: loyalty.accounts.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: paths./accounts/{id}/relationships.get.parameters.4
+  severity: INFO
+  contract: loyalty.accounts.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: security_token"
+  schemaPath: paths./accounts/{id}/relationships.get.parameters.3.name
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: parameter-headers-valid
+  message: "Only white listed headers can be used. To add a new header, review with API Governance team. ref: correlation_id"
+  schemaPath: paths./accounts/{id}/relationships.get.parameters.4.name
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: card_account_number"
+  schemaPath: paths./accounts/{id}/relationships.get.parameters.1.name
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: security_token"
+  schemaPath: paths./accounts/{id}/relationships.get.parameters.3.name
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: parameter-query-naming
+  message: "Query parameters names MUST start with a letter and MUST be in all lowercase. ref: correlation_id"
+  schemaPath: paths./accounts/{id}/relationships.get.parameters.4.name
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: parameter-resource-id
+  message: Id's in resource must be defined as resourceId not just 'id'.
+  schemaPath: paths./accounts/{id}/relationships
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /accounts/{id}/relationships"
+  schemaPath: paths./accounts/{id}/relationships
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: path-response-404-description
+  message: 404 response MUST contain a description
+  schemaPath: paths./accounts/{id}/relationships.get.responses.404.description
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./accounts/{id}/relationships.get.responses.401
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./accounts/{id}/relationships.get.responses.403
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./accounts/{id}/relationships.get.responses.503
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: path-status-codes
+  message: HTTP Status codes MUST be appropriate for the operation
+  schemaPath: paths./accounts/{id}/relationships.get.responses.504
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./accounts/{id}/relationships.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-array-min-max
+  message: "Properties declared as type: array MUST have a minItems and maxItems defined"
+  schemaPath: paths./accounts/{id}/relationships.get.responses.400.content.application/json.schema
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-description
+  message: Schema description MUST be present
+  schemaPath: components.schemas.Api_Error
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-names-not-valid
+  message: "Property names MUST NOT equal any of the following: {id|type|status|date|dateTime|additionalProperties}."
+  schemaPath: components.schemas.Relationship.properties.status
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Relationship.properties
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-properties-inline
+  message: Schema MUST NOT be defined inline
+  schemaPath: components.schemas.Api_Error.properties
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: card_account_number"
+  schemaPath: components.schemas.Relationship.properties.card_account_number
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-properties-name-reserved
+  message: "Property names MUST NOT include any of the restricted values. ref: more_information"
+  schemaPath: components.schemas.Api_Error.properties.more_information
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Api_Error.properties.error_code
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Api_Error.properties.message
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Api_Error.properties.developer_message
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-property-description
+  message: Schema.property description MUST be present
+  schemaPath: components.schemas.Api_Error.properties.more_information
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Api_Error.properties.error_code
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Api_Error.properties.message
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Api_Error.properties.developer_message
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: schema-string-pattern
+  message: Pattern OR format MUST be defined for string properties
+  schemaPath: components.schemas.Api_Error.properties.more_information
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml
+- ruleId: tag-description
+  message: Tag object must have "description".
+  schemaPath: tags.0
+  severity: ERROR
+  contract: loyalty.accounts.v1.yaml

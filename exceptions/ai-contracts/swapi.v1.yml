@@ -1,0 +1,340 @@
+- ruleId: general-version-format
+  message: "info.version MUST follow vX or vX.Y formatting. ref: 1"
+  schemaPath: info.version
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: oas3-parameter-description
+  message: Parameter objects must have "description".
+  schemaPath: components.parameters.id
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-array
+  message: If path does NOT use the primary key in the path, the response MUST be an array.
+  schemaPath: paths./.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-array
+  message: If path does NOT use the primary key in the path, the response MUST be an array.
+  schemaPath: paths./people.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-array
+  message: If path does NOT use the primary key in the path, the response MUST be an array.
+  schemaPath: paths./films.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-array
+  message: If path does NOT use the primary key in the path, the response MUST be an array.
+  schemaPath: paths./starships.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-array
+  message: If path does NOT use the primary key in the path, the response MUST be an array.
+  schemaPath: paths./vehicles.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-array
+  message: If path does NOT use the primary key in the path, the response MUST be an array.
+  schemaPath: paths./species.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-array
+  message: If path does NOT use the primary key in the path, the response MUST be an array.
+  schemaPath: paths./planets.get.responses.200.content.application/json.schema
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-description
+  message: Operation "description" must be present and non-empty string.
+  schemaPath: paths./people.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-description
+  message: Operation "description" must be present and non-empty string.
+  schemaPath: paths./people/{id}.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-description
+  message: Operation "description" must be present and non-empty string.
+  schemaPath: paths./films.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-description
+  message: Operation "description" must be present and non-empty string.
+  schemaPath: paths./films/{id}.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-description
+  message: Operation "description" must be present and non-empty string.
+  schemaPath: paths./starships.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-description
+  message: Operation "description" must be present and non-empty string.
+  schemaPath: paths./starships/{id}.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-description
+  message: Operation "description" must be present and non-empty string.
+  schemaPath: paths./vehicles.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-description
+  message: Operation "description" must be present and non-empty string.
+  schemaPath: paths./vehicles/{id}.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-description
+  message: Operation "description" must be present and non-empty string.
+  schemaPath: paths./species.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-description
+  message: Operation "description" must be present and non-empty string.
+  schemaPath: paths./species/{id}.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-description
+  message: Operation "description" must be present and non-empty string.
+  schemaPath: paths./planets.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-description
+  message: Operation "description" must be present and non-empty string.
+  schemaPath: paths./planets/{id}.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: get"
+  schemaPath: paths./.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getPeople"
+  schemaPath: paths./people.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getFilms"
+  schemaPath: paths./films.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getStarships"
+  schemaPath: paths./starships.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getVehicles"
+  schemaPath: paths./vehicles.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getSpecies"
+  schemaPath: paths./species.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: operation-id-naming
+  message: "Operations MUST follow naming strategy. Expecting: getPlanets"
+  schemaPath: paths./planets.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.id
+  severity: INFO
+  contract: swapi.v1.yaml
+- ruleId: parameter-example
+  message: parameters MUST have examples.
+  schemaPath: components.parameters.searchQueryStringOptional
+  severity: INFO
+  contract: swapi.v1.yaml
+- ruleId: parameter-resource-id
+  message: Id's in resource must be defined as resourceId not just 'id'.
+  schemaPath: paths./people/{id}
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: parameter-resource-id
+  message: Id's in resource must be defined as resourceId not just 'id'.
+  schemaPath: paths./films/{id}
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: parameter-resource-id
+  message: Id's in resource must be defined as resourceId not just 'id'.
+  schemaPath: paths./starships/{id}
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: parameter-resource-id
+  message: Id's in resource must be defined as resourceId not just 'id'.
+  schemaPath: paths./vehicles/{id}
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: parameter-resource-id
+  message: Id's in resource must be defined as resourceId not just 'id'.
+  schemaPath: paths./species/{id}
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: parameter-resource-id
+  message: Id's in resource must be defined as resourceId not just 'id'.
+  schemaPath: paths./planets/{id}
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /people"
+  schemaPath: paths./people
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /people/{id}"
+  schemaPath: paths./people/{id}
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /films"
+  schemaPath: paths./films
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /films/{id}"
+  schemaPath: paths./films/{id}
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /starships"
+  schemaPath: paths./starships
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /starships/{id}"
+  schemaPath: paths./starships/{id}
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /vehicles"
+  schemaPath: paths./vehicles
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /vehicles/{id}"
+  schemaPath: paths./vehicles/{id}
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /species"
+  schemaPath: paths./species
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /species/{id}"
+  schemaPath: paths./species/{id}
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /planets"
+  schemaPath: paths./planets
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-resource-limit
+  message: "Number of paths nodes MUST NOT exceed 5. ref: /planets/{id}"
+  schemaPath: paths./planets/{id}
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./people.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./people/{id}.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./films.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./films/{id}.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./starships.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./starships/{id}.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./vehicles.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./vehicles/{id}.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./species.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./species/{id}.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./planets.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: path-security-required
+  message: Each operation MUST define security requirements
+  schemaPath: paths./planets/{id}.get
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: tag-description
+  message: Tag object must have "description".
+  schemaPath: tags.0
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: tag-description
+  message: Tag object must have "description".
+  schemaPath: tags.1
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: tag-description
+  message: Tag object must have "description".
+  schemaPath: tags.2
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: tag-description
+  message: Tag object must have "description".
+  schemaPath: tags.3
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: tag-description
+  message: Tag object must have "description".
+  schemaPath: tags.4
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: tag-description
+  message: Tag object must have "description".
+  schemaPath: tags.5
+  severity: ERROR
+  contract: swapi.v1.yaml
+- ruleId: tag-description
+  message: Tag object must have "description".
+  schemaPath: tags.6
+  severity: ERROR
+  contract: swapi.v1.yaml
