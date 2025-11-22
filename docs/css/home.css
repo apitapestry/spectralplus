@@ -42,7 +42,7 @@
 /* Style the first two headings in white with larger text */
 .md-content article:has(#homepage-hero) h1:first-of-type {
     color: white !important;
-    font-size: 2rem !important;
+    font-size: 3rem !important;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 0.5rem;
     text-align: center !important;
@@ -59,3 +59,15 @@
     text-align: center !important;
 }
 
+/* Ensure any links inside the hero's first H1/H2 appear white across states */
+.md-content article:has(#homepage-hero) h1:first-of-type a,
+.md-content article:has(#homepage-hero) h1:first-of-type a:visited,
+.md-content article:has(#homepage-hero) h1:first-of-type a:focus,
+.md-content article:has(#homepage-hero) h1:first-of-type a:hover,
+.md-content article:has(#homepage-hero) h2:first-of-type a,
+.md-content article:has(#homepage-hero) h2:first-of-type a:visited,
+.md-content article:has(#homepage-hero) h2:first-of-type a:focus,
+.md-content article:has(#homepage-hero) h2:first-of-type a:hover {
+    color: white !important;
+    text-decoration-color: rgba(255,255,255,0.7) !important;
+}

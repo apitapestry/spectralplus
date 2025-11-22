@@ -3,14 +3,14 @@ class: landing-bg
 ---
 
 <div id="homepage-hero"></div>
-# **CONTRACT AS A SERVICE**
+# **SpectralPlus**
 <br>
 <br>
 <br>
 
-## The Next Evolution in API Service Development
+## [Spectral Linter](https://stoplight.io/open-source/spectral) plus a few extras
 
 <br><br><br><br>
 <footer>  
-© 2025 Contract-as-a-Service. All rights reserved.  
+© 2025 API Tapestry. All rights reserved.  
 </footer>
