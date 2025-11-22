@@ -10,6 +10,9 @@ site/
 build/
 dist/
 *.egg-info/
+**/node_modules/
+**/.package-lock.json
+**/.env
 
 # macOS
 .DS_Store

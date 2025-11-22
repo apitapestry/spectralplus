@@ -6,6 +6,7 @@ import * as utils from './utils/utils.mjs';
 
 import Parsers from '@stoplight/spectral-parsers';
 import spectralCore from '@stoplight/spectral-core';
+import { program } from 'commander';
 
 const workingDir = process.cwd();
 const parentDir = path.dirname(workingDir);
@@ -13,14 +14,26 @@ const parentName = path.basename(parentDir);
 const moduleName = path.basename(workingDir);
 let hasErrors = false;
 
-const errorsArg = utils.getArg('--errors', 'target/contract-linter-errors');
-// const exceptionsArg = utils.getArg('--exceptions', '../contract-linter-exceptions/exceptions/{repo}/{module}');
-const exceptionsArg = utils.getArg('--exceptions', '../contract-linter-exceptions');
-const excludesArg = utils.getArg('--excludes', '*wip*, */target/*, */global/*').replace(/ /g, '').split(',');
-const includesArg = utils.getArg('--includes', '*.yaml').replace(/ /g, '').split(',');
-const rulesArg = utils.getArg('--rules', 'contract-rule-set.yml');
-const silentArg = utils.getArg('--silent', 'false');
-const csvArg = utils.getArg('--csv', 'false');
+// Setup commander for CLI argument parsing
+program
+    .option('--errors <path>', 'Path to errors directory', 'target/contract-linter-errors')
+    .option('--exceptions <path>', 'Path to exceptions directory', '../contract-linter-exceptions')
+    .option('--excludes <patterns>', 'Comma-separated exclude patterns', '*wip*, */target/*, */global/*')
+    .option('--includes <patterns>', 'Comma-separated include patterns', '*.yaml')
+    .option('--rules <file>', 'Path to rule set file', 'contract-rule-set.yml')
+    .option('--silent <boolean>', 'Silent mode', 'false')
+    .option('--csv <boolean>', 'Output CSV format', 'false')
+    .parse(process.argv);
+
+const options = program.opts();
+
+const errorsArg = options.errors;
+const exceptionsArg = options.exceptions;
+const excludesArg = options.excludes.replace(/ /g, '').split(',');
+const includesArg = options.includes.replace(/ /g, '').split(',');
+const rulesArg = options.rules;
+const silentArg = options.silent;
+const csvArg = options.csv;
 
 let exceptionsEnv = process.env.CONTRACT_LINTER_EXCEPTIONS;
 let rulesEnv = process.env.CONTRACT_LINTER_RULES;
