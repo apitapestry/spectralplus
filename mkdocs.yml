@@ -2,6 +2,10 @@ site_name: SpectralPlus
 site_url: https://www.apitapestry.net/spectralplus/
 use_directory_urls: true
 
+nav:
+  - Home: index.md
+  - Overview: README.md
+
 theme:
   name: material
   features:
@@ -22,15 +26,7 @@ theme:
     code: Roboto Mono
 
 extra_css:
-  - css/custom.css
-  - css/home.css
-
-extra_javascript:
-  - js/custom.js
+  - extra.css
 
 extra:
   generator: false
-
-nav:
-  - Home: index.md
-  - Overview: overview.md
